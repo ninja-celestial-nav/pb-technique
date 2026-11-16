@@ -137,6 +137,24 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
 .kv dt{color:var(--mute);text-transform:uppercase}
 .codeinline{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:1px dashed var(--acc);padding-top:12px;margin-top:10px}
 .codeinline .c{font-family:var(--mono);color:var(--acc);font-size:18px;letter-spacing:.15em;border:1px dashed var(--acc);padding:2px 10px}
+.sim{border:1px solid var(--ink);background:#fff8;padding:22px;display:grid;grid-template-columns:1fr 1.1fr;gap:26px;margin-bottom:10px}
+.scall{font-family:var(--disp);font-size:clamp(46px,7vw,76px);font-weight:800;line-height:1;letter-spacing:.02em}
+.scall em{color:var(--acc);font-style:italic}
+.court{display:grid;grid-template-rows:auto auto auto;gap:0;border:2px solid var(--ink)}
+.half{display:grid;grid-template-columns:1fr 1fr}
+.half div{padding:12px;border-right:1px solid var(--rule);text-align:center;min-height:62px}
+.half div:last-child{border-right:0}
+.half small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--mute);text-transform:uppercase}
+.chip{display:inline-block;font-family:var(--mono);font-weight:500;padding:2px 10px;border:1px solid var(--ink);margin-top:4px}
+.chip.srv{background:var(--acc);border-color:var(--acc);color:#fff}
+.netl{height:0;border-top:3px double var(--ink);position:relative}
+.netl span{position:absolute;left:50%;top:-9px;transform:translateX(-50%);background:var(--paper);font-family:var(--mono);font-size:10px;padding:0 6px}
+.tm{font-family:var(--mono);font-size:11px;text-transform:uppercase;padding:6px 12px;background:var(--paper2);display:flex;justify-content:space-between}
+.tm.on{background:var(--ink);color:var(--paper)}
+.slog{border-left:3px solid var(--acc);padding:8px 12px;margin:14px 0;font-size:15px;min-height:52px}
+.win{background:var(--acc);color:#fff;padding:8px 12px;font-weight:700;margin-bottom:10px}
+.sim select{font:inherit;font-family:var(--mono);font-size:12px;border:1px solid var(--ink);background:none;padding:6px}
+@media (max-width:860px){.sim{grid-template-columns:1fr;padding:16px}}
 /* footer nav */
 .foot{position:fixed;bottom:0;left:0;right:0;background:var(--paper);border-top:1px solid var(--ink);z-index:20}
 .foot-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;padding:10px 24px;gap:14px}
@@ -288,9 +306,71 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
  <p class="src"><span data-l="zh">影片標題、長度與上傳日期取自 YouTube（2026/11/17 查詢）。</span><span data-l="en">Titles, lengths and upload dates from YouTube (checked 17 Nov 2026). English titles are our translations.</span></p>
 </section>
 
-<!-- ===== 08 CORNER ===== -->
+<!-- ===== 08 RULES ===== -->
 <section class="slide" data-n="8">
- <div class="kick">VII · Gear &amp; Coach's Corner</div>
+ <div class="kick">VII · Rules &amp; Scoring</div>
+ <h2 class="h-big"><span data-l="zh">看懂比分：<em>0-0-2</em> 是什麼？</span><span data-l="en">Reading the score: what is <em>0-0-2?</em></span></h2>
+ <p class="lede dropcap"><span data-l="zh">技術練得再好，報錯分、站錯邊一樣會被判失誤。這一頁整理 USA Pickleball 2026 年官方規則的核心：傳統計分怎麼算、雙打三個數字代表什麼、今年改了哪裡，以及最常被誤會的幾條規則。</span><span data-l="en">Great technique won't save you from a wrong score call or the wrong court. This page covers the core of USA Pickleball's 2026 rules: how traditional scoring works, what the three numbers mean in doubles, what changed this year, and the rules people most often get wrong.</span></p>
+ <div class="cols c3">
+  <article class="card"><div class="num">01</div><h3><span data-l="zh">只有發球方得分</span><span data-l="en">Only the serving side scores</span></h3><div class="en-sub">Side-out scoring</div><ul>
+   <li><span data-l="zh">傳統計分（Side-out）只有發球方能得分</span><span data-l="en">In traditional side-out scoring, only the serving team scores</span></li>
+   <li><span data-l="zh">接發方贏球不加分，只拿回發球權</span><span data-l="en">Win a rally while receiving and you get the serve, not a point</span></li>
+   <li><span data-l="zh">一般打到 11 分、須領先 2 分；比賽也可能打 15 或 21 分</span><span data-l="en">Games go to 11, win by 2; tournaments may play to 15 or 21</span></li></ul></article>
+  <article class="card"><div class="num">02</div><h3><span data-l="zh">雙打報三個數字</span><span data-l="en">Doubles calls three numbers</span></h3><div class="en-sub">Score call</div><ul>
+   <li><span data-l="zh">順序：發球方分數 → 接發方分數 → 發球員號碼（1 或 2）</span><span data-l="en">Order: serving score → receiving score → server number (1 or 2)</span></li>
+   <li><span data-l="zh">每次拿回發球權，由站在右區的球員擔任 1 號發球</span><span data-l="en">After each side-out, the player in the right-hand court serves first as server 1</span></li>
+   <li><span data-l="zh">單打只報兩個數字：發球方、接發方</span><span data-l="en">Singles calls just two numbers: server, then receiver</span></li></ul></article>
+  <article class="card"><div class="num">03</div><h3><span data-l="zh">開局為什麼是 0-0-2</span><span data-l="en">Why the game starts 0-0-2</span></h3><div class="en-sub">Start-of-game exception</div><ul>
+   <li><span data-l="zh">開局第一輪只有一位發球員，失誤就直接換對方發球</span><span data-l="en">The first serving turn of a game gets only one server; a fault is an immediate side-out</span></li>
+   <li><span data-l="zh">發球方得分後，發球員與搭檔換邊，同一人繼續發</span><span data-l="en">When the serving team scores, the server switches courts with their partner and serves again</span></li>
+   <li><span data-l="zh">站位口訣：開局第一位發球員，自家分數偶數站右、奇數站左</span><span data-l="en">Position check: the game's first server is on the right when their team's score is even, left when odd</span></li></ul></article>
+ </div>
+
+ <div class="kick" style="margin-top:34px"><span data-l="zh">互動練習 · 報分模擬器（雙打、傳統計分）</span><span data-l="en">Try it · Score-call trainer (doubles, side-out)</span></div>
+ <div class="sim" id="sim"></div>
+
+ <div class="feature">
+  <div class="kick"><span data-l="zh">2026 規則更新</span><span data-l="en">What changed in 2026</span></div>
+  <h3><span data-l="zh">落球得分（Rally scoring）取消「凍結」</span><span data-l="en">Rally scoring drops the "freeze"</span></h3>
+  <p><span data-l="zh">落球得分制是每一球都計分，不論誰發球。2025 年的版本在賽末點規定只有發球方能得分；2026 年規則 14.A.2 取消了這個「凍結」，接發方也能拿下致勝分。傳統 Side-out 計分仍是 USA Pickleball 的預設制度，落球得分屬於可選用的賽制。</span><span data-l="en">In rally scoring, every rally earns a point, whoever served. The 2025 version said only the serving side could win game point; 2026 Rule 14.A.2 removed that freeze, so the receiving side can win the final point too. Traditional side-out scoring remains USA Pickleball's default; rally scoring is an optional format.</span></p>
+ </div>
+
+ <div class="kick"><span data-l="zh">六條核心規則</span><span data-l="en">Six core rules</span></div>
+ <div class="cols c3">
+  <article class="card"><div class="num">i</div><h3><span data-l="zh">發球</span><span data-l="en">The serve</span></h3><ul>
+   <li><span data-l="zh">擊球時手臂由下往上揮，擊球點不高於腰</span><span data-l="en">Arm moves in an upward arc; contact below the waist</span></li>
+   <li><span data-l="zh">拍頭不可高於手腕最高點；拋落地後再擊的「落地發球」不受這三項限制</span><span data-l="en">Paddle head not above the wrist; a drop serve is exempt from these three</span></li>
+   <li><span data-l="zh">至少一腳在底線後，不可踩線或超出中線、邊線延長線</span><span data-l="en">At least one foot behind the baseline; don't touch the line or cross the center/side extensions</span></li>
+   <li><span data-l="zh">對角發球，每人只有一次機會</span><span data-l="en">Serve diagonally; one attempt per server</span></li></ul></article>
+  <article class="card"><div class="num">ii</div><h3><span data-l="zh">雙彈跳規則</span><span data-l="en">Two-bounce rule</span></h3><ul>
+   <li><span data-l="zh">接發方必須讓發球落地彈起再回擊</span><span data-l="en">The receivers must let the serve bounce</span></li>
+   <li><span data-l="zh">發球方也必須讓接發球落地彈起再回擊</span><span data-l="en">The servers must then let the return bounce</span></li>
+   <li><span data-l="zh">兩次彈跳之後，雙方才可截擊</span><span data-l="en">After both bounces, either side may volley</span></li></ul></article>
+  <article class="card"><div class="num">iii</div><h3><span data-l="zh">廚房（非截擊區）</span><span data-l="en">The kitchen (NVZ)</span></h3><ul>
+   <li><span data-l="zh">網前兩側各 7 英尺（約 2.13 公尺），含線</span><span data-l="en">7 feet from the net on each side, lines included</span></li>
+   <li><span data-l="zh">在區內或踩線時截擊＝失誤</span><span data-l="en">Volleying while in it or on its line is a fault</span></li>
+   <li><span data-l="zh">截擊後慣性帶進區內也算失誤，即使球已經死球</span><span data-l="en">Momentum carrying you in after a volley is a fault, even if the ball is already dead</span></li>
+   <li><span data-l="zh">不截擊時，隨時可以進廚房</span><span data-l="en">You may be in the kitchen anytime you're not volleying</span></li></ul></article>
+  <article class="card"><div class="num">iv</div><h3><span data-l="zh">壓線</span><span data-l="en">Lines</span></h3><ul>
+   <li><span data-l="zh">球碰到任何線都算界內</span><span data-l="en">A ball touching any line is in</span></li>
+   <li><span data-l="zh">唯一例外：發球落在廚房線上＝短球失誤</span><span data-l="en">One exception: a serve on the kitchen line is short—a fault</span></li></ul></article>
+  <article class="card"><div class="num">v</div><h3><span data-l="zh">失誤</span><span data-l="en">Faults</span></h3><ul>
+   <li><span data-l="zh">出界、掛網、兩次落地才回擊</span><span data-l="en">Out, into the net, or letting it bounce twice</span></li>
+   <li><span data-l="zh">雙彈跳前截擊、在廚房內截擊</span><span data-l="en">Volleying before both bounces, or from the kitchen</span></li>
+   <li><span data-l="zh">死球前人、衣物或球拍碰網或網柱；球打到身上</span><span data-l="en">You, your clothing or paddle touching the net or post during play; the ball hitting you</span></li>
+   <li><span data-l="zh">接發方失誤＝發球方得分；發球方失誤＝換發</span><span data-l="en">Receiving fault = point to servers; serving fault = loss of serve</span></li></ul></article>
+  <article class="card"><div class="num">vi</div><h3><span data-l="zh">球場</span><span data-l="en">The court</span></h3><ul>
+   <li><span data-l="zh">20 × 44 英尺（約 6.10 × 13.41 公尺），單雙打同尺寸</span><span data-l="en">20 × 44 ft (6.10 × 13.41 m), same for singles and doubles</span></li>
+   <li><span data-l="zh">網高：兩側 36 英寸（91.44 公分），中央 34 英寸（86.36 公分）</span><span data-l="en">Net: 36 in at the sidelines, 34 in at the center</span></li></ul></article>
+ </div>
+
+ <blockquote class="pq"><span data-l="zh">發球擦網、落在正確發球區？繼續打。發球沒有「重發」。</span><span data-l="en">Serve clips the net and lands in the right box? Play on. There are no lets on serves.</span><cite><span data-l="zh">最常見的誤會 · 本刊整理</span><span data-l="en">The most common myth · Our note</span></cite></blockquote>
+ <p class="src"><span data-l="zh">依據：USA Pickleball 2026 官方規則與規則摘要、2026 規則變更文件（Rule 14.A.2）。本頁為摘要，正式比賽以官方規則書與賽事規程為準。</span><span data-l="en">Based on the USA Pickleball 2026 Official Rulebook and rules summary, and the 2026 Rulebook Change Document (Rule 14.A.2). This is a summary; the official rulebook and event regulations prevail.</span></p>
+</section>
+
+<!-- ===== 09 CORNER ===== -->
+<section class="slide" data-n="9">
+ <div class="kick">VIII · Gear &amp; Coach's Corner</div>
  <h2 class="h-big"><span data-l="zh">本期<em>裝備</em>推薦</span><span data-l="en">This issue's <em>gear</em></span></h2>
  <div class="gear" id="gear"></div>
  <div class="corner">
@@ -338,7 +418,7 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
 <footer class="foot">
  <div class="foot-in">
   <button class="tbtn" id="prev">←</button>
-  <span class="folio" id="folio">01 / 08</span>
+  <span class="folio" id="folio">01 / 09</span>
   <span class="pname" id="pname"></span>
   <div class="sp"></div>
   <button class="tbtn" id="next">→</button>
@@ -429,13 +509,46 @@ var GEAR=[
   en:{tag:'All-court spin',d:'Six Zero positions it as all-court: heavy spin and ball bite with plush power, and a dwell feel that helps resets, drops and touch shots.',fit:'For: touch at the net plus topspin attack'},
   kv:[['Core','16mm · Hybrid / Elongated / Widebody'],['Weight','8.0–8.3 oz'],['Swing / Twist','Hybrid 114 / 6.70'],['Cert','UPA · UPA + USAP versions']]}
 ];
-var UI={zh:{pages:['封面','握拍','發球與接發','網前截擊','廚房區','強攻三招','你的處方','裝備與教練課'],watch:'看示範',watch2:'延伸：教學 30',copied:'已複製 NINJA',rxh:'建議觀看順序',buy:'前往選購',copy:'複製優惠碼',src:'數據來源：Six Zero 官網商品頁（2026/11/17 查詢）；描述為官方定位整理。',ep:'教學',min:'長度',pub:'上傳'},
- en:{pages:['Cover','Grip','Serve & return','Volleys','The kitchen','Power trio','Your prescription','Gear & lessons'],watch:'Watch',watch2:'Also: Lesson 30',copied:'Copied NINJA',rxh:'Watch in this order',buy:'Shop',copy:'Copy code',src:'Source: Six Zero product pages (checked 17 Nov 2026); descriptions summarise the brand’s own positioning.',ep:'Lesson',min:'Length',pub:'Uploaded'}};
-var ROMAN=['','I','II','III','IV','V','VI','VII'];
-var lang='zh',cur=1,N=8,sel=0;
+var UI={zh:{pages:['封面','握拍','發球與接發','網前截擊','廚房區','強攻三招','你的處方','規則與計分','裝備與教練課'],watch:'看示範',watch2:'延伸：教學 30',copied:'已複製 NINJA',rxh:'建議觀看順序',buy:'前往選購',copy:'複製優惠碼',src:'數據來源：Six Zero 官網商品頁（2026/11/17 查詢）；描述為官方定位整理。',ep:'教學',min:'長度',pub:'上傳'},
+ en:{pages:['Cover','Grip','Serve & return','Volleys','The kitchen','Power trio','Your prescription','Rules & scoring','Gear & lessons'],watch:'Watch',watch2:'Also: Lesson 30',copied:'Copied NINJA',rxh:'Watch in this order',buy:'Shop',copy:'Copy code',src:'Source: Six Zero product pages (checked 17 Nov 2026); descriptions summarise the brand’s own positioning.',ep:'Lesson',min:'Length',pub:'Uploaded'}};
+var ROMAN=['','I','II','III','IV','V','VI','VII','VIII'];
+var lang='zh',cur=1,N=9,sel=0;
+function pad(n){return String(n).padStart(2,'0')}
 function $(s,r){return (r||document).querySelector(s)}
 function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+
+var SIMT={zh:{srvw:'發球方贏球',rcvw:'接發方贏球',reset:'重新開局',to:'打到',team:'隊',right:'右發球區',left:'左發球區',net:'網',serving:'發球中',call:'發球員報分',start:'開局：A 隊先發，只有一位發球員（A1），報 0-0-2。',pt:function(p){return '發球方得分 → 加 1 分。'+p+' 與搭檔換邊，繼續由 '+p+' 發球。'},s2:function(p){return '1 號發球員失誤 → 換搭檔 '+p+' 從他目前的位置發球，成為 2 號發球。'},so:function(p,t){return '2 號發球員失誤 → 換發（Side out）。'+t+' 隊站在右區的 '+p+' 成為 1 號發球員。'},so0:function(p,t){return '開局唯一的發球員失誤 → 直接換發。'+t+' 隊右區的 '+p+' 為 1 號發球員。'},win:function(t,a,b){return t+' 隊 '+a+':'+b+' 獲勝！'},chk:function(ok){return ok?'站位檢查：A1、B1 都符合「自家分數偶數站右、奇數站左」。':'站位錯誤'}},
+ en:{srvw:'Serving side wins rally',rcvw:'Receiving side wins rally',reset:'New game',to:'Play to',team:'Team',right:'Right court',left:'Left court',net:'NET',serving:'serving',call:'Server calls',start:'Start: Team A serves first with one server only (A1). Call 0-0-2.',pt:function(p){return 'Serving side wins → +1 point. '+p+' switches courts with their partner and serves again.'},s2:function(p){return 'Server 1 faults → partner '+p+' serves from where they stand, as server 2.'},so:function(p,t){return 'Server 2 faults → side out. '+p+', in Team '+t+'’s right court, becomes server 1.'},so0:function(p,t){return 'The single starting server faults → immediate side out. '+p+' (right court, Team '+t+') is server 1.'},win:function(t,a,b){return 'Team '+t+' wins '+a+'-'+b+'!'},chk:function(ok){return ok?'Position check: A1 and B1 each stand right on an even team score, left on odd.':'Position error'}}};
+var S;
+function simReset(){var tg=S?S.target:11;S={a:{R:'A1',L:'A2',s:0},b:{R:'B1',L:'B2',s:0},srv:'a',num:2,server:'A1',first:true,target:tg,over:null,log:['start']};}
+function oth(k){return k==='a'?'b':'a'}
+function partner(t,p){return t.R===p?t.L:t.R}
+function simAct(k){
+ if(S.over)return;var t=S[S.srv];
+ if(k==='w'){t.s++;var x=t.R;t.R=t.L;t.L=x;S.log=['pt',S.server];
+  var o=S[oth(S.srv)];if(t.s>=S.target&&t.s-o.s>=2)S.over=S.srv;}
+ else{
+  if(S.num===1){S.num=2;S.server=partner(t,S.server);S.log=['s2',S.server];}
+  else{var wasFirst=S.first;S.first=false;S.srv=oth(S.srv);S.num=1;S.server=S[S.srv].R;S.log=[wasFirst?'so0':'so',S.server,S.srv.toUpperCase()];}
+ }
+ renderSim();
+}
+function posOk(){function ok(t,p){var even=t.s%2===0;return even?t.R===p:t.L===p}return ok(S.a,'A1')&&ok(S.b,'B1')}
+function renderSim(){
+ if(!S)simReset();var u=SIMT[lang],a=S[S.srv],b=S[oth(S.srv)];
+ var L=S.log,msg=u[L[0]];msg=typeof msg==='function'?msg(L[1],L[2]):msg;
+ function cell(t,side){var p=t[side];return '<div><small>'+(side==='R'?u.right:u.left)+'</small><span class="chip'+(p===S.server&&!S.over?' srv':'')+'">'+p+'</span></div>'}
+ function half(k,flip){var t=S[k];var cells=flip?cell(t,'R')+cell(t,'L'):cell(t,'L')+cell(t,'R');
+  return '<div class="tm'+(S.srv===k&&!S.over?' on':'')+'"><span>'+u.team+' '+k.toUpperCase()+(S.srv===k&&!S.over?' · '+u.serving:'')+'</span><span>'+t.s+'</span></div><div class="half">'+cells+'</div>'}
+ var html='<div><div class="kick">'+u.call+'</div><div class="scall">'+a.s+' – '+b.s+' – <em>'+S.num+'</em></div>'
+  +'<div class="slog">'+esc(msg)+'</div>'+(S.over?'<div class="win">'+esc(u.win(S.over.toUpperCase(),S[S.over].s,S[oth(S.over)].s))+'</div>':'')
+  +'<div class="row"><button class="btn dark" data-sim="w">'+u.srvw+'</button><button class="btn" data-sim="l">'+u.rcvw+'</button></div>'
+  +'<div class="row" style="margin-top:10px"><button class="btn" data-sim="r">'+u.reset+'</button><label class="mono" style="font-size:12px">'+u.to+' <select id="simT">'+[11,15,21].map(function(n){return '<option'+(n===S.target?' selected':'')+'>'+n+'</option>'}).join('')+'</select></label></div>'
+  +'<p class="src">'+esc(u.chk(posOk()))+'</p></div>'
+  +'<div class="court">'+half('b',true)+'<div class="netl"><span>'+u.net+'</span></div>'+half('a',false)+'</div>';
+ $('#sim').innerHTML=html;
+}
 function render(){
  var u=UI[lang];
  $$('[data-cards]').forEach(function(box){
@@ -445,11 +558,12 @@ function render(){
    return '<article class="card"><div class="num">'+String(i+1).padStart(2,'0')+'</div><h3>'+esc(L.n)+'</h3><div class="en-sub">'+c.sub+' · '+u.ep+' '+VID[c.v].ep+'</div><ul>'+L.b.map(function(b){return '<li>'+esc(b)+'</li>'}).join('')+'</ul><a class="watch" href="'+YT(VID[c.v].id,c.t)+'" target="_blank" rel="noopener">'+u.watch+' '+mmss(c.t)+'</a>'+extra+'</article>'}).join('');
  });
  $('#tiers').innerHTML=TIERS.map(function(t){var L=t[lang];return '<div class="tier"><b>'+L[0]+'</b><div class="en-sub mono" style="font-size:11px;color:var(--mute);text-transform:uppercase">'+L[1]+'</div><div class="bar"><span style="width:'+t.w+'%"></span></div><div style="font-size:15px">'+L[2]+'</div></div>'}).join('');
- var lines=u.pages.map(function(p,i){return i?'<li data-go="'+(i+1)+'"><i>'+ROMAN[i]+'</i><div><b>'+p+'</b><small>'+String(i+1).padStart(2,'0')+' / 08</small></div></li>':''}).join('');
+ var lines=u.pages.map(function(p,i){return i?'<li data-go="'+(i+1)+'"><i>'+ROMAN[i]+'</i><div><b>'+p+'</b><small>'+String(i+1).padStart(2,'0')+' / '+pad(N)+'</small></div></li>':''}).join('');
  $('#covlines').innerHTML=lines;
- $('#toclist').innerHTML='<li data-go="1"><i>·</i><div><b>'+u.pages[0]+'</b><small>01 / 08</small></div></li>'+lines;
+ $('#toclist').innerHTML='<li data-go="1"><i>·</i><div><b>'+u.pages[0]+'</b><small>01 / '+pad(N)+'</small></div></li>'+lines;
  $('#opts').innerHTML=MATCH.map(function(m,i){return '<label><input type="radio" name="m" value="'+i+'"'+(i===sel?' checked':'')+'><span>'+esc(m[lang])+'</span></label>'}).join('');
  renderRx();
+ renderSim();
  $('#vidx').innerHTML=Object.keys(VID).map(function(k){return VID[k]}).sort(function(a,b){return a.ep-b.ep}).map(function(v){
   var ts=[];Object.keys(CARDS).forEach(function(g){CARDS[g].forEach(function(c){if(VID[c.v]===v)ts.push(c.t);if(c.v2&&VID[c.v2]===v)ts.push(c.t2)})});
   if(v===VID.force)ts.push(59);if(v===VID.volley)ts.push(73);
@@ -467,7 +581,7 @@ function renderRx(){
 function go(n,push){
  n=Math.max(1,Math.min(N,n));cur=n;
  $$('.slide').forEach(function(s){s.classList.toggle('on',+s.getAttribute('data-n')===n)});
- $('#folio').textContent=String(n).padStart(2,'0')+' / 08';
+ $('#folio').textContent=String(n).padStart(2,'0')+' / '+pad(N);
  $('#pname').textContent=UI[lang].pages[n-1];
  $('#prog').style.width=(n/N*100)+'%';
  if(push!==false){try{history.replaceState(null,'','#'+n)}catch(e){location.hash=n}}
@@ -490,9 +604,10 @@ function copy(t){
 function fallback(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
 document.addEventListener('click',function(e){
  var c=e.target.closest('[data-copy]');if(c){copy(c.getAttribute('data-copy'));return}
+ var sb=e.target.closest('[data-sim]');if(sb){var a=sb.getAttribute('data-sim');if(a==='r'){simReset();renderSim()}else simAct(a);return}
  var g=e.target.closest('[data-go]');if(g){$('#toc').classList.remove('on');go(+g.getAttribute('data-go'));return}
 });
-document.addEventListener('change',function(e){if(e.target.name==='m'){sel=+e.target.value;renderRx()}});
+document.addEventListener('change',function(e){if(e.target.name==='m'){sel=+e.target.value;renderRx()}if(e.target.id==='simT'){S.target=+e.target.value;simReset();renderSim()}});
 $('#prev').onclick=function(){go(cur-1)};
 $('#next').onclick=function(){go(cur+1)};
 $('#langBtn').onclick=function(){setLang(lang==='zh'?'en':'zh',true)};
@@ -500,7 +615,7 @@ $('#tocBtn').onclick=function(){$('#toc').classList.add('on')};
 $('#tocClose').onclick=function(){$('#toc').classList.remove('on')};
 $('#toc').onclick=function(e){if(e.target.id==='toc')$('#toc').classList.remove('on')};
 document.addEventListener('keydown',function(e){
- if(e.target.tagName==='INPUT')return;
+ if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT')return;
  if(e.key==='ArrowRight')go(cur+1);else if(e.key==='ArrowLeft')go(cur-1);else if(e.key==='Escape')$('#toc').classList.remove('on');
 });
 window.addEventListener('hashchange',function(){var h=parseInt(location.hash.slice(1),10);if(h&&h!==cur)go(h,false)});
