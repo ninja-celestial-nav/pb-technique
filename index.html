@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Paddle Review · 技術特輯：張教練精選影片全解析</title>
+<meta name="description" content="匹克球技術特輯：張教練 YouTube 教學影片重點整理，握拍、發球、接發、截擊、丁克、強抽、扣殺、重推，附時間軸直達連結。Coach Ninja / NinjaPB.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,600;0,800;1,500;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4F0E7;--paper2:#ECE6D8;--ink:#161513;--mute:#5E5A52;--rule:#C9C1B0;--acc:#A3311D;--accd:#7E2414;
+--serif:"Noto Serif TC","Songti TC",serif;--disp:"Playfair Display","Noto Serif TC",serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.7;-webkit-font-smoothing:antialiased}
+html:not(.en) [data-l="en"],html.en [data-l="zh"]{display:none!important}
+html.en .h-big,html.en .mast{font-family:var(--disp)}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.mono{font-family:var(--mono);letter-spacing:.04em}
+/* header */
+.top{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--ink)}
+.top-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:10px 24px}
+.mast{font-family:var(--disp);font-weight:800;font-size:22px;white-space:nowrap;letter-spacing:-.01em}
+.mast i{color:var(--acc);font-weight:700}
+.issue{font-family:var(--mono);font-size:11px;color:var(--mute);text-transform:uppercase;white-space:nowrap}
+.sp{flex:1}
+.tbtn{font-family:var(--mono);font-size:12px;text-transform:uppercase;padding:6px 10px;border:1px solid var(--ink);border-radius:999px}
+.tbtn:hover{background:var(--ink);color:var(--paper)}
+.pill{background:var(--acc);color:#fff;border-color:var(--acc);text-decoration:none;font-weight:500}
+.pill:hover{background:var(--accd);color:#fff}
+.prog{height:2px;background:var(--acc);width:0;transition:width .3s}
+.short{display:none}
+/* slides */
+main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
+.slide{display:none;padding:44px 0 24px;animation:fade .35s ease}
+.slide.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.kick{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--acc);margin-bottom:10px}
+.h-big{font-weight:900;font-size:clamp(34px,5.4vw,64px);line-height:1.12;letter-spacing:-.01em;margin-bottom:14px}
+.h-big em{font-family:var(--disp);font-style:italic;color:var(--acc);font-weight:700}
+.deck{font-size:19px;color:var(--mute);max-width:760px;margin-bottom:28px}
+.rule2{border:0;border-top:3px double var(--ink);margin:22px 0}
+.cols{display:grid;gap:0;border-top:1px solid var(--ink)}
+.c2{grid-template-columns:1fr 1fr}.c3{grid-template-columns:repeat(3,1fr)}
+.card{padding:22px 22px 24px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);display:flex;flex-direction:column}
+.cols>.card:last-child{border-right:0}
+.c2>.card:nth-child(2n),.c3>.card:nth-child(3n){border-right:0}
+.num{font-family:var(--disp);font-style:italic;font-size:38px;color:var(--acc);line-height:1}
+.card h3{font-size:22px;font-weight:700;margin:6px 0 2px;line-height:1.3}
+.card .en-sub{font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--mute);letter-spacing:.08em;margin-bottom:10px}
+.card ul{list-style:none;margin:6px 0 14px}
+.card li{padding:5px 0 5px 16px;position:relative;border-top:1px dotted var(--rule);font-size:15.5px}
+.card li:first-child{border-top:0}
+.card li:before{content:"";position:absolute;left:0;top:14px;width:7px;height:1px;background:var(--acc)}
+.spec{font-family:var(--mono);font-size:12.5px;background:var(--paper2);padding:2px 6px;margin-right:4px;white-space:nowrap}
+.watch{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;align-self:flex-start}
+.watch:before{content:"▶";color:var(--acc);font-size:10px}
+.watch:hover{color:var(--acc);border-color:var(--acc)}
+.src{font-family:var(--mono);font-size:11px;color:var(--mute);margin-top:18px;line-height:1.6}
+.dropcap:first-letter{float:left;font-family:var(--disp);font-size:76px;line-height:.85;padding:6px 10px 0 0;color:var(--acc);font-weight:800}
+.lede{font-size:18px;max-width:780px;margin-bottom:22px}
+.pq{border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);padding:22px 0;margin:30px 0;font-size:clamp(22px,3vw,30px);font-weight:700;line-height:1.45;max-width:880px}
+.pq:before{content:"“";font-family:var(--disp);color:var(--acc);font-size:64px;line-height:0;vertical-align:-24px;margin-right:6px}
+.pq cite{display:block;font-family:var(--mono);font-size:12px;font-style:normal;color:var(--mute);margin-top:10px;font-weight:400;text-transform:uppercase}
+.feature{background:var(--ink);color:var(--paper);padding:30px 32px;margin:30px 0}
+.feature .kick{color:#E9907E}
+.feature h3{font-size:28px;font-weight:900;line-height:1.3;margin-bottom:10px}
+.feature p{color:#D8D2C4}
+.feature .watch{border-color:var(--paper)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.tier{padding:20px;border-right:1px solid var(--rule)}
+.tier:last-child{border-right:0}
+.bar{height:8px;background:var(--paper2);margin:10px 0 12px;position:relative}
+.bar span{position:absolute;inset:0 auto 0 0;background:var(--acc)}
+.tier b{font-size:20px}
+.steps{display:flex;gap:0;border:1px solid var(--ink);margin:14px 0}
+.steps div{flex:1;padding:14px;border-right:1px solid var(--ink);text-align:center}
+.steps div:last-child{border-right:0}
+.steps .num{font-size:30px}
+/* cover */
+.cover{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:start}
+.cover .h-big{font-size:clamp(40px,6.6vw,84px)}
+.covlines{list-style:none;border-top:1px solid var(--ink)}
+.covlines li{display:flex;gap:16px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--rule);cursor:pointer}
+.covlines li:hover b{color:var(--acc)}
+.covlines i{font-family:var(--disp);color:var(--acc);font-size:20px;min-width:34px}
+.covlines b{font-size:17px}
+.covlines small{display:block;font-family:var(--mono);font-size:11px;color:var(--mute);text-transform:uppercase}
+.codecard{border:1px solid var(--ink);padding:22px;background:#fff8}
+.codecard .code{font-family:var(--mono);font-size:40px;font-weight:500;letter-spacing:.2em;border:2px dashed var(--acc);color:var(--acc);text-align:center;padding:8px;margin:12px 0}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.btn{font-family:var(--mono);font-size:12px;text-transform:uppercase;padding:9px 14px;border:1px solid var(--ink);text-decoration:none;display:inline-block}
+.btn.dark{background:var(--ink);color:var(--paper)}
+.btn.red{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn:hover{opacity:.85}
+.disc{font-size:12.5px;color:var(--mute);margin-top:12px;line-height:1.6}
+.credit{border-left:3px solid var(--acc);padding:4px 0 4px 14px;margin:20px 0;font-size:15px}
+/* matcher + index */
+.mx{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;border-top:1px solid var(--ink);padding-top:20px}
+.opts label{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--rule);cursor:pointer;font-size:16px}
+.opts input{accent-color:var(--acc);margin-top:7px}
+.rx{background:#fff8;border:1px solid var(--ink);padding:22px;position:sticky;top:80px}
+.rx h4{font-size:22px;margin-bottom:6px}
+.rx ol{list-style:none;counter-reset:r}
+.rx li{counter-increment:r;padding:12px 0 12px 44px;border-top:1px solid var(--rule);position:relative}
+.rx li:before{content:counter(r,decimal-leading-zero);position:absolute;left:0;top:8px;font-family:var(--disp);font-style:italic;color:var(--acc);font-size:26px}
+.rx li a{font-weight:700;text-decoration:none;border-bottom:1px solid var(--acc)}
+.rx li small{display:block;color:var(--mute);font-size:13.5px}
+.vidx{list-style:none;border-top:3px double var(--ink);margin-top:34px}
+.vidx li{display:grid;grid-template-columns:70px 1fr auto;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.vidx .ep{font-family:var(--disp);font-style:italic;font-size:26px;color:var(--acc)}
+.vidx .ttl{font-weight:700}
+.vidx .meta{font-family:var(--mono);font-size:11.5px;color:var(--mute)}
+.vidx .chips a{font-family:var(--mono);font-size:11.5px;border:1px solid var(--rule);padding:1px 6px;margin:2px 4px 0 0;display:inline-block;text-decoration:none}
+.vidx .chips a:hover{border-color:var(--acc);color:var(--acc)}
+/* corner */
+.corner{background:var(--ink);color:var(--paper);padding:36px;margin-top:6px}
+.corner .kick{color:#E9907E}
+.corner .h-big{color:var(--paper)}
+.corner .deck{color:#CFC8B8}
+.cgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid #444}
+.cgrid>div{padding:20px;border-right:1px solid #444}
+.cgrid>div:last-child{border-right:0}
+.price{display:flex;justify-content:space-between;border-bottom:1px dotted #555;padding:7px 0;font-family:var(--mono);font-size:14px}
+.price b{font-family:var(--disp);font-size:22px;color:#fff}
+.corner ul{list-style:none}
+.corner li{padding:6px 0;border-bottom:1px dotted #555;font-size:15px}
+.corner .btn{border-color:var(--paper);color:var(--paper)}
+.corner .btn.red{border-color:var(--acc)}
+.corner .disc{color:#A9A294}
+.gear{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);margin-bottom:30px}
+.gear>div{padding:22px;border-right:1px solid var(--rule)}
+.gear>div:last-child{border-right:0}
+.gear h3{font-family:var(--disp);font-size:28px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-family:var(--mono);font-size:12.5px;margin:12px 0}
+.kv dt{color:var(--mute);text-transform:uppercase}
+.codeinline{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:1px dashed var(--acc);padding-top:12px;margin-top:10px}
+.codeinline .c{font-family:var(--mono);color:var(--acc);font-size:18px;letter-spacing:.15em;border:1px dashed var(--acc);padding:2px 10px}
+/* footer nav */
+.foot{position:fixed;bottom:0;left:0;right:0;background:var(--paper);border-top:1px solid var(--ink);z-index:20}
+.foot-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;padding:10px 24px;gap:14px}
+.folio{font-family:var(--disp);font-style:italic;font-size:18px}
+.pname{font-family:var(--mono);font-size:11px;color:var(--mute);text-transform:uppercase}
+/* contents overlay */
+.toc{position:fixed;inset:0;background:rgba(22,21,19,.55);z-index:40;display:none;align-items:flex-start;justify-content:center;padding:70px 16px}
+.toc.on{display:flex}
+.toc-in{background:var(--paper);max-width:560px;width:100%;padding:28px;border:1px solid var(--ink);max-height:80vh;overflow:auto}
+.toast{position:fixed;left:50%;bottom:76px;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:8px 16px;font-family:var(--mono);font-size:12px;opacity:0;transition:.25s;z-index:50;pointer-events:none}
+.toast.on{opacity:1}
+@media (max-width:860px){
+ .top-in{padding:8px 14px;gap:8px}.mast{font-size:18px}.issue{display:none}
+ .long{display:none}.short{display:inline}
+ main{padding:0 16px 96px}.slide{padding-top:28px}
+ .cover,.mx,.c2,.c3,.tiers,.cgrid,.gear{grid-template-columns:1fr}
+ .card,.tier,.gear>div{border-right:0!important}
+ .cgrid>div{border-right:0;border-bottom:1px solid #444}
+ .corner,.feature{padding:24px 20px}
+ .rx{position:static}
+ .vidx li{grid-template-columns:48px 1fr}.vidx .meta.r{grid-column:2}
+ .steps{flex-direction:column}.steps div{border-right:0;border-bottom:1px solid var(--ink)}.steps div:last-child{border-bottom:0}
+ .deck{font-size:17px}.foot-in{padding:8px 14px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="top-in">
+  <div class="mast">The Paddle <i>Review</i></div>
+  <div class="issue"><span data-l="zh">技術特輯 · 2026 年 11 月</span><span data-l="en">Technique Special · Nov 2026</span></div>
+  <div class="sp"></div>
+  <button class="tbtn" id="langBtn" aria-label="Switch language">EN</button>
+  <button class="tbtn" id="tocBtn"><span class="long"><span data-l="zh">目錄</span><span data-l="en">Contents</span></span><span class="short">≡</span></button>
+  <a class="tbtn pill" href="https://ninjapb.vercel.app/" target="_blank" rel="noopener"><span class="long"><span data-l="zh">預約教練課</span><span data-l="en">Book a lesson</span></span><span class="short"><span data-l="zh">預約課程</span><span data-l="en">Book</span></span></a>
+ </div>
+ <div class="prog" id="prog"></div>
+</header>
+
+<main id="main">
+
+<!-- ===== 01 COVER ===== -->
+<section class="slide" data-n="1">
+ <div class="cover">
+  <div>
+   <div class="kick"><span data-l="zh">技術特輯 · 張教練精選影片全解析</span><span data-l="en">Technique Special · Coach Chang's video lessons, decoded</span></div>
+   <h1 class="h-big"><span data-l="zh">十一支影片，<br>一套<em>完整</em>打法</span><span data-l="en">Eleven videos.<br>One <em>complete</em> game.</span></h1>
+   <p class="deck"><span data-l="zh">從握拍到重推，我們把張教練 YouTube 頻道的實戰教學整理成一本可以帶上球場的雜誌——每個重點都附時間軸，點一下直接看示範。</span><span data-l="en">From grip to hard push, we turned Coach Chang's YouTube lessons into a magazine you can take to the court. Every point links to the exact second of the demo.</span></p>
+   <ul class="covlines" id="covlines"></ul>
+  </div>
+  <aside>
+   <div class="codecard">
+    <div class="kick"><span data-l="zh">Six Zero 官網專屬優惠</span><span data-l="en">Six Zero store offer</span></div>
+    <div><span data-l="zh">結帳時輸入優惠碼，全館 9 折（10% OFF）</span><span data-l="en">Enter this code at checkout for 10% off</span></div>
+    <div class="code">NINJA</div>
+    <div class="row">
+     <button class="btn dark" data-copy="NINJA"><span data-l="zh">複製優惠碼</span><span data-l="en">Copy code</span></button>
+     <a class="btn" href="https://www.sixzeropickleball.com/NINJA" target="_blank" rel="noopener sponsored"><span data-l="zh">前往 Six Zero 官網</span><span data-l="en">Visit Six Zero</span></a>
+    </div>
+    <p class="disc"><span data-l="zh">推薦連結不會自動套用折扣，請記得在結帳頁貼上 NINJA。揭露：Coach Ninja 為 Six Zero 官方品牌推廣大使，透過本頁連結或優惠碼購買，他可能獲得推薦回饋。</span><span data-l="en">The link does not apply the discount automatically—paste NINJA at checkout. Disclosure: Coach Ninja is an official Six Zero brand ambassador and may earn a referral reward from purchases made through this page or code.</span></p>
+   </div>
+   <div class="credit"><span data-l="zh">影片來源：張教練 YouTube 頻道 <a href="https://www.youtube.com/@pickleballcoachchang" target="_blank" rel="noopener">@pickleballcoachchang</a>。本刊整理重點並附連結，影片著作權屬原頻道所有，歡迎到頻道訂閱支持。</span><span data-l="en">Source: Coach Chang's YouTube channel <a href="https://www.youtube.com/@pickleballcoachchang" target="_blank" rel="noopener">@pickleballcoachchang</a>. We summarise and link; the videos belong to the channel—go subscribe.</span></div>
+   <p class="src"><span data-l="zh">編輯：Coach Ninja · NinjaPB Performance Academy<br>使用方式：← → 鍵或下方按鈕翻頁</span><span data-l="en">Edited by Coach Ninja · NinjaPB Performance Academy<br>Use ← → keys or the buttons below to turn pages</span></p>
+  </aside>
+ </div>
+</section>
+
+<!-- ===== 02 GRIP ===== -->
+<section class="slide" data-n="2">
+ <div class="kick">I · Fundamentals</div>
+ <h2 class="h-big"><span data-l="zh">握拍：<em>沒有標準</em>答案</span><span data-l="en">The grip has <em>no single</em> right answer</span></h2>
+ <p class="lede dropcap"><span data-l="zh">張教練的第一課很務實：握法只是參考，能把球穩定處理好才是重點。初學者先用東方式打底，想加上旋時再換西方式；而握得多緊，則要看你正在打哪一顆球。</span><span data-l="en">Coach Chang's first lesson is practical: grips are a reference point, and handling the ball reliably is what counts. Beginners build on the Eastern grip, switch toward Western when they want topspin—and how hard you squeeze depends on which shot you're hitting.</span></p>
+ <div class="cols c2" data-cards="grip"></div>
+ <blockquote class="pq"><span data-l="zh">握拍沒有一定標準，能將球處理好最重要。</span><span data-l="en">There's no fixed standard for the grip. Handling the ball well is what matters most.</span><cite><span data-l="zh">張教練 · 教學 33〈球拍該怎麼握〉</span><span data-l="en">Coach Chang · Lesson 33, How to hold the paddle (translated)</span></cite></blockquote>
+ <div class="kick"><span data-l="zh">握拍力道 · 教學 23</span><span data-l="en">Grip pressure · Lesson 23</span></div>
+ <div class="tiers" id="tiers"></div>
+ <p style="margin-top:14px"><a class="watch" href="https://youtu.be/VDOVj5mnir4?t=59" target="_blank" rel="noopener"><span data-l="zh">看握力重點 0:59</span><span data-l="en">Watch grip pressure 0:59</span></a></p>
+</section>
+
+<!-- ===== 03 SERVE & RETURN ===== -->
+<section class="slide" data-n="3">
+ <div class="kick">II · Serve &amp; Return</div>
+ <h2 class="h-big"><span data-l="zh">開局六招：<em>三發</em>三接</span><span data-l="en">Six ways to start a point: <em>three serves,</em> three returns</span></h2>
+ <p class="deck"><span data-l="zh">張教練用「時鐘」描述拍面角度與擊球點：5-5 拍面約仰角 45°，8-2 拍面微朝上；擊球點的幾點鐘則是球的位置。</span><span data-l="en">Coach Chang describes paddle face and contact with a clock: a 5-5 face is open about 45°, an 8-2 face is slightly open; the "o'clock" contact point refers to the position on the ball.</span></p>
+ <div class="kick"><span data-l="zh">發球 · 教學 16</span><span data-l="en">Serves · Lesson 16</span></div>
+ <div class="cols c3" data-cards="serve"></div>
+ <hr class="rule2">
+ <div class="kick"><span data-l="zh">接發球 · 教學 18</span><span data-l="en">Returns · Lesson 18</span></div>
+ <div class="cols c3" data-cards="ret"></div>
+</section>
+
+<!-- ===== 04 NET PLAY ===== -->
+<section class="slide" data-n="4">
+ <div class="kick">III · Net Play</div>
+ <h2 class="h-big"><span data-l="zh">截擊：先求<em>穩</em>，再求狠</span><span data-l="en">Volleys: <em>steady</em> first, then sharp</span></h2>
+ <p class="deck"><span data-l="zh">初學者先練 8-2 拍面帶切，把球擋穩；進階者再加入平擊與帶上旋截擊，提升攻擊力。帶上旋的仰角要依來球高度調整，8-2 只是參考。</span><span data-l="en">Beginners start with the 8-2 slice volley to block steadily; advanced players add the flat and topspin volley for more attack. On the topspin volley, adjust the face to the ball's height—8-2 is just a reference.</span></p>
+ <div class="cols c3" data-cards="volley"></div>
+ <div class="feature">
+  <div class="kick"><span data-l="zh">實戰戰術 · 本刊整理</span><span data-l="en">Match tactics · Our summary</span></div>
+  <h3><span data-l="zh">進攻落點三原則</span><span data-l="en">Three targets when you attack</span></h3>
+  <p><span data-l="zh">① 打還留在底線的對手　② 攻接球較弱的一方　③ 壓對手腳邊。</span><span data-l="en">① The opponent still back at the baseline. ② The weaker returner. ③ Their feet.</span></p>
+  <p style="margin:14px 0 12px;font-size:13px"><span data-l="zh">本刊依截擊教學 1:13 段落整理（影片說明欄未列出，以影片內容為準）。</span><span data-l="en">Our summary of the 1:13 segment of the volley lesson (not listed in the video description—the video itself is the reference).</span></p>
+  <a class="watch" href="https://youtu.be/eZQ4cloSYeU?t=73" target="_blank" rel="noopener"><span data-l="zh">看戰術解析 1:13</span><span data-l="en">Watch tactics 1:13</span></a>
+ </div>
+</section>
+
+<!-- ===== 05 KITCHEN ===== -->
+<section class="slide" data-n="5">
+ <div class="kick">IV · Kitchen Control</div>
+ <h2 class="h-big"><span data-l="zh">廚房區：<em>耐心</em>與突破</span><span data-l="en">The kitchen: <em>patience</em> and the breakthrough</span></h2>
+ <p class="deck"><span data-l="zh">丁克對峙的第一原則是穩定、不亂失誤；但耐心只是手段——等到對手送出偏高的球，你要有三種方法把局面打開。</span><span data-l="en">Rule one of the dink rally: be steady, no free errors. But patience is a means, not the goal—when the ball pops up, you need three ways to break the rally open.</span></p>
+ <div class="kick"><span data-l="zh">丁克 · 教學 11</span><span data-l="en">Dinks · Lesson 11</span></div>
+ <div class="cols c2" data-cards="dink"></div>
+ <div class="feature">
+  <div class="kick"><span data-l="zh">大哉問</span><span data-l="en">The big question</span></div>
+  <h3><span data-l="zh">什麼時候該停止丁克、開始進攻？</span><span data-l="en">When do you stop dinking and attack?</span></h3>
+  <p><span data-l="zh">張教練的答案是：等對手回球過高。下面三招都建立在同一個前提上——先用丁克把對手逼出一顆「可以打」的球，再決定是突襲、挑高，還是斜角上旋。</span><span data-l="en">Coach Chang's answer: when the opponent's ball comes up too high. All three plays below share that premise—use the dink to force an attackable ball, then choose the speed-up, the lob or the inside-out topspin.</span></p>
+ </div>
+ <div class="kick"><span data-l="zh">突破丁克 · 教學 17</span><span data-l="en">Breaking the dink · Lesson 17</span></div>
+ <div class="cols c3" data-cards="brk"></div>
+</section>
+
+<!-- ===== 06 POWER ===== -->
+<section class="slide" data-n="6">
+ <div class="kick">V · Power</div>
+ <h2 class="h-big"><span data-l="zh">強抽、扣殺、重推：<em>終結</em>三連發</span><span data-l="en">Drive, smash, push: the <em>finishing</em> trio</span></h2>
+ <p class="deck"><span data-l="zh">三招的共同點：以小臂發力為主。差別在於來球高度——肩膀以上扣殺、偏高但在肩下用重推、中場則用帶上旋的強抽把球壓進底線。</span><span data-l="en">What they share: the forearm does most of the work. What separates them is ball height—smash above the shoulder, hard-push a high ball below the shoulder, and drive from mid-court with topspin to keep it in.</span></p>
+ <div class="cols c3" data-cards="power"></div>
+ <div class="kick" style="margin-top:26px"><span data-l="zh">扣殺三步驟 · 教學 22</span><span data-l="en">Three steps of the smash · Lesson 22</span></div>
+ <div class="steps">
+  <div><div class="num">01</div><b><span data-l="zh">拉拍</span><span data-l="en">Take back</span></b></div>
+  <div><div class="num">02</div><b><span data-l="zh">揮拍</span><span data-l="en">Swing</span></b></div>
+  <div><div class="num">03</div><b><span data-l="zh">還原</span><span data-l="en">Recover</span></b></div>
+ </div>
+ <p class="src"><span data-l="zh">強抽擊球點：教學 35 建議初學固定拍面、約 4 點鐘位置起步；教學 30 則說明擊球點在球的 8 點鐘位置。兩支影片角度不同，建議都看。</span><span data-l="en">Drive contact: Lesson 35 suggests starting with a fixed face around 4 o'clock; Lesson 30 puts contact at 8 o'clock on the ball. They frame it differently—watch both.</span></p>
+</section>
+
+<!-- ===== 07 PRESCRIPTION ===== -->
+<section class="slide" data-n="7">
+ <div class="kick">VI · The Prescription</div>
+ <h2 class="h-big"><span data-l="zh">你的問題，<em>該看哪一段？</em></span><span data-l="en">Your problem, <em>your playlist</em></span></h2>
+ <p class="deck"><span data-l="zh">選一個你最近最常遇到的狀況，我們幫你排好要看的影片片段。</span><span data-l="en">Pick the problem you hit most often and we'll queue the exact segments to watch.</span></p>
+ <div class="mx">
+  <div class="opts" id="opts"></div>
+  <div class="rx" id="rx"></div>
+ </div>
+ <div class="kick" style="margin-top:40px"><span data-l="zh">影片索引 · 本期引用的 11 支影片</span><span data-l="en">Video index · the 11 videos in this issue</span></div>
+ <ul class="vidx" id="vidx"></ul>
+ <p class="src"><span data-l="zh">影片標題、長度與上傳日期取自 YouTube（2026/11/17 查詢）。</span><span data-l="en">Titles, lengths and upload dates from YouTube (checked 17 Nov 2026). English titles are our translations.</span></p>
+</section>
+
+<!-- ===== 08 CORNER ===== -->
+<section class="slide" data-n="8">
+ <div class="kick">VII · Gear &amp; Coach's Corner</div>
+ <h2 class="h-big"><span data-l="zh">本期<em>裝備</em>推薦</span><span data-l="en">This issue's <em>gear</em></span></h2>
+ <div class="gear" id="gear"></div>
+ <div class="corner">
+  <div class="kick">Coach's Corner</div>
+  <h2 class="h-big"><span data-l="zh">看完影片，<em>上場</em>練一次</span><span data-l="en">You've watched it. Now <em>play</em> it.</span></h2>
+  <p class="deck"><span data-l="zh">Coach Ninja · NinjaPB Performance Academy 創辦人 · RPO Level 1 國際匹克球教練 · Six Zero 官方品牌推廣大使。雙北小班制，慢動作影片分析＋動力鏈診斷。</span><span data-l="en">Coach Ninja · Founder, NinjaPB Performance Academy · RPO Level 1 certified coach · Official Six Zero brand ambassador. Small groups in Taipei &amp; New Taipei, with slow-motion video analysis and kinetic-chain diagnosis.</span></p>
+  <div class="cgrid">
+   <div>
+    <div class="kick"><span data-l="zh">小班課 · 60 分鐘 · 每人每堂</span><span data-l="en">Small group · 60 min · per person</span></div>
+    <div class="price"><span><span data-l="zh">2 人班</span><span data-l="en">2 players</span></span><b>NT$800</b></div>
+    <div class="price"><span><span data-l="zh">3 人班</span><span data-l="en">3 players</span></span><b>NT$600</b></div>
+    <div class="price"><span><span data-l="zh">4 人班</span><span data-l="en">4 players</span></span><b>NT$500</b></div>
+    <p class="disc"><span data-l="zh">4 人全班 NT$2,000，場地費另計。程度：新手入門 → DUPR 進階。時段：平日白天／晚上／週末。人數未滿也可私訊，協助揪團。</span><span data-l="en">Full group of 4: NT$2,000; court fees extra. Levels: beginner → DUPR advanced. Weekday day/evening or weekend. Short on players? DM and we'll help fill the group.</span></p>
+   </div>
+   <div>
+    <div class="kick"><span data-l="zh">本週練習菜單 · 本刊觀點</span><span data-l="en">This week's drills · Our view</span></div>
+    <ul>
+     <li><span data-l="zh">放鬆握力斜線丁克 10 分鐘，只准打低於網帶的球</span><span data-l="en">10 min cross-court dinks with a relaxed grip—nothing above tape height</span></li>
+     <li><span data-l="zh">三種發球各 20 顆，記錄進區率</span><span data-l="en">20 of each serve; log how many land in</span></li>
+     <li><span data-l="zh">搭檔餵腳邊球，半截擊回丁克 3 組</span><span data-l="en">Partner feeds at your feet; 3 sets of half-volley dinks</span></li>
+     <li><span data-l="zh">丁克中聽口令突襲執拍手方向</span><span data-l="en">Dink rally; speed up to the paddle side on a call</span></li>
+    </ul>
+   </div>
+   <div>
+    <div class="kick"><span data-l="zh">學員福利</span><span data-l="en">Student perks</span></div>
+    <ul>
+     <li><span data-l="zh">課堂免費試打 Six Zero 旗艦拍</span><span data-l="en">Try Six Zero flagship paddles in class</span></li>
+     <li><span data-l="zh">球拍配重與鉛片客製建議</span><span data-l="en">Paddle weighting &amp; lead-tape advice</span></li>
+     <li><span data-l="zh">官網結帳輸入 NINJA 享 9 折</span><span data-l="en">10% off at the Six Zero store with NINJA</span></li>
+    </ul>
+    <div class="codeinline"><span class="c">NINJA</span><button class="btn" data-copy="NINJA"><span data-l="zh">複製</span><span data-l="en">Copy</span></button></div>
+   </div>
+  </div>
+  <div class="row" style="margin-top:22px">
+   <a class="btn red" href="https://ninjapb.vercel.app/" target="_blank" rel="noopener"><span data-l="zh">預約教練課</span><span data-l="en">Book a lesson</span></a>
+   <a class="btn" href="https://ig.me/m/ninjapbtw" target="_blank" rel="noopener"><span data-l="zh">IG 私訊 @ninjapbtw</span><span data-l="en">DM @ninjapbtw on IG</span></a>
+   <a class="btn" href="https://pickleball-ninja.vercel.app/" target="_blank" rel="noopener"><span data-l="zh">NinjaPB 線上戰術秘笈</span><span data-l="en">NinjaPB tactics handbook</span></a>
+  </div>
+  <p class="disc"><span data-l="zh">揭露：Coach Ninja 為 Six Zero 官方品牌推廣大使，本頁的 Six Zero 連結含推薦參數，透過連結或優惠碼購買，他可能獲得推薦回饋。技術內容整理自張教練公開影片，影片著作權屬原頻道所有。</span><span data-l="en">Disclosure: Coach Ninja is an official Six Zero brand ambassador. Six Zero links on this page carry a referral tag, and he may earn a reward from purchases made through them or the code. Technique content summarises Coach Chang's public videos, which belong to his channel.</span></p>
+ </div>
+</section>
+
+</main>
+
+<footer class="foot">
+ <div class="foot-in">
+  <button class="tbtn" id="prev">←</button>
+  <span class="folio" id="folio">01 / 08</span>
+  <span class="pname" id="pname"></span>
+  <div class="sp"></div>
+  <button class="tbtn" id="next">→</button>
+ </div>
+</footer>
+
+<div class="toc" id="toc"><div class="toc-in">
+ <div class="row" style="justify-content:space-between;margin-bottom:10px"><div class="kick" style="margin:0"><span data-l="zh">目錄</span><span data-l="en">Contents</span></div><button class="tbtn" id="tocClose">✕</button></div>
+ <ul class="covlines" id="toclist"></ul>
+</div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+var YT=function(id,t){return 'https://youtu.be/'+id+(t?'?t='+t:'')};
+var mmss=function(t){return Math.floor(t/60)+':'+String(t%60).padStart(2,'0')};
+var VID={
+ grip:{id:'E32RneGmi20',ep:33,len:162,pub:'2023-01-30',zh:'球拍該怎麼握',en:'How to hold the paddle'},
+ force:{id:'VDOVj5mnir4',ep:23,len:106,pub:'2022-10-16',zh:'關於握拍力道',en:'Grip pressure'},
+ serve:{id:'RJYO5ED9Vfo',ep:16,len:322,pub:'2022-09-08',zh:'介紹三種發球',en:'Three kinds of serve'},
+ ret:{id:'edGsOR8jZOg',ep:18,len:202,pub:'2022-09-10',zh:'三種接發球打法',en:'Three ways to return serve'},
+ volley:{id:'eZQ4cloSYeU',ep:31,len:273,pub:'2023-01-19',zh:'截擊的三種打法',en:'Three ways to volley'},
+ dink:{id:'5QqDVv14ijg',ep:11,len:263,pub:'2022-08-29',zh:'丁克球對峙＋進階丁克球（半截擊回擊）',en:'Dink rallies + advanced dink (half-volley)'},
+ brk:{id:'gPByKZXkA4I',ep:17,len:198,pub:'2022-09-10',zh:'突破丁克球打法',en:'Breaking out of the dink'},
+ drive:{id:'93NNKJsiFcU',ep:35,len:235,pub:'2023-01-31',zh:'強抽球實練',en:'Hard drive practice'},
+ drive2:{id:'y1lQkEZkFRw',ep:30,len:194,pub:'2023-01-19',zh:'強抽球的白努力原理',en:'The physics of the hard drive'},
+ smash:{id:'iDVKZNbRBgw',ep:22,len:153,pub:'2022-10-16',zh:'扣殺自主練習',en:'Smash practice on your own'},
+ push:{id:'Hetva022LKc',ep:36,len:177,pub:'2023-03-22',zh:'重推進階教學',en:'Advanced hard push'}
+};
+var CARDS={
+ grip:[
+  {v:'grip',t:30,zh:{n:'東方式握法',b:['初學者練丁克球的首選','手感自然、控球穩定','先以東方式打底，進階再依手感微調']},en:{n:'Eastern grip',b:['First choice for beginners learning to dink','Natural feel, steady control','Build on it first; fine-tune as you advance']},sub:'Eastern Grip'},
+  {v:'grip',t:41,zh:{n:'西方式握法',b:['想加上旋時建議使用','方便手腕帶動刷球旋轉']},en:{n:'Western grip',b:['Recommended when you want topspin','Lets the wrist brush up the back of the ball']},sub:'Western Grip'}
+ ],
+ serve:[
+  {v:'serve',t:46,sp:['5-5','2:00'],zh:{n:'底線長球',b:['拍面 5-5，仰角約 45°','擊球點約 2 點鐘位置','高遠球深壓對方底線']},en:{n:'Deep serve',b:['5-5 face, open about 45°','Contact around 2 o’clock','High and deep to pin them on the baseline']},sub:'Deep Serve'},
+  {v:'serve',t:101,zh:{n:'上旋發球',b:['拍面 8-2，微朝上','擊球點約 2 點鐘位置','快速向上刷出上旋']},en:{n:'Topspin serve',b:['8-2 face, slightly open','Contact around 2 o’clock','Brush up fast for heavy topspin']},sub:'Topspin Serve'},
+  {v:'serve',t:136,zh:{n:'側旋發球',b:['拍面 8-2，微朝上','擊球點約 12 點鐘位置','快速側上旋，彈跳往側邊偏']},en:{n:'Sidespin serve',b:['8-2 face, slightly open','Contact around 12 o’clock','Fast side-topspin that kicks sideways']},sub:'Sidespin Serve'}
+ ],
+ ret:[
+  {v:'ret',t:49,zh:{n:'一般抽球',b:['身體右前方、約 2 點鐘位置','在彈跳最高點擊球','回深球，爭取時間上網']},en:{n:'Regular drive',b:['In front and to the right, around 2 o’clock','Hit at the top of the bounce','Go deep and buy time to reach the kitchen']},sub:'Regular Drive'},
+  {v:'ret',t:76,zh:{n:'斜切推',b:['專門對付側旋來球','擊球點約 12 點鐘位置','切推化解旋轉，平穩送回']},en:{n:'Slice push',b:['For returning sidespin serves','Contact around 12 o’clock','Slice through to neutralise the spin']},sub:'Slice Push'},
+  {v:'ret',t:121,zh:{n:'半截擊',b:['對付打在腳邊的球','在彈起的上升期第一時間擊球','不向後拉拍，拍面微朝上借力回擊']},en:{n:'Half volley',b:['For balls landing at your feet','Take it early, on the rise','No backswing; slightly open face, borrow the pace']},sub:'Half Volley'}
+ ],
+ volley:[
+  {v:'volley',t:153,zh:{n:'帶切截擊',b:['8-2 拍面帶切','初學者首重安全穩定']},en:{n:'Slice volley',b:['8-2 face with slice','For beginners: safety and consistency first']},sub:'Slice Volley'},
+  {v:'volley',t:167,zh:{n:'平擊截擊',b:['正面平推加速','進階者用來提升攻擊力']},en:{n:'Flat volley',b:['Flat punch through the ball','For advanced players adding pace']},sub:'Flat Volley'},
+  {v:'volley',t:184,zh:{n:'帶上旋截擊',b:['仰角依來球高度調整，8-2 為參考','打出過網急墜的進攻球']},en:{n:'Topspin volley',b:['Adjust face to ball height; 8-2 is a reference','An attacking ball that dips after the net']},sub:'Topspin Volley'}
+ ],
+ dink:[
+  {v:'dink',t:29,zh:{n:'丁克對峙',b:['以穩定為第一原則，不隨便失誤','控制低平弧線與落點','等對手回球過高再搶攻']},en:{n:'Dink rally',b:['Consistency first—no free errors','Keep it low and placed','Attack only when their ball comes up high']},sub:'Dink Rally Control'},
+  {v:'dink',t:136,zh:{n:'進階丁克・半截擊',b:['化解打在腳邊的球','手腕調整拍面，手臂控球','彈起第一時間借力送回']},en:{n:'Half-volley dink',b:['Handles balls dropped at your feet','Wrist sets the face, arm controls the ball','Take it right off the bounce and borrow its pace']},sub:'Half-Volley Dink'}
+ ],
+ brk:[
+  {v:'brk',t:60,zh:{n:'微高時突襲',b:['做好丁克準備動作，具遮蔽性','球微高瞬間搶攻','目標：對方執拍手方向']},en:{n:'Speed-up',b:['Disguise it with your normal dink prep','Attack the instant the ball sits up','Target: their paddle side']},sub:'Speed-Up Attack'},
+  {v:'brk',t:114,zh:{n:'進攻挑高球',b:['弧度必須高過對手能扣殺的高度','出球後立刻做好防守準備']},en:{n:'Offensive lob',b:['Must clear the height they can smash','Get ready to defend right after']},sub:'Offensive Lob'},
+  {v:'brk',t:162,zh:{n:'上旋斜角 Inside-Out',b:['大角度上旋急墜球，不易掌控','球速要快，否則容易被繞柱（ATP）回擊']},en:{n:'Inside-out topspin',b:['Sharp-angle dipping topspin—hard to control','Hit it fast or risk an ATP (around-the-post)']},sub:'Inside-Out Topspin'}
+ ],
+ power:[
+  {v:'drive',t:28,v2:'drive2',t2:6,zh:{n:'強抽球',b:['中場強抽殺傷力大，但容易出底線，要加上旋','初練固定拍面角度','小臂發力、手腕加摩擦，擊球瞬間握緊']},en:{n:'Hard drive',b:['Big damage from mid-court but flies long—add topspin','Fix the face angle while learning','Forearm power, wrist adds brush; squeeze at contact']},sub:'Hard Drive'},
+  {v:'smash',t:56,zh:{n:'扣殺',b:['擊球點固定在身體右上方偏前一點','初學先不用手腕，熟練後再加','做好拉拍、揮拍、還原三步驟']},en:{n:'Smash',b:['Fixed contact: above and slightly in front, right side','No wrist at first; add it once it’s grooved','Take back, swing, recover']},sub:'Smash'},
+  {v:'push',t:44,zh:{n:'重推',b:['對手回球偏高但在肩膀以下、無法扣殺時使用','目的在製造搶攻機會，攻擊對手腳邊','小臂瞬間加速，短時間小空間完成']},en:{n:'Hard push',b:['For a high ball that’s still below the shoulder','Creates the attack: aim at their feet','A quick forearm burst in a short, compact motion']},sub:'Hard Push'}
+ ]
+};
+var TIERS=[
+ {w:30,zh:['放鬆','初學者打丁克','初學者常握太緊，導致肌肉僵硬、無法精確控拍。放鬆才能控球。'],en:['Relaxed','Beginners dinking','Beginners often squeeze too hard, stiffening the arm and losing precision. Relax to control.']},
+ {w:60,zh:['再加一點','進階者打上旋丁克','打上旋丁克球需要再加一點握拍力道，支撐拍面。'],en:['A little more','Advanced topspin dinks','A topspin dink needs a bit more grip to support the face.']},
+ {w:95,zh:['握緊','殺球沒威力時','殺球常沒威力的人，試試握緊球拍再殺，比較看看差別。'],en:['Firm','When smashes lack bite','If your smashes lack power, try a firmer grip and compare.']}
+];
+var MATCH=[
+ {zh:'丁克常飛高或下網',en:'My dinks pop up or find the net',rx:[['force',59],['dink',29],['grip',30]]},
+ {zh:'常被打到腳邊',en:'I keep getting hit at my feet',rx:[['dink',136],['ret',121]]},
+ {zh:'發球沒有威脅',en:'My serve has no bite',rx:[['serve',46],['serve',101],['serve',136]]},
+ {zh:'接側旋發球很吃力',en:'Sidespin serves give me trouble',rx:[['ret',76],['ret',49]]},
+ {zh:'截擊不穩、常失誤',en:'My volleys are unreliable',rx:[['volley',153],['volley',167],['volley',184]]},
+ {zh:'對峙打不開局面',en:'I can’t break dink rallies',rx:[['brk',60],['brk',114],['push',44]]},
+ {zh:'強抽常出底線',en:'My drives sail long',rx:[['drive',28],['drive2',6]]},
+ {zh:'扣殺沒威力',en:'My smash lacks power',rx:[['force',59],['smash',56]]}
+];
+var RXNOTE={force:{zh:'握拍力道',en:'Grip pressure'},dink:{zh:'丁克',en:'Dinks'},grip:{zh:'握法',en:'Grips'},ret:{zh:'接發球',en:'Returns'},serve:{zh:'發球',en:'Serves'},volley:{zh:'截擊',en:'Volleys'},brk:{zh:'突破丁克',en:'Breaking the dink'},push:{zh:'重推',en:'Hard push'},drive:{zh:'強抽',en:'Drive'},drive2:{zh:'強抽原理',en:'Drive physics'},smash:{zh:'扣殺',en:'Smash'}};
+var GEAR=[
+ {name:'Boulder Opal 14mm',url:'https://www.sixzeropickleball.com/products/boulder-opal?sca_ref=11914723.sbiWIzNDK28ii',
+  zh:{tag:'控制型力量拍',d:'官方定位是「可控的力量」：比 Black Opal 出球更可預測、持球時間更長、甜區更大、容錯更高，搭配 SharkSkin 表面帶旋轉。適合想要力量、但不想被彈性嚇到的球友。',fit:'適合：強抽、底線壓制，同時要穩定性'},
+  en:{tag:'Controlled power',d:'Six Zero pitches it as controlled power: a more predictable pop than the Black Opal, longer dwell, a larger power band and more forgiveness, with a SharkSkin surface for spin.',fit:'For: drivers who want power with predictability'},
+  kv:[['Core','14mm · Hybrid'],['Weight','8.0–8.3 oz'],['Swing / Twist','115 / 6.4'],['Cert','UPA (Rough) · USAP (Smooth)']]},
+ {name:'Coral Pro 16mm',url:'https://www.sixzeropickleball.com/products/coral-pro?sca_ref=11914723.sbiWIzNDK28ii',
+  zh:{tag:'全場型旋轉拍',d:'官方定位是全場型：強調旋轉與咬球感、柔和的力量，以及 reset、放小球時的厚實持球感。想加重旋轉又不失手感的球友可以先試。',fit:'適合：網前手感＋上旋攻擊'},
+  en:{tag:'All-court spin',d:'Six Zero positions it as all-court: heavy spin and ball bite with plush power, and a dwell feel that helps resets, drops and touch shots.',fit:'For: touch at the net plus topspin attack'},
+  kv:[['Core','16mm · Hybrid / Elongated / Widebody'],['Weight','8.0–8.3 oz'],['Swing / Twist','Hybrid 114 / 6.70'],['Cert','UPA · UPA + USAP versions']]}
+];
+var UI={zh:{pages:['封面','握拍','發球與接發','網前截擊','廚房區','強攻三招','你的處方','裝備與教練課'],watch:'看示範',watch2:'延伸：教學 30',copied:'已複製 NINJA',rxh:'建議觀看順序',buy:'前往選購',copy:'複製優惠碼',src:'數據來源：Six Zero 官網商品頁（2026/11/17 查詢）；描述為官方定位整理。',ep:'教學',min:'長度',pub:'上傳'},
+ en:{pages:['Cover','Grip','Serve & return','Volleys','The kitchen','Power trio','Your prescription','Gear & lessons'],watch:'Watch',watch2:'Also: Lesson 30',copied:'Copied NINJA',rxh:'Watch in this order',buy:'Shop',copy:'Copy code',src:'Source: Six Zero product pages (checked 17 Nov 2026); descriptions summarise the brand’s own positioning.',ep:'Lesson',min:'Length',pub:'Uploaded'}};
+var ROMAN=['','I','II','III','IV','V','VI','VII'];
+var lang='zh',cur=1,N=8,sel=0;
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function render(){
+ var u=UI[lang];
+ $$('[data-cards]').forEach(function(box){
+  var k=box.getAttribute('data-cards');
+  box.innerHTML=CARDS[k].map(function(c,i){var L=c[lang];
+   var extra=c.v2?' <a class="watch" style="margin-top:8px" href="'+YT(VID[c.v2].id,c.t2)+'" target="_blank" rel="noopener">'+u.watch2+' '+mmss(c.t2)+'</a>':'';
+   return '<article class="card"><div class="num">'+String(i+1).padStart(2,'0')+'</div><h3>'+esc(L.n)+'</h3><div class="en-sub">'+c.sub+' · '+u.ep+' '+VID[c.v].ep+'</div><ul>'+L.b.map(function(b){return '<li>'+esc(b)+'</li>'}).join('')+'</ul><a class="watch" href="'+YT(VID[c.v].id,c.t)+'" target="_blank" rel="noopener">'+u.watch+' '+mmss(c.t)+'</a>'+extra+'</article>'}).join('');
+ });
+ $('#tiers').innerHTML=TIERS.map(function(t){var L=t[lang];return '<div class="tier"><b>'+L[0]+'</b><div class="en-sub mono" style="font-size:11px;color:var(--mute);text-transform:uppercase">'+L[1]+'</div><div class="bar"><span style="width:'+t.w+'%"></span></div><div style="font-size:15px">'+L[2]+'</div></div>'}).join('');
+ var lines=u.pages.map(function(p,i){return i?'<li data-go="'+(i+1)+'"><i>'+ROMAN[i]+'</i><div><b>'+p+'</b><small>'+String(i+1).padStart(2,'0')+' / 08</small></div></li>':''}).join('');
+ $('#covlines').innerHTML=lines;
+ $('#toclist').innerHTML='<li data-go="1"><i>·</i><div><b>'+u.pages[0]+'</b><small>01 / 08</small></div></li>'+lines;
+ $('#opts').innerHTML=MATCH.map(function(m,i){return '<label><input type="radio" name="m" value="'+i+'"'+(i===sel?' checked':'')+'><span>'+esc(m[lang])+'</span></label>'}).join('');
+ renderRx();
+ $('#vidx').innerHTML=Object.keys(VID).map(function(k){return VID[k]}).sort(function(a,b){return a.ep-b.ep}).map(function(v){
+  var ts=[];Object.keys(CARDS).forEach(function(g){CARDS[g].forEach(function(c){if(VID[c.v]===v)ts.push(c.t);if(c.v2&&VID[c.v2]===v)ts.push(c.t2)})});
+  if(v===VID.force)ts.push(59);if(v===VID.volley)ts.push(73);
+  ts=ts.filter(function(x,i,a){return a.indexOf(x)===i}).sort(function(a,b){return a-b});
+  return '<li><span class="ep">'+v.ep+'</span><div><a class="ttl" href="'+YT(v.id)+'" target="_blank" rel="noopener">'+esc(v[lang])+'</a><div class="chips">'+ts.map(function(t){return '<a href="'+YT(v.id,t)+'" target="_blank" rel="noopener">▶ '+mmss(t)+'</a>'}).join('')+'</div></div><span class="meta r">'+mmss(v.len)+' · '+v.pub+'</span></li>'}).join('');
+ $('#gear').innerHTML=GEAR.map(function(g){var L=g[lang];return '<div><div class="kick">'+esc(L.tag)+'</div><h3>Six Zero '+g.name+'</h3><p style="margin:8px 0">'+esc(L.d)+'</p><p style="font-weight:700">'+esc(L.fit)+'</p><dl class="kv">'+g.kv.map(function(x){return '<dt>'+x[0]+'</dt><dd>'+x[1]+'</dd>'}).join('')+'</dl><div class="codeinline"><span class="c">NINJA</span><button class="btn" data-copy="NINJA">'+u.copy+'</button><a class="btn dark" href="'+g.url+'" target="_blank" rel="noopener sponsored">'+u.buy+' →</a></div></div>'}).join('')+'<p class="src" style="grid-column:1/-1;padding:0 22px 10px">'+u.src+'</p>';
+ $('#pname').textContent=u.pages[cur-1];
+ $('#langBtn').textContent=lang==='zh'?'EN':'中';
+ document.documentElement.lang=lang==='zh'?'zh-Hant':'en';
+}
+function renderRx(){
+ var m=MATCH[sel],u=UI[lang];
+ $('#rx').innerHTML='<div class="kick">'+u.rxh+'</div><h4>'+esc(m[lang])+'</h4><ol>'+m.rx.map(function(r){var v=VID[r[0]];return '<li><a href="'+YT(v.id,r[1])+'" target="_blank" rel="noopener">'+esc(v[lang])+' · '+mmss(r[1])+'</a><small>'+u.ep+' '+v.ep+' · '+RXNOTE[r[0]][lang]+'</small></li>'}).join('')+'</ol>';
+}
+function go(n,push){
+ n=Math.max(1,Math.min(N,n));cur=n;
+ $$('.slide').forEach(function(s){s.classList.toggle('on',+s.getAttribute('data-n')===n)});
+ $('#folio').textContent=String(n).padStart(2,'0')+' / 08';
+ $('#pname').textContent=UI[lang].pages[n-1];
+ $('#prog').style.width=(n/N*100)+'%';
+ if(push!==false){try{history.replaceState(null,'','#'+n)}catch(e){location.hash=n}}
+ window.scrollTo(0,0);
+}
+window.go=go;
+function setLang(l,save){lang=l;document.documentElement.classList.toggle('en',l==='en');if(save){try{localStorage.setItem('pr-lang',l)}catch(e){}}render();}
+function detect(){
+ var q=(location.search.match(/[?&]lang=(en|zh)/)||[])[1];if(q)return q;
+ try{var s=localStorage.getItem('pr-lang');if(s==='en'||s==='zh')return s}catch(e){}
+ var ls=navigator.languages||[navigator.language||'zh'];
+ for(var i=0;i<ls.length;i++){if(/^zh/i.test(ls[i]))return 'zh'}
+ return 'en';
+}
+function toast(t){var el=$('#toast');el.textContent=t;el.classList.add('on');setTimeout(function(){el.classList.remove('on')},1600)}
+function copy(t){
+ var done=function(){toast(UI[lang].copied)};
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback(t);done()})}else{fallback(t);done()}
+}
+function fallback(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+document.addEventListener('click',function(e){
+ var c=e.target.closest('[data-copy]');if(c){copy(c.getAttribute('data-copy'));return}
+ var g=e.target.closest('[data-go]');if(g){$('#toc').classList.remove('on');go(+g.getAttribute('data-go'));return}
+});
+document.addEventListener('change',function(e){if(e.target.name==='m'){sel=+e.target.value;renderRx()}});
+$('#prev').onclick=function(){go(cur-1)};
+$('#next').onclick=function(){go(cur+1)};
+$('#langBtn').onclick=function(){setLang(lang==='zh'?'en':'zh',true)};
+$('#tocBtn').onclick=function(){$('#toc').classList.add('on')};
+$('#tocClose').onclick=function(){$('#toc').classList.remove('on')};
+$('#toc').onclick=function(e){if(e.target.id==='toc')$('#toc').classList.remove('on')};
+document.addEventListener('keydown',function(e){
+ if(e.target.tagName==='INPUT')return;
+ if(e.key==='ArrowRight')go(cur+1);else if(e.key==='ArrowLeft')go(cur-1);else if(e.key==='Escape')$('#toc').classList.remove('on');
+});
+window.addEventListener('hashchange',function(){var h=parseInt(location.hash.slice(1),10);if(h&&h!==cur)go(h,false)});
+setLang(detect(),false);
+go(parseInt(location.hash.slice(1),10)||1,false);
+})();
+</script>
+</body>
+</html>
