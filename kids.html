@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>匹克球專刊 · 新手路線｜獻給阿尼色弗兒童之家</title>
-<meta name="description" content="匹克球新手路線：握拍、發球、雙彈跳、廚房與丁克、報分，五關學會上場打球。為阿尼色弗兒童之家匹克球活動製作。">
+<meta name="description" content="匹克球新手路線：安全、握拍、發球、彈兩次、廚房、報分，六關學會上場打球。為阿尼色弗兒童之家匹克球活動製作。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="匹克球專刊">
 <meta property="og:locale" content="zh_TW">
@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Playfair+Display:ital,wght@0,800;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#F4F0E7;--paper2:#ECE6D8;--ink:#161513;--mute:#5E5A52;--rule:#C9C1B0;--acc:#A3311D;--accd:#7E2414;
+:root{--paper:#F4F0E7;--paper2:#ECE6D8;--ink:#161513;--mute:#5E5A52;--rule:#C9C1B0;--acc:#A3311D;--accd:#7E2414;--ok:#2F6B3A;
 --serif:"Noto Serif TC","Songti TC",serif;--disp:"Playfair Display","Noto Serif TC",serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.75;font-size:19px;-webkit-font-smoothing:antialiased}
@@ -46,66 +46,109 @@ main{max-width:1000px;margin:0 auto;padding:30px 20px 80px}
 h1{font-weight:900;font-size:clamp(40px,7vw,72px);line-height:1.15;margin-bottom:14px}
 h1 em,h2 em{font-family:var(--disp);font-style:italic;color:var(--acc)}
 .deck{font-size:21px;color:var(--mute);max-width:760px}
-.map{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:2px solid var(--ink);margin:30px 0 10px}
-.map a{padding:14px 10px;text-align:center;border-right:1px solid var(--ink);text-decoration:none;position:relative}
+.map{display:grid;grid-template-columns:repeat(6,1fr);border:2px solid var(--ink);margin:30px 0 10px}
+.map a{padding:12px 6px;text-align:center;border-right:1px solid var(--ink);text-decoration:none;position:relative}
 .map a:last-child{border-right:0}
 .map a:hover{background:var(--paper2)}
-.map b{display:block;font-family:var(--disp);font-style:italic;font-size:34px;color:var(--acc);line-height:1}
+.map b{display:block;font-family:var(--disp);font-style:italic;font-size:32px;color:var(--acc);line-height:1}
 .map span{font-weight:700}
-.map a.done:after{content:"✓";position:absolute;top:6px;right:8px;color:#fff;background:var(--acc);border-radius:50%;width:22px;height:22px;font-size:14px;line-height:22px}
-.prog{font-family:var(--mono);font-size:13px;color:var(--mute);margin-bottom:24px}
+.map a.done:after{content:"✓";position:absolute;top:5px;right:6px;color:#fff;background:var(--acc);border-radius:50%;width:22px;height:22px;font-size:14px;line-height:22px}
+.shelf{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:6px 0 4px}
+.shelf .b{width:54px;text-align:center;font-size:11px;line-height:1.3;color:var(--mute)}
+.bdg{width:54px;height:54px;display:block}
+.prog{font-family:var(--mono);font-size:13px;color:var(--mute)}
 .level{border-top:3px double var(--ink);padding:34px 0 10px;scroll-margin-top:70px}
-.lhead{display:flex;gap:18px;align-items:baseline;margin-bottom:10px}
+.lhead{display:flex;gap:18px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap}
 .lnum{font-family:var(--disp);font-style:italic;font-weight:700;font-size:76px;color:var(--acc);line-height:.9}
 h2{font-size:clamp(30px,4.6vw,44px);font-weight:900;line-height:1.2}
+.say{margin-left:auto;align-self:center;font-family:var(--mono);font-size:13px;border:2px solid var(--ink);padding:8px 14px;border-radius:999px;background:#fff8}
+.say[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
 .big{font-size:23px;font-weight:700;background:var(--ink);color:var(--paper);padding:14px 20px;margin:14px 0 20px;display:inline-block}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
 .steps div{padding:16px 18px 18px 0;border-bottom:1px solid var(--rule)}
 .steps div+div{padding-left:18px;border-left:1px solid var(--rule)}
 .steps i{font-family:var(--disp);font-size:28px;color:var(--acc);display:block;line-height:1.1}
+.sub{margin-top:22px}
 .note{font-size:17px;color:var(--mute);margin-top:12px}
-.chal{border:2px dashed var(--acc);padding:16px 20px;margin:20px 0 12px;display:flex;gap:16px;align-items:flex-start}
-.chal .ic{font-family:var(--mono);font-size:12px;text-transform:uppercase;background:var(--acc);color:#fff;padding:3px 8px;white-space:nowrap;margin-top:4px}
+.fig{margin:22px 0 6px;border:1px solid var(--ink);background:#fffdf7;padding:12px}
+.fig svg{width:100%;height:auto;display:block}
+.fig figcaption{font-size:15px;color:var(--mute);margin-top:6px}
+.frames{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.frames div{border:1px solid var(--rule);background:var(--paper)}
+.frames b{display:block;font-size:17px;padding:6px 10px 0}
+.frames small{display:block;font-size:14px;color:var(--mute);padding:0 10px 8px;line-height:1.5}
+.chals{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 12px}
+.chal{border:2px dashed var(--acc);padding:14px 18px}
+.chal.hard{border-style:solid;background:#fff8}
+.chal .ic{font-family:var(--mono);font-size:12px;text-transform:uppercase;background:var(--acc);color:#fff;padding:3px 8px;display:inline-block;margin-bottom:6px}
+.chal.easy .ic{background:var(--paper);color:var(--acc);border:1px solid var(--acc)}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .btn{font-family:var(--mono);font-size:13px;text-transform:uppercase;padding:10px 16px;border:1px solid var(--ink);text-decoration:none;display:inline-block}
 .btn.dark{background:var(--ink);color:var(--paper)}
 .btn.red{background:var(--acc);border-color:var(--acc);color:#fff}
 .btn:hover{opacity:.88}
 .watch:before{content:"▶ ";color:var(--acc)}
-.dark.watch:before{color:#E9907E}
-.got{display:flex;gap:10px;align-items:center;font-weight:700;cursor:pointer;margin:6px 0 4px}
+.quiz{border:1px solid var(--ink);margin:22px 0 10px;padding:18px 20px;background:#fffdf7}
+.quiz h3{font-size:20px;margin-bottom:4px}
+.qq{padding:12px 0;border-top:1px dotted var(--rule)}
+.qq:first-of-type{border-top:0}
+.qq p{font-weight:700;margin-bottom:8px}
+.qo{display:flex;flex-wrap:wrap;gap:8px}
+.qo button{border:2px solid var(--ink);padding:6px 14px;font-size:17px;background:#fff;border-radius:6px}
+.qo button.right{background:var(--ok);border-color:var(--ok);color:#fff}
+.qo button.wrong{background:var(--paper2);border-color:var(--rule);color:var(--mute);text-decoration:line-through}
+.qf{font-size:16px;margin-top:6px;min-height:1.5em}
+.qf.ok{color:var(--ok)}.qf.no{color:var(--acc)}
+.got{display:flex;gap:10px;align-items:center;font-weight:700;cursor:pointer;margin:10px 0 4px}
 .got input{width:22px;height:22px;accent-color:var(--acc)}
-.bounce{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--ink);margin:6px 0 4px}
-.bounce div{padding:16px;text-align:center;border-right:1px solid var(--ink)}
-.bounce div:last-child{border-right:0;background:var(--paper2)}
-.bounce b{display:block;font-size:20px}
-.bounce small{color:var(--mute);font-size:15px}
+.got.locked{color:var(--mute);cursor:not-allowed}
 .disc{font-size:14px;color:var(--mute);line-height:1.6}
+.gl{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+.gl div{padding:14px 18px 14px 0;border-bottom:1px solid var(--rule)}
+.gl div:nth-child(2n){padding-left:18px;border-left:1px solid var(--rule)}
+.gl dt{font-weight:900;font-size:20px}
+.gl dd{font-size:17px}
+.cert{border:6px double var(--ink);background:#fffdf7;padding:36px 30px;text-align:center;max-width:760px;margin:6px auto 14px}
+.cert .ck{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--acc);text-transform:uppercase}
+.cert h3{font-size:clamp(28px,5vw,44px);font-weight:900;margin:8px 0 18px;line-height:1.25}
+.cert .nm{font-size:clamp(30px,6vw,52px);font-weight:900;border-bottom:2px solid var(--ink);display:inline-block;min-width:60%;padding:0 12px;margin-bottom:16px;color:var(--acc)}
+.cert p{font-size:18px}
+.cert .bdgs{display:flex;justify-content:center;gap:8px;margin:16px 0 4px;flex-wrap:wrap}
+.cert .bdgs .bdg{width:46px;height:46px}
+.cert .sig{display:flex;justify-content:space-between;margin-top:26px;font-size:15px;gap:20px}
+.cert .sig div{flex:1;border-top:1px solid var(--ink);padding-top:6px}
+.cert .ded{font-size:13px;color:var(--mute);margin-top:18px}
+.namein{font:inherit;font-size:20px;padding:8px 12px;border:2px solid var(--ink);background:#fff;min-width:240px}
+.card{border:2px solid var(--ink);background:#fff;padding:24px;max-width:820px;margin:8px auto 14px}
+.card h3{font-size:28px;font-weight:900;text-align:center}
+.card .who{display:flex;gap:20px;margin:14px 0 16px;font-size:17px}
+.card .who span{flex:1;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cbox{border:1.5px solid var(--ink);padding:12px;display:flex;flex-direction:column;min-height:210px}
+.cbox .n{font-family:var(--disp);font-style:italic;font-size:30px;color:var(--acc);line-height:1}
+.cbox b{font-size:19px}
+.cbox .t{font-size:14px;line-height:1.5;margin:6px 0}
+.cbox .t span{display:block}
+.cbox .stamp{margin-top:auto;align-self:center;width:84px;height:84px;border:2px dashed var(--rule);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--mute);text-align:center}
+.card .foot{display:flex;gap:16px;align-items:center;margin-top:14px;font-size:14px;color:var(--mute)}
+.card .foot img{width:92px;height:92px}
 .endbox{background:var(--ink);color:var(--paper);padding:30px;margin-top:40px}
 .endbox h2{color:var(--paper)}
 .endbox .disc{color:#B9B2A3;margin-top:14px}
 .endbox .btn{border-color:var(--paper);color:var(--paper)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--acc);color:#fff;padding:10px 18px;font-weight:700;opacity:0;transition:.25s;z-index:50;pointer-events:none}
 .toast.on{opacity:1}
-.gl{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
-.gl div{padding:14px 18px 14px 0;border-bottom:1px solid var(--rule)}
-.gl div:nth-child(2n){padding-left:18px;border-left:1px solid var(--rule)}
-.gl dt{font-weight:900;font-size:20px}
-.gl dt small{font-family:var(--mono);font-size:12px;color:var(--mute);font-weight:400;margin-left:8px}
-.gl dd{font-size:17px}
-.cert{border:6px double var(--ink);background:#fffdf7;padding:36px 30px;text-align:center;max-width:760px;margin:6px auto 14px;position:relative}
-.cert .ck{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--acc);text-transform:uppercase}
-.cert h3{font-size:clamp(28px,5vw,44px);font-weight:900;margin:8px 0 18px;line-height:1.25}
-.cert .nm{font-size:clamp(30px,6vw,52px);font-weight:900;border-bottom:2px solid var(--ink);display:inline-block;min-width:60%;padding:0 12px;margin-bottom:16px;color:var(--acc)}
-.cert p{font-size:18px}
-.cert .sig{display:flex;justify-content:space-between;margin-top:30px;font-size:15px;gap:20px}
-.cert .sig div{flex:1;border-top:1px solid var(--ink);padding-top:6px}
-.cert .ded{font-size:13px;color:var(--mute);margin-top:18px}
-.namein{font:inherit;font-size:20px;padding:8px 12px;border:2px solid var(--ink);background:#fff;min-width:240px}
+.pop{position:fixed;inset:0;background:rgba(22,21,19,.55);display:none;align-items:center;justify-content:center;z-index:60;overflow:hidden}
+.pop.on{display:flex}
+.pop-in{background:var(--paper);border:2px solid var(--ink);padding:28px 34px;text-align:center;max-width:340px;position:relative;z-index:2;animation:popin .45s cubic-bezier(.2,1.4,.4,1)}
+.pop-in .bdg{width:130px;height:130px;margin:0 auto 10px}
+.pop-in h3{font-size:26px;font-weight:900}
+.pop-in p{color:var(--mute);margin:4px 0 14px}
+@keyframes popin{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
+.cf{position:absolute;top:-20px;width:10px;height:16px;z-index:1;animation:fall 2.2s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
 :focus-visible{outline:3px solid var(--acc);outline-offset:3px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
-@media print{body *{visibility:hidden}#cert,#cert *{visibility:visible}#cert{position:absolute;left:0;top:0;width:100%;max-width:none;margin:0}.top{display:none}}
-@media (max-width:760px){.gl{grid-template-columns:1fr}.gl div:nth-child(2n){padding-left:0;border-left:0}.cert{padding:24px 16px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.cf{display:none}}
 .sim{border:1px solid var(--ink);background:#fff8;padding:22px;display:grid;grid-template-columns:1fr 1.1fr;gap:26px;margin-bottom:10px}
 .scall{font-family:var(--disp);font-size:clamp(46px,7vw,76px);font-weight:800;line-height:1;letter-spacing:.02em}
 .scall em{color:var(--acc);font-style:italic}
@@ -127,9 +170,30 @@ h2{font-size:clamp(30px,4.6vw,44px);font-weight:900;line-height:1.2}
 
 @media (max-width:760px){
  html,body{font-size:18px}.top-in{padding:8px 14px}.mast{font-size:17px}
- .map{grid-template-columns:repeat(6,1fr)}.map a{padding:10px 2px}.map b{font-size:24px}.map span{font-size:13px;display:block;line-height:1.3}
- .steps,.bounce{grid-template-columns:1fr}.steps div+div{padding-left:0;border-left:0}.bounce div{border-right:0;border-bottom:1px solid var(--ink)}
- .lnum{font-size:58px}.big{font-size:20px}.chal{flex-direction:column;gap:8px}
+ .map a{padding:8px 1px}.map b{font-size:22px}.map span{font-size:12px;display:block;line-height:1.3}
+ .steps,.frames,.chals,.gl{grid-template-columns:1fr}.steps div+div{padding-left:0;border-left:0}.gl div:nth-child(2n){padding-left:0;border-left:0}
+ .lnum{font-size:58px}.big{font-size:20px}.say{margin-left:0}
+ .shelf .b{width:44px}.bdg{width:44px;height:44px}
+ .cgrid{grid-template-columns:1fr 1fr}.cert{padding:24px 16px}
+}
+@media print{
+ @page{size:A4;margin:12mm}
+ html,body{background:#fff}
+ body[data-print] > *:not(#printArea){display:none!important}
+ body[data-print] #printArea{display:block!important}
+ #printArea .cert,#printArea .card{max-width:none;margin:0;border-width:2px}
+ #printArea .cert{border-width:6px;margin-top:20mm}
+ #printArea .cgrid{grid-template-columns:repeat(3,1fr)!important}
+ #printArea .card{padding:8mm}
+ #printArea .card h3{font-size:24pt}
+ #printArea .card .who{font-size:14pt;margin:6mm 0}
+ #printArea .cbox{min-height:78mm;padding:4mm}
+ #printArea .cbox .n{font-size:26pt}
+ #printArea .cbox b{font-size:16pt}
+ #printArea .cbox .t{font-size:12pt}
+ #printArea .cbox .stamp{width:30mm;height:30mm;font-size:10pt}
+ #printArea .card .foot{font-size:11pt}
+ #printArea .card .foot img{width:28mm;height:28mm}
 }
 </style>
 </head>
@@ -142,110 +206,15 @@ h2{font-size:clamp(30px,4.6vw,44px);font-weight:900;line-height:1.2}
 </div></header>
 
 <main>
- <div class="kick"><span data-l="zh">匹克球專刊 · 獻給阿尼色弗兒童之家</span><span data-l="en">Pickleball Special · For the Onesiphorus Children's Home</span></div>
+ <div class="kick"><span data-l="zh">匹克球專刊 · 獻給阿尼色弗兒童之家</span><span data-l="en">Pickleball Special · For the Onesiphorus Children’s Home</span></div>
  <h1><span data-l="zh">六關，<br>學會<em>上場</em>打球</span><span data-l="en">Six levels to<br>get you <em>playing</em></span></h1>
- <p class="deck"><span data-l="zh">一關一關來：先學會保護自己、公平比賽，再握好球拍，再學發球、記住「彈兩次」、認識廚房，最後學會報分。每一關都有一個小挑戰，完成就打勾！</span><span data-l="en">One level at a time: play safe and fair, hold the paddle, serve, remember "two bounces," meet the kitchen, then learn to call the score. Each level has a small challenge—tick it when you're done!</span></p>
+ <p class="deck"><span data-l="zh">一關一關來：看圖、聽重點、做挑戰、答對小測驗，就能打勾拿徽章！集滿六枚，就能做一張結業證書。</span><span data-l="en">Level by level: look at the pictures, listen, try the challenge, pass the mini-quiz—then tick it and earn a badge! Collect all six for your certificate.</span></p>
 
- <nav class="map" id="map" aria-label="關卡地圖 Level map">
-  <a href="#lv0" data-lv="0"><b>0</b><span data-l="zh">安全</span><span data-l="en">Safety</span></a>
-  <a href="#lv1" data-lv="1"><b>1</b><span data-l="zh">握拍</span><span data-l="en">Grip</span></a>
-  <a href="#lv2" data-lv="2"><b>2</b><span data-l="zh">發球</span><span data-l="en">Serve</span></a>
-  <a href="#lv3" data-lv="3"><b>3</b><span data-l="zh">彈兩次</span><span data-l="en">Two bounces</span></a>
-  <a href="#lv4" data-lv="4"><b>4</b><span data-l="zh">廚房</span><span data-l="en">Kitchen</span></a>
-  <a href="#lv5" data-lv="5"><b>5</b><span data-l="zh">報分</span><span data-l="en">Scoring</span></a>
- </nav>
- <div class="row" style="margin-bottom:24px"><div class="prog" id="prog" style="margin:0" aria-live="polite"></div><button class="btn" data-reset style="font-size:12px;padding:6px 12px"></button></div>
+ <nav class="map" id="map" aria-label="關卡地圖 / Level map"></nav>
+ <div class="shelf" id="shelf" aria-label="徽章 / Badges"></div>
+ <div class="row" style="margin:6px 0 24px"><div class="prog" id="prog" aria-live="polite"></div><button class="btn" data-reset style="font-size:12px;padding:6px 12px"></button></div>
 
- <!-- LEVEL 0 -->
- <section class="level" id="lv0">
-  <div class="lhead"><span class="lnum">0</span><div><div class="kick"><span data-l="zh">第零關 · 上場之前</span><span data-l="en">Level 0 · Before you play</span></div><h2><span data-l="zh">安全與運動精神</span><span data-l="en">Safety and good sportsmanship</span></h2></div></div>
-  <div class="big"><span data-l="zh">先熱身、保護好自己，再公平地玩。</span><span data-l="en">Warm up, stay safe, play fair.</span></div>
-  <div class="kick"><span data-l="zh">保護自己</span><span data-l="en">Stay safe</span></div>
-  <div class="steps">
-   <div><i>①</i><span data-l="zh">先熱身：慢跑一下，轉轉手腕、肩膀和腳踝，再開始打球。</span><span data-l="en">Warm up: jog a little and circle your wrists, shoulders and ankles before you play.</span></div>
-   <div><i>②</i><span data-l="zh">記得喝水，穿運動鞋（不要穿拖鞋）。有護目鏡更好。</span><span data-l="en">Drink water and wear sports shoes (no slippers). Eye protection is even better.</span></div>
-   <div><i>③</i><span data-l="zh">往後退的時候側身移動，不要倒退跑，比較不容易跌倒。</span><span data-l="en">Move sideways when you go back—don't run backwards—so you're less likely to fall.</span></div>
-  </div>
-  <div class="kick" style="margin-top:22px"><span data-l="zh">公平比賽</span><span data-l="en">Play fair</span></div>
-  <div class="steps">
-   <div><i>④</i><span data-l="zh">有別的球滾進場：大聲喊「有球！」，大家停下來，這一球重打。不要踩到球！</span><span data-l="en">A ball rolls onto your court? Shout "Ball!", everyone stops, and the point is replayed. Never step on a ball!</span></div>
-   <div><i>⑤</i><span data-l="zh">誠實判球：自己這一邊的球自己判。碰到線算界內；看不清楚，就算界內。</span><span data-l="en">Call it honestly: you call the balls on your side. Touching the line is in—and if you're not sure, it's in.</span></div>
-   <div><i>⑥</i><span data-l="zh">比賽結束，到網前和大家碰拍或握手，說聲「謝謝」。</span><span data-l="en">After the game, meet at the net, tap paddles or shake hands, and say "thank you."</span></div>
-  </div>
-  <p class="note"><span data-l="zh">「有球滾進場可以重打」和「看不清楚算界內」是 USA Pickleball 的規則；其他是本刊建議的好習慣。</span><span data-l="en">"Replay when a ball rolls on" and "if in doubt, it's in" come from USA Pickleball's rules; the rest are good habits we recommend.</span></p>
-  <div class="chal"><span class="ic"><span data-l="zh">小挑戰</span><span data-l="en">Challenge</span></span><div><span data-l="zh">上場前帶大家一起做 5 分鐘熱身；比賽結束後，和每一個人碰拍說謝謝。</span><span data-l="en">Lead everyone in a 5-minute warm-up before you play; after the game, tap paddles with every player and say thanks.</span></div></div>
-  <label class="got"><input type="checkbox" data-done="0"><span data-l="zh">我記住了，完成第零關！</span><span data-l="en">Got it—Level 0 done!</span></label>
- </section>
-
- <!-- LEVEL 1 -->
- <section class="level" id="lv1">
-  <div class="lhead"><span class="lnum">1</span><div><div class="kick"><span data-l="zh">第一關</span><span data-l="en">Level 1</span></div><h2><span data-l="zh">握好球拍</span><span data-l="en">Hold the paddle</span></h2></div></div>
-  <div class="big"><span data-l="zh">像跟球拍握手一樣，輕輕握住。</span><span data-l="en">Shake hands with the paddle—and hold it gently.</span></div>
-  <div class="steps">
-   <div><i>①</i><span data-l="zh">拍面立起來，手像要跟它握手，自然握住拍柄。這叫「東方式握法」，張教練說新手先從這個開始。</span><span data-l="en">Stand the paddle on its edge and grip the handle like a handshake. This is the Eastern grip—Coach Chang says beginners start here.</span></div>
-   <div><i>②</i><span data-l="zh">不要握太緊！握太緊手會變硬，球就控制不好。</span><span data-l="en">Don't squeeze! A tight grip makes your arm stiff and the ball hard to control.</span></div>
-   <div><i>③</i><span data-l="zh">握法沒有標準答案，能把球穩穩打好最重要。</span><span data-l="en">There's no single right grip—hitting the ball steadily is what matters.</span></div>
-  </div>
-  <div class="chal"><span class="ic"><span data-l="zh">小挑戰</span><span data-l="en">Challenge</span></span><div><span data-l="zh">拍面朝上，把球往上輕輕顛，連續 10 下不落地。</span><span data-l="en">Paddle face up, bounce the ball gently upward 10 times in a row without dropping it.</span></div></div>
-  <div class="row"><a class="btn watch" href="https://youtu.be/E32RneGmi20?t=30" target="_blank" rel="noopener"><span data-l="zh">看握拍示範</span><span data-l="en">Watch: grip</span></a><a class="btn watch" href="https://youtu.be/VDOVj5mnir4?t=59" target="_blank" rel="noopener"><span data-l="zh">看握力示範</span><span data-l="en">Watch: grip pressure</span></a></div>
-  <label class="got"><input type="checkbox" data-done="1"><span data-l="zh">我完成第一關了！</span><span data-l="en">I finished Level 1!</span></label>
- </section>
-
- <!-- LEVEL 2 -->
- <section class="level" id="lv2">
-  <div class="lhead"><span class="lnum">2</span><div><div class="kick"><span data-l="zh">第二關</span><span data-l="en">Level 2</span></div><h2><span data-l="zh">發球</span><span data-l="en">The serve</span></h2></div></div>
-  <div class="big"><span data-l="zh">站在底線後面，由下往上，發到斜對面。</span><span data-l="en">Stand behind the back line, swing low to high, serve to the box diagonally across.</span></div>
-  <div class="steps">
-   <div><i>①</i><span data-l="zh">站在底線後面，腳不要踩到線。</span><span data-l="en">Stand behind the baseline—don't step on the line.</span></div>
-   <div><i>②</i><span data-l="zh">手由下往上揮，在腰的下面打到球。也可以讓球從手上自然掉下來，彈一下再打（不能用丟的）。</span><span data-l="en">Swing from low to high and hit the ball below your waist. Or let the ball drop from your hand, bounce once, then hit it (just drop it—no throwing).</span></div>
-   <div><i>③</i><span data-l="zh">球要飛過網子，落在斜對面的發球區。每個人只有一次機會。</span><span data-l="en">The ball must clear the net and land in the service box diagonally across. You get one try.</span></div>
-  </div>
-  <p class="note"><span data-l="zh">⚠️ 球落在對面的「廚房」裡，或壓到廚房的線，都不算。發球擦到網、但還是落在對的發球區，就繼續打！</span><span data-l="en">⚠️ A serve landing in the kitchen—or on the kitchen line—doesn't count. If it clips the net but still lands in the right box, keep playing!</span></p>
-  <div class="chal"><span class="ic"><span data-l="zh">小挑戰</span><span data-l="en">Challenge</span></span><div><span data-l="zh">發 10 顆球，數數看有幾顆落進斜對面的發球區。下次試著多進一顆！</span><span data-l="en">Serve 10 balls and count how many land in the diagonal box. Next time, try to beat your score by one!</span></div></div>
-  <div class="row"><a class="btn watch" href="https://youtu.be/RJYO5ED9Vfo?t=46" target="_blank" rel="noopener"><span data-l="zh">看發球示範</span><span data-l="en">Watch: serve</span></a></div>
-  <label class="got"><input type="checkbox" data-done="2"><span data-l="zh">我完成第二關了！</span><span data-l="en">I finished Level 2!</span></label>
- </section>
-
- <!-- LEVEL 3 -->
- <section class="level" id="lv3">
-  <div class="lhead"><span class="lnum">3</span><div><div class="kick"><span data-l="zh">第三關</span><span data-l="en">Level 3</span></div><h2><span data-l="zh">記住：<em>彈兩次</em></span><span data-l="en">Remember: <em>two bounces</em></span></h2></div></div>
-  <div class="big"><span data-l="zh">前兩球都要等它落地彈起來，才可以打。</span><span data-l="en">The first two shots must bounce before anyone hits them.</span></div>
-  <div class="bounce">
-   <div><b><span data-l="zh">① 發球</span><span data-l="en">① Serve</span></b><small><span data-l="zh">對方要等球彈一次</span><span data-l="en">They wait for one bounce</span></small></div>
-   <div><b><span data-l="zh">② 回球</span><span data-l="en">② Return</span></b><small><span data-l="zh">發球的這一隊也要等球彈一次</span><span data-l="en">The serving team waits for one bounce too</span></small></div>
-   <div><b><span data-l="zh">③ 之後</span><span data-l="en">③ After that</span></b><small><span data-l="zh">可以在空中直接打（截擊），也可以等彈起來再打</span><span data-l="en">Hit it out of the air (a volley) or after a bounce—your choice</span></small></div>
-  </div>
-  <div class="chal"><span class="ic"><span data-l="zh">小挑戰</span><span data-l="en">Challenge</span></span><div><span data-l="zh">和夥伴玩「彈彈接力」：每一球都等它落地彈起再打，連續來回 10 拍不失誤。</span><span data-l="en">Play "bounce relay" with a partner: let every ball bounce before you hit it, and keep 10 shots going without a miss.</span></div></div>
-  <label class="got"><input type="checkbox" data-done="3"><span data-l="zh">我完成第三關了！</span><span data-l="en">I finished Level 3!</span></label>
- </section>
-
- <!-- LEVEL 4 -->
- <section class="level" id="lv4">
-  <div class="lhead"><span class="lnum">4</span><div><div class="kick"><span data-l="zh">第四關</span><span data-l="en">Level 4</span></div><h2><span data-l="zh">廚房與丁克球</span><span data-l="en">The kitchen and the dink</span></h2></div></div>
-  <div class="big"><span data-l="zh">站在廚房裡，不可以打空中球。</span><span data-l="en">In the kitchen, no hitting the ball out of the air.</span></div>
-  <div class="steps">
-   <div><i>①</i><span data-l="zh">「廚房」是網子兩邊、各大約 2 公尺的區域，連線也算在裡面。</span><span data-l="en">The "kitchen" is the area about 2 meters (7 feet) from the net on each side—the lines count as part of it.</span></div>
-   <div><i>②</i><span data-l="zh">腳踩在廚房裡（或踩到線）時，不能打還沒落地的球。打完空中球後腳滑進去，也不行。</span><span data-l="en">With a foot in the kitchen (or on its line), you can't hit a ball before it bounces. Stumbling in right after a volley doesn't count either.</span></div>
-   <div><i>③</i><span data-l="zh">「丁克球」就是輕輕一推，讓球落進對方的廚房。穩穩打、不要急，等對方打出太高的球再進攻。</span><span data-l="en">A "dink" is a soft push that lands in the other team's kitchen. Stay steady, be patient, and attack when they send one up too high.</span></div>
-  </div>
-  <div class="chal"><span class="ic"><span data-l="zh">小挑戰</span><span data-l="en">Challenge</span></span><div><span data-l="zh">兩個人都站在廚房線外面，輕輕把球推進對方的廚房，連續 10 下不失誤。</span><span data-l="en">Both players stand just outside the kitchen line and softly push the ball into each other's kitchen—10 in a row without a miss.</span></div></div>
-  <div class="row"><a class="btn watch" href="https://youtu.be/5QqDVv14ijg?t=29" target="_blank" rel="noopener"><span data-l="zh">看丁克示範</span><span data-l="en">Watch: dinks</span></a></div>
-  <label class="got"><input type="checkbox" data-done="4"><span data-l="zh">我完成第四關了！</span><span data-l="en">I finished Level 4!</span></label>
- </section>
-
- <!-- LEVEL 5 -->
- <section class="level" id="lv5">
-  <div class="lhead"><span class="lnum">5</span><div><div class="kick"><span data-l="zh">第五關</span><span data-l="en">Level 5</span></div><h2><span data-l="zh">學會報分</span><span data-l="en">Call the score</span></h2></div></div>
-  <div class="big"><span data-l="zh">只有發球的那一隊可以得分。打到 11 分、還要多對方 2 分才贏。</span><span data-l="en">Only the serving team can score. First to 11—and you must be 2 points ahead to win.</span></div>
-  <div class="steps">
-   <div><i>①</i><span data-l="zh">雙打發球前要說三個數字：我們的分數、對方的分數、我是第幾號發球員（1 或 2）。</span><span data-l="en">Before serving in doubles, say three numbers: our score, their score, and whether you're server 1 or 2.</span></div>
-   <div><i>②</i><span data-l="zh">比賽一開始要說「0-0-2」：第一輪只有一個人發球，失誤就換對方發。</span><span data-l="en">A game starts with "0-0-2": the first turn has only one server, and a miss passes the serve to the other team.</span></div>
-   <div><i>③</i><span data-l="zh">發球的隊伍贏了這一球，就加 1 分，發球的人和隊友換邊，繼續發。</span><span data-l="en">When the serving team wins the rally, they get 1 point; the server swaps sides with their partner and serves again.</span></div>
-  </div>
-  <div class="chal"><span class="ic"><span data-l="zh">小挑戰</span><span data-l="en">Challenge</span></span><div><span data-l="zh">用下面的報分模擬器闖關：每按一次按鈕前，先大聲猜猜看新的比分是多少，再看看答對了沒！</span><span data-l="en">Use the score trainer below: before each tap, guess the new score out loud—then check if you got it right!</span></div></div>
-  <div class="sim" id="sim" aria-live="polite"></div>
-  <label class="got"><input type="checkbox" data-done="5"><span data-l="zh">我完成第五關了！</span><span data-l="en">I finished Level 5!</span></label>
- </section>
+ <div id="levels"></div>
 
  <section class="level" id="gloss">
   <div class="kick"><span data-l="zh">看不懂的字，來這裡查</span><span data-l="en">Look up any word here</span></div>
@@ -254,20 +223,30 @@ h2{font-size:clamp(30px,4.6vw,44px);font-weight:900;line-height:1.2}
  </section>
 
  <section class="level" id="cert-sec">
-  <div class="kick"><span data-l="zh">全部過關的獎勵</span><span data-l="en">Your reward</span></div>
+  <div class="kick"><span data-l="zh">集滿六枚徽章的獎勵</span><span data-l="en">Your reward for six badges</span></div>
   <h2 style="margin-bottom:12px"><span data-l="zh">結業證書</span><span data-l="en">Certificate</span></h2>
   <div id="certArea"></div>
  </section>
 
+ <section class="level" id="card-sec">
+  <div class="kick"><span data-l="zh">沒有平板也能玩</span><span data-l="en">No tablet? No problem</span></div>
+  <h2 style="margin-bottom:8px"><span data-l="zh">紙本集點卡</span><span data-l="en">Printable stamp card</span></h2>
+  <p class="note" style="margin-bottom:14px"><span data-l="zh">印出來發給每個孩子：在球場上完成挑戰，就請教練或老師在那一格蓋章或簽名。</span><span data-l="en">Print one per child: when they finish a challenge on court, the coach or teacher stamps or signs that box.</span></p>
+  <div id="card" class="card"></div>
+  <div class="row" style="justify-content:center"><button class="btn dark" data-print="card"><span data-l="zh">列印集點卡（A4）</span><span data-l="en">Print stamp card (A4)</span></button></div>
+ </section>
+
  <div class="endbox">
-  <div class="kick" style="color:#E9907E"><span data-l="zh">全部過關之後</span><span data-l="en">After all five levels</span></div>
-  <h2><span data-l="zh">恭喜你，可以上場打一場了！</span><span data-l="en">Congratulations—you're ready to play a game!</span></h2>
+  <div class="kick" style="color:#E9907E"><span data-l="zh">全部過關之後</span><span data-l="en">After all six levels</span></div>
+  <h2><span data-l="zh">恭喜你，可以上場打一場了！</span><span data-l="en">Congratulations—you’re ready to play a game!</span></h2>
   <p style="margin:12px 0 18px;color:#D8D2C4"><span data-l="zh">想學更多（截擊、強抽、扣殺……），請老師或教練帶你看完整版。</span><span data-l="en">Want more (volleys, drives, smashes…)? Ask your teacher or coach to go through the full issue with you.</span></p>
   <div class="row"><a class="btn" href="./"><span data-l="zh">前往完整版 →</span><span data-l="en">Go to the full issue →</span></a><button class="btn" data-reset></button></div>
-  <p class="disc"><span data-l="zh">規則依據 USA Pickleball 2026 官方規則；示範影片來自張教練 YouTube 頻道 @pickleballcoachchang，影片著作權屬原頻道所有；「小挑戰」為本刊建議。本刊由 Coach Ninja 為阿尼色弗兒童之家的匹克球活動整理製作，並非阿尼色弗兒童之家的出版品。</span><span data-l="en">Rules follow USA Pickleball's 2026 rules; demo videos are from Coach Chang's YouTube channel @pickleballcoachchang and belong to the channel; the challenges are our suggestions. Compiled by Coach Ninja for a pickleball activity with the Onesiphorus Children's Home; not a publication of the Home.</span></p>
+  <p class="disc"><span data-l="zh">規則依據 USA Pickleball 2026 官方規則；示範影片來自張教練 YouTube 頻道 @pickleballcoachchang，影片著作權屬原頻道所有；挑戰、徽章與小測驗為本刊設計。本刊由 Coach Ninja 為阿尼色弗兒童之家的匹克球活動整理製作，並非阿尼色弗兒童之家的出版品。</span><span data-l="en">Rules follow USA Pickleball’s 2026 rules; demo videos are from Coach Chang’s YouTube channel @pickleballcoachchang and belong to the channel; challenges, badges and quizzes are our own. Compiled by Coach Ninja for a pickleball activity with the Onesiphorus Children’s Home; not a publication of the Home.</span></p>
  </div>
 </main>
+<div class="pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="popT"><div class="pop-in" id="popIn"></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="printArea" style="display:none"></div>
 
 <script>
 (function(){
@@ -275,6 +254,8 @@ var lang='zh';
 function $(s,r){return (r||document).querySelector(s)}
 function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function T2(o){return o?o[lang]:''}
+var REDUCE=false;try{REDUCE=window.matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
 var SIMT={zh:{srvw:'發球方贏球',rcvw:'接發方贏球',reset:'重新開局',to:'打到',team:'隊',right:'右發球區',left:'左發球區',net:'網',serving:'發球中',call:'發球員報分',start:'開局：A 隊先發，只有一位發球員（A1），報 0-0-2。',pt:function(p){return '發球方得分 → 加 1 分。'+p+' 與搭檔換邊，繼續由 '+p+' 發球。'},s2:function(p){return '1 號發球員失誤 → 換搭檔 '+p+' 從他目前的位置發球，成為 2 號發球。'},so:function(p,t){return '2 號發球員失誤 → 換發（Side out）。'+t+' 隊站在右區的 '+p+' 成為 1 號發球員。'},so0:function(p,t){return '開局唯一的發球員失誤 → 直接換發。'+t+' 隊右區的 '+p+' 為 1 號發球員。'},win:function(t,a,b){return t+' 隊 '+a+':'+b+' 獲勝！'},chk:function(ok){return ok?'站位檢查：A1、B1 都符合「自家分數偶數站右、奇數站左」。':'站位錯誤'}},
  en:{srvw:'Serving side wins rally',rcvw:'Receiving side wins rally',reset:'New game',to:'Play to',team:'Team',right:'Right court',left:'Left court',net:'NET',serving:'serving',call:'Server calls',start:'Start: Team A serves first with one server only (A1). Call 0-0-2.',pt:function(p){return 'Serving side wins → +1 point. '+p+' switches courts with their partner and serves again.'},s2:function(p){return 'Server 1 faults → partner '+p+' serves from where they stand, as server 2.'},so:function(p,t){return 'Server 2 faults → side out. '+p+', in Team '+t+'’s right court, becomes server 1.'},so0:function(p,t){return 'The single starting server faults → immediate side out. '+p+' (right court, Team '+t+') is server 1.'},win:function(t,a,b){return 'Team '+t+' wins '+a+'-'+b+'!'},chk:function(ok){return ok?'Position check: A1 and B1 each stand right on an even team score, left on odd.':'Position error'}}};
 var S;
@@ -331,36 +312,248 @@ function renderGloss(el,kidsOnly){
  el.innerHTML=GLOSS.filter(function(g){return !kidsOnly||g.k}).map(function(g){var L=g[lang];return '<div><dt>'+esc(L[0])+'</dt><dd>'+esc(L[1])+'</dd></div>'}).join('');
 }
 
-var done={},TOTAL=6,certName='',resetArm=0;
+
+/* ---------- diagrams ---------- */
+function courtSVG(mode){
+ var z=lang==='zh';
+ var s='<svg viewBox="0 0 520 290" role="img" aria-label="'+(mode==='serve'?(z?'發球路線圖':'Serve diagram'):(z?'廚房位置圖':'Kitchen diagram'))+'" font-family="Noto Serif TC, serif">';
+ s+='<rect x="40" y="40" width="440" height="200" fill="#E9F0E4" stroke="#161513" stroke-width="3"/>';
+ s+='<rect x="190" y="40" width="140" height="200" fill="'+(mode==='kitchen'?'#A3311D':'#A3311D')+'" fill-opacity="'+(mode==='kitchen'?'.35':'.18')+'"/>';
+ s+='<line x1="190" y1="40" x2="190" y2="240" stroke="#161513" stroke-width="2.5"/><line x1="330" y1="40" x2="330" y2="240" stroke="#161513" stroke-width="2.5"/>';
+ s+='<line x1="40" y1="140" x2="190" y2="140" stroke="#161513" stroke-width="2"/><line x1="330" y1="140" x2="480" y2="140" stroke="#161513" stroke-width="2"/>';
+ s+='<line x1="260" y1="28" x2="260" y2="252" stroke="#161513" stroke-width="5"/><text x="260" y="22" text-anchor="middle" font-size="15" font-weight="700">'+(z?'網子':'Net')+'</text>';
+ s+='<text x="40" y="270" font-size="14" fill="#5E5A52">'+(z?'← 底線':'← Baseline')+'</text><text x="480" y="270" text-anchor="end" font-size="14" fill="#5E5A52">'+(z?'底線 →':'Baseline →')+'</text>';
+ if(mode==='serve'){
+  s+='<rect x="330" y="40" width="150" height="100" fill="#F2C94C" fill-opacity=".55"/>';
+  s+='<text x="405" y="86" text-anchor="middle" font-size="17" font-weight="900">'+(z?'發到這裡':'Land here')+'</text><text x="405" y="108" text-anchor="middle" font-size="13">'+(z?'斜對面的發球區':'diagonal box')+'</text>';
+  s+='<rect x="176" y="180" width="168" height="44" rx="4" fill="#FFFDF7" stroke="#7E2414" stroke-width="1.5"/><text x="260" y="198" text-anchor="middle" font-size="14" font-weight="700" fill="#7E2414">'+(z?'廚房：發球不能落在這裡':'Kitchen: serve can’t land here')+'</text><text x="260" y="216" text-anchor="middle" font-size="13" fill="#7E2414">'+(z?'（壓線也不行）':'(not even on the line)')+'</text>';
+  s+='<circle cx="24" cy="200" r="12" fill="#161513"/><text x="24" y="205" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">'+(z?'你':'You')+'</text>';
+  s+='<path d="M36 196 Q 230 40 392 92" fill="none" stroke="#A3311D" stroke-width="4" stroke-dasharray="10 7"/><polygon points="392,92 376,84 380,100" fill="#A3311D"/>';
+  s+='<text x="60" y="232" font-size="13">'+(z?'站在底線後面':'Behind the baseline')+'</text>';
+ }else{
+  s+='<text x="225" y="134" text-anchor="middle" font-size="16" font-weight="900" fill="#7E2414">'+(z?'廚房':'Kitchen')+'</text><text x="295" y="134" text-anchor="middle" font-size="16" font-weight="900" fill="#7E2414">'+(z?'廚房':'Kitchen')+'</text>';
+  s+='<text x="225" y="156" text-anchor="middle" font-size="12" fill="#7E2414">'+(z?'約 2 公尺':'7 ft')+'</text><text x="295" y="156" text-anchor="middle" font-size="12" fill="#7E2414">'+(z?'約 2 公尺':'7 ft')+'</text>';
+  s+='<circle cx="212" cy="80" r="13" fill="#A3311D"/><text x="212" y="85" text-anchor="middle" font-size="15" fill="#fff" font-weight="900">✗</text>';
+  s+='<text x="120" y="70" text-anchor="middle" font-size="13" fill="#7E2414" font-weight="700">'+(z?'腳在廚房裡：':'Foot in kitchen:')+'</text><text x="120" y="88" text-anchor="middle" font-size="13" fill="#7E2414">'+(z?'不能打空中球':'no volleys')+'</text>';
+  s+='<circle cx="172" cy="200" r="13" fill="#2F6B3A"/><text x="172" y="205" text-anchor="middle" font-size="15" fill="#fff" font-weight="900">✓</text>';
+  s+='<text x="100" y="196" text-anchor="middle" font-size="13" fill="#2F6B3A" font-weight="700">'+(z?'站在線外面：':'Behind the line:')+'</text><text x="100" y="214" text-anchor="middle" font-size="13" fill="#2F6B3A">'+(z?'可以打空中球':'volleys OK')+'</text>';
+ }
+ return s+'</svg>';
+}
+function frameSVG(k){
+ var anim=!REDUCE;
+ var s='<svg viewBox="0 0 240 118" role="img" aria-hidden="true">';
+ s+='<rect x="10" y="14" width="220" height="72" fill="#E9F0E4" stroke="#161513" stroke-width="2"/><line x1="120" y1="6" x2="120" y2="94" stroke="#161513" stroke-width="4"/>';
+ var path,bx=-99,by=-99,ax,bx2;
+ if(k===1){ax=22;bx2=218;path='M30 46 Q 120 -4 190 66 Q 200 46 210 42';bx=190;by=66;}
+ else if(k===2){ax=22;bx2=218;path='M210 46 Q 120 -4 50 66 Q 40 46 30 42';bx=50;by=66;}
+ else{ax=96;bx2=144;path='M104 48 Q 120 30 136 48 Q 120 66 104 52';}
+ s+='<circle cx="'+ax+'" cy="50" r="9" fill="#161513"/><circle cx="'+bx2+'" cy="50" r="9" fill="#A3311D"/>';
+ s+='<path d="'+path+'" fill="none" stroke="#5E5A52" stroke-width="2" stroke-dasharray="5 5"/>';
+ if(bx>0){s+='<circle cx="'+bx+'" cy="'+by+'" r="11" fill="none" stroke="#A3311D" stroke-width="2.5"/><text x="'+bx+'" y="110" text-anchor="middle" font-size="13" font-weight="700" fill="#A3311D">'+(lang==='zh'?'彈！':'Bounce!')+'</text>';}
+ else{s+='<text x="120" y="110" text-anchor="middle" font-size="13" font-weight="700" fill="#2F6B3A">'+(lang==='zh'?'空中直接打 ✓':'Volley ✓')+'</text>';}
+ var sx=k===2?210:k===3?104:30,sy=k===3?48:46;
+ s+='<circle r="6" fill="#F2C94C" stroke="#161513" stroke-width="1.5"'+(anim?'':' cx="'+sx+'" cy="'+sy+'"')+'>'+(anim?'<animateMotion dur="2.4s" repeatCount="indefinite" path="'+path+'"/>':'')+'</circle>';
+ return s+'</svg>';
+}
+
+/* ---------- level data ---------- */
+var V=function(id,t){return 'https://youtu.be/'+id+'?t='+t};
+var LV=[
+ {n:0,title:{zh:'安全與運動精神',en:'Safety and good sportsmanship'},kick:{zh:'第零關 · 上場之前',en:'Level 0 · Before you play'},map:{zh:'安全',en:'Safety'},
+  big:{zh:'先熱身、保護好自己，再公平地玩。',en:'Warm up, stay safe, play fair.'},
+  groups:[{sub:{zh:'保護自己',en:'Stay safe'},steps:[
+   {zh:'先熱身：慢跑一下，轉轉手腕、肩膀和腳踝，再開始打球。',en:'Warm up: jog a little and circle your wrists, shoulders and ankles before you play.'},
+   {zh:'記得喝水，穿運動鞋（不要穿拖鞋）。有護目鏡更好。',en:'Drink water and wear sports shoes (no slippers). Eye protection is even better.'},
+   {zh:'往後退的時候側身移動，不要倒退跑，比較不容易跌倒。',en:'Move sideways when you go back—don’t run backwards—so you’re less likely to fall.'}]},
+   {sub:{zh:'公平比賽',en:'Play fair'},steps:[
+   {zh:'有別的球滾進場：大聲喊「有球！」，大家停下來，這一球重打。不要踩到球！',en:'A ball rolls onto your court? Shout “Ball!”, everyone stops, and the point is replayed. Never step on a ball!'},
+   {zh:'誠實判球：自己這一邊的球自己判。碰到線算界內；看不清楚，就算界內。',en:'Call it honestly: you call the balls on your side. Touching the line is in—and if you’re not sure, it’s in.'},
+   {zh:'比賽結束，到網前和大家碰拍或握手，說聲「謝謝」。',en:'After the game, meet at the net, tap paddles or shake hands, and say “thank you.”'}]}],
+  note:{zh:'「有球滾進場可以重打」和「看不清楚算界內」是 USA Pickleball 的規則；其他是本刊建議的好習慣。',en:'“Replay when a ball rolls on” and “if in doubt, it’s in” come from USA Pickleball’s rules; the rest are good habits we recommend.'},
+  easy:{zh:'跟著大家一起做 5 分鐘熱身。',en:'Join a 5-minute group warm-up.'},
+  hard:{zh:'自己帶大家做 5 分鐘熱身；比賽結束後，和每一個人碰拍說謝謝。',en:'Lead the 5-minute warm-up yourself; after the game, tap paddles with every player and say thanks.'},
+  quiz:[{q:{zh:'打到一半，別的球滾進你的場地，你要？',en:'Mid-rally, a ball from another court rolls onto yours. You…'},o:[{zh:'大喊「有球！」，停下來重打',en:'Shout “Ball!”, stop and replay'},{zh:'繼續打，不用管它',en:'Keep playing and ignore it'}],a:0,w:{zh:'對！停下來最安全，這一球重打。',en:'Right! Stopping is safest, and the point is replayed.'}},
+   {q:{zh:'球落在線附近，你看不清楚有沒有出界，要怎麼判？',en:'A ball lands near the line and you can’t tell if it’s out. You call it…'},o:[{zh:'出界',en:'Out'},{zh:'界內',en:'In'}],a:1,w:{zh:'對！看不清楚就算界內。',en:'Right! If you’re not sure, it’s in.'}}],
+  badge:{zh:'安全小尖兵',en:'Safety Star'}},
+ {n:1,title:{zh:'握好球拍',en:'Hold the paddle'},kick:{zh:'第一關',en:'Level 1'},map:{zh:'握拍',en:'Grip'},
+  big:{zh:'像跟球拍握手一樣，輕輕握住。',en:'Shake hands with the paddle—and hold it gently.'},
+  groups:[{steps:[
+   {zh:'拍面立起來，手像要跟它握手，自然握住拍柄。這叫「東方式握法」，張教練說新手先從這個開始。',en:'Stand the paddle on its edge and grip the handle like a handshake. This is the Eastern grip—Coach Chang says beginners start here.'},
+   {zh:'不要握太緊！握太緊手會變硬，球就控制不好。',en:'Don’t squeeze! A tight grip makes your arm stiff and the ball hard to control.'},
+   {zh:'握法沒有標準答案，能把球穩穩打好最重要。',en:'There’s no single right grip—hitting the ball steadily is what matters.'}]}],
+  easy:{zh:'拍面朝上，把球往上輕輕顛，連續 5 下不落地。',en:'Paddle face up, bounce the ball gently upward 5 times in a row.'},
+  hard:{zh:'連續顛球 10 下，再試試正面、反面輪流顛。',en:'Bounce it 10 times in a row—then try alternating paddle sides.'},
+  vids:[{zh:'看握拍示範',en:'Watch: grip',u:V('E32RneGmi20',30)},{zh:'看握力示範',en:'Watch: grip pressure',u:V('VDOVj5mnir4',59)}],
+  quiz:[{q:{zh:'新手建議先學哪一種握法？',en:'Which grip should beginners learn first?'},o:[{zh:'西方式',en:'Western'},{zh:'東方式（像握手）',en:'Eastern (like a handshake)'}],a:1,w:{zh:'對！先用東方式打好基礎。',en:'Right! Build on the Eastern grip first.'}},
+   {q:{zh:'打輕輕的小球時，球拍要怎麼握？',en:'For soft little shots, how should you hold the paddle?'},o:[{zh:'輕輕握，放鬆',en:'Gently, relaxed'},{zh:'越用力越好',en:'As tight as you can'}],a:0,w:{zh:'對！握太緊手會變硬。',en:'Right! A tight grip makes your arm stiff.'}}],
+  badge:{zh:'握拍好手',en:'Grip Pro'}},
+ {n:2,title:{zh:'發球',en:'The serve'},kick:{zh:'第二關',en:'Level 2'},map:{zh:'發球',en:'Serve'},
+  big:{zh:'站在底線後面，由下往上，發到斜對面。',en:'Stand behind the back line, swing low to high, serve to the box diagonally across.'},
+  fig:'serve',figcap:{zh:'看圖：從底線後面，把球發到斜對面黃色的發球區。',en:'From behind the baseline, serve to the yellow box diagonally across.'},
+  groups:[{steps:[
+   {zh:'站在底線後面，腳不要踩到線。',en:'Stand behind the baseline—don’t step on the line.'},
+   {zh:'手由下往上揮，在腰的下面打到球。也可以讓球從手上自然掉下來，彈一下再打（不能用丟的）。',en:'Swing from low to high and hit the ball below your waist. Or let the ball drop from your hand, bounce once, then hit it (just drop it—no throwing).'},
+   {zh:'球要飛過網子，落在斜對面的發球區。每個人只有一次機會。',en:'The ball must clear the net and land in the service box diagonally across. You get one try.'}]}],
+  note:{zh:'⚠️ 球落在對面的「廚房」裡，或壓到廚房的線，都不算。發球擦到網、但還是落在對的發球區，就繼續打！',en:'⚠️ A serve landing in the kitchen—or on the kitchen line—doesn’t count. If it clips the net but still lands in the right box, keep playing!'},
+  easy:{zh:'先站在離網子近一點的地方練習，發 10 顆，數數看進了幾顆。',en:'Practice from a bit closer to the net: serve 10 and count how many go in.'},
+  hard:{zh:'從底線後面發 10 顆，挑戰進 6 顆以上！',en:'Serve 10 from behind the baseline—aim for 6 or more in!'},
+  vids:[{zh:'看發球示範',en:'Watch: serve',u:V('RJYO5ED9Vfo',46)}],
+  quiz:[{q:{zh:'發球要發到哪裡？',en:'Where does the serve go?'},o:[{zh:'正對面',en:'Straight ahead'},{zh:'斜對面的發球區',en:'The box diagonally across'}],a:1,w:{zh:'對！要發到斜對面。',en:'Right! Diagonally across.'}},
+   {q:{zh:'發球落在廚房的線上，算不算？',en:'A serve lands on the kitchen line. Is it good?'},o:[{zh:'不算，是失誤',en:'No—it’s a fault'},{zh:'算，壓線都算',en:'Yes—lines are in'}],a:0,w:{zh:'對！發球壓到廚房線不算。',en:'Right! A serve on the kitchen line is a fault.'}},
+   {q:{zh:'發球擦到網，但落進對的發球區？',en:'The serve clips the net but lands in the right box?'},o:[{zh:'要重發',en:'Serve again'},{zh:'繼續打',en:'Keep playing'}],a:1,w:{zh:'對！發球沒有重發，繼續打。',en:'Right! No re-serves—play on.'}}],
+  badge:{zh:'發球神射手',en:'Serve Ace'}},
+ {n:3,title:{zh:'記住：<em>彈兩次</em>',en:'Remember: <em>two bounces</em>'},kick:{zh:'第三關',en:'Level 3'},map:{zh:'彈兩次',en:'Two bounces'},
+  big:{zh:'前兩球都要等它落地彈起來，才可以打。',en:'The first two shots must bounce before anyone hits them.'},
+  frames:true,
+  easy:{zh:'和夥伴玩「彈彈接力」：每一球都等它彈起來再打，連續 5 拍不失誤。',en:'“Bounce relay” with a partner: let every ball bounce before you hit it—5 in a row.'},
+  hard:{zh:'彈彈接力連續 10 拍，而且每一球都打過網子中間。',en:'Bounce relay for 10 in a row, every shot over the middle of the net.'},
+  quiz:[{q:{zh:'對方發球過來，你要？',en:'The serve comes to you. You…'},o:[{zh:'等球彈一次再打',en:'Let it bounce once, then hit'},{zh:'在空中直接打回去',en:'Hit it out of the air'}],a:0,w:{zh:'對！第一球要彈一次。',en:'Right! The serve must bounce.'}},
+   {q:{zh:'你把球回過去之後，發球的那一隊要？',en:'After your return, the serving team must…'},o:[{zh:'也等球彈一次',en:'Also let it bounce once'},{zh:'可以直接截擊',en:'Volley it right away'}],a:0,w:{zh:'對！兩邊各彈一次之後，才可以打空中球。',en:'Right! After one bounce on each side, volleys are allowed.'}}],
+  badge:{zh:'彈彈達人',en:'Bounce Boss'}},
+ {n:4,title:{zh:'廚房與丁克球',en:'The kitchen and the dink'},kick:{zh:'第四關',en:'Level 4'},map:{zh:'廚房',en:'Kitchen'},
+  big:{zh:'站在廚房裡，不可以打空中球。',en:'In the kitchen, no hitting the ball out of the air.'},
+  fig:'kitchen',figcap:{zh:'看圖：紅色是廚房。腳在裡面，就不能打還沒落地的球。',en:'Red is the kitchen. With a foot in it, you can’t hit a ball before it bounces.'},
+  groups:[{steps:[
+   {zh:'「廚房」是網子兩邊、各大約 2 公尺的區域，連線也算在裡面。',en:'The “kitchen” is the area about 2 meters (7 feet) from the net on each side—the lines count as part of it.'},
+   {zh:'腳踩在廚房裡（或踩到線）時，不能打還沒落地的球。打完空中球後腳滑進去，也不行。',en:'With a foot in the kitchen (or on its line), you can’t hit a ball before it bounces. Stumbling in right after a volley doesn’t count either.'},
+   {zh:'「丁克球」就是輕輕一推，讓球落進對方的廚房。穩穩打、不要急，等對方打出太高的球再進攻。',en:'A “dink” is a soft push that lands in the other team’s kitchen. Stay steady, be patient, and attack when they send one up too high.'}]}],
+  easy:{zh:'兩個人站在廚房線外面，輕輕把球推過網，連續 5 下不失誤。',en:'Both stand just outside the kitchen line and softly push the ball over—5 in a row.'},
+  hard:{zh:'連續 10 下丁克，而且每一球都落在對方的廚房裡。',en:'10 dinks in a row, every one landing in the other kitchen.'},
+  vids:[{zh:'看丁克示範',en:'Watch: dinks',u:V('5QqDVv14ijg',29)}],
+  quiz:[{q:{zh:'腳踩在廚房的線上，可以打還沒落地的球嗎？',en:'With a foot on the kitchen line, can you hit a ball before it bounces?'},o:[{zh:'可以',en:'Yes'},{zh:'不可以，線也算廚房',en:'No—the line is part of the kitchen'}],a:1,w:{zh:'對！線也算在廚房裡。',en:'Right! The line counts as kitchen.'}},
+   {q:{zh:'不打空中球的時候，可以走進廚房嗎？',en:'When you’re not volleying, can you step into the kitchen?'},o:[{zh:'可以',en:'Yes'},{zh:'永遠不行',en:'Never'}],a:0,w:{zh:'對！只是不能在裡面打空中球。',en:'Right! You just can’t volley from there.'}}],
+  badge:{zh:'廚房守門員',en:'Kitchen Keeper'}},
+ {n:5,title:{zh:'學會報分',en:'Call the score'},kick:{zh:'第五關',en:'Level 5'},map:{zh:'報分',en:'Scoring'},
+  big:{zh:'只有發球的那一隊可以得分。打到 11 分、還要多對方 2 分才贏。',en:'Only the serving team can score. First to 11—and you must be 2 points ahead to win.'},
+  groups:[{steps:[
+   {zh:'雙打發球前要說三個數字：我們的分數、對方的分數、我是第幾號發球員（1 或 2）。',en:'Before serving in doubles, say three numbers: our score, their score, and whether you’re server 1 or 2.'},
+   {zh:'比賽一開始要說「0-0-2」：第一輪只有一個人發球，失誤就換對方發。',en:'A game starts with “0-0-2”: the first turn has only one server, and a miss passes the serve to the other team.'},
+   {zh:'發球的隊伍贏了這一球，就加 1 分，發球的人和隊友換邊，繼續發。',en:'When the serving team wins the rally, they get 1 point; the server swaps sides with their partner and serves again.'}]}],
+  sim:true,
+  easy:{zh:'用下面的報分模擬器，每按一次前先猜新比分，猜對 3 次。',en:'With the score trainer below, guess the new score before each tap—get 3 right.'},
+  hard:{zh:'從 0-0-2 一路猜到有人贏，全部都猜對！',en:'Guess every score from 0-0-2 until someone wins—all correct!'},
+  quiz:[{q:{zh:'傳統計分裡，誰可以得分？',en:'In traditional scoring, who can score?'},o:[{zh:'只有發球的隊伍',en:'Only the serving team'},{zh:'兩隊都可以',en:'Either team'}],a:0,w:{zh:'對！接發球的隊伍贏球，只會拿回發球權。',en:'Right! The receiving team only wins the serve back.'}},
+   {q:{zh:'比賽一開始要報什麼？',en:'What’s the score call at the start of a game?'},o:[{zh:'0-0-1',en:'0-0-1'},{zh:'0-0-2',en:'0-0-2'}],a:1,w:{zh:'對！開局是 0-0-2。',en:'Right! Games start at 0-0-2.'}},
+   {q:{zh:'比數 10 比 10，打到 11 分就贏了嗎？',en:'It’s 10–10. Does reaching 11 win the game?'},o:[{zh:'對，先到 11 就贏',en:'Yes, first to 11 wins'},{zh:'不行，要多對方 2 分',en:'No, you must lead by 2'}],a:1,w:{zh:'對！要贏 2 分才算贏。',en:'Right! You must win by 2.'}}],
+  badge:{zh:'報分小裁判',en:'Score Ref'}}
+];
+var TOTAL=LV.length;
+
+/* ---------- state ---------- */
+var done={},quiz={},certName='',resetArm=0,speaking=-1;
 try{done=JSON.parse(localStorage.getItem('pb-kids-done')||'{}')||{}}catch(e){done={}}
-function save(){try{localStorage.setItem('pb-kids-done',JSON.stringify(done))}catch(x){}}
+try{quiz=JSON.parse(localStorage.getItem('pb-kids-quiz')||'{}')||{}}catch(e){quiz={}}
+function save(){try{localStorage.setItem('pb-kids-done',JSON.stringify(done));localStorage.setItem('pb-kids-quiz',JSON.stringify(quiz))}catch(x){}}
 function count(){var n=0;for(var i=0;i<TOTAL;i++)if(done[i])n++;return n}
-var T={zh:{prog:function(n){return n===TOTAL?'🎉 六關全部完成！':'已完成 '+n+' / '+TOTAL+' 關'},toast:'過關！',reset:'換下一位：重新開始',reset2:'再按一次確認重新開始',resetDone:'已重新開始',
-  left:function(n){return '完成全部六關後，就可以製作你的結業證書！還差 '+n+' 關。'},name:'寫上你的名字',make:'製作證書',print:'列印證書',printNo:'這個畫面無法直接列印，請用瀏覽器的列印功能。',
-  ck:'匹克球新手路線',title:'結業證書',body:'完成匹克球新手路線全部六關：安全、握拍、發球、彈兩次、廚房、報分。<br>歡迎正式上場，享受每一球！',coach:'教練',date:'日期',ded:'匹克球專刊 · 獻給阿尼色弗兒童之家',hint:'名字只會顯示在這台裝置上，不會上傳。'},
+function passed(i){var q=quiz[i]||{};for(var j=0;j<LV[i].quiz.length;j++)if(q[j]!==LV[i].quiz[j].a)return false;return true}
+
+var U={zh:{prog:function(n){return n===TOTAL?'🎉 六關全部完成！':'已完成 '+n+' / '+TOTAL+' 關'},toast:'過關！',reset:'換下一位：重新開始',reset2:'再按一次確認重新開始',resetDone:'已重新開始',
+  say:'🔊 唸給我聽',stop:'⏹ 停止',easy:'入門挑戰',hard:'進階挑戰',quizH:'小測驗',quizS:'全部答對，就能打勾過關！',quizOk:'全部答對！可以打勾了 ✓',no:'再想想看！',
+  got:function(n){return n===0?'我記住了，完成第零關！':'我完成第'+['零','一','二','三','四','五'][n]+'關了！'},lock:'（先答對小測驗才能打勾）',
+  f1:'① 發球',f1s:'對方要等球彈一次',f2:'② 回球',f2s:'發球的這一隊也要等球彈一次',f3:'③ 之後',f3s:'可以在空中直接打（截擊），也可以等彈起來再打',
+  badgeGot:'獲得徽章！',close:'太棒了！',allDone:'六枚徽章全部集滿！快去做你的結業證書吧！',
+  left:function(n){return '集滿六枚徽章，就可以製作你的結業證書！還差 '+n+' 枚。'},name:'寫上你的名字',make:'製作證書',print:'列印證書',printNo:'這個畫面無法直接列印，請用瀏覽器的列印功能。',
+  ck:'匹克球新手路線',title:'結業證書',body:'完成匹克球新手路線全部六關：安全、握拍、發球、彈兩次、廚房、報分。<br>歡迎正式上場，享受每一球！',coach:'教練',date:'日期',colon:'：',ded:'匹克球專刊 · 獻給阿尼色弗兒童之家',hint:'名字只會顯示在這台裝置上，不會上傳。',congrats:'恭喜',
+  cardT:'匹克球新手路線 · 集點卡',cardName:'姓名',cardDate:'日期',stamp:'蓋章處',cardFoot:'完成挑戰後，請教練或老師在圓圈裡蓋章或簽名。掃描 QR code 可以打開線上版。',noSpeech:'這台裝置不支援朗讀。'},
  en:{prog:function(n){return n===TOTAL?'🎉 All six levels done!':n+' of '+TOTAL+' levels done'},toast:'Level cleared!',reset:'Next player: start over',reset2:'Tap again to confirm',resetDone:'Started over',
-  left:function(n){return 'Finish all six levels to make your certificate! '+n+' to go.'},name:'Write your name',make:'Make my certificate',print:'Print certificate',printNo:'This view can’t print directly—use your browser’s print option.',
-  ck:'Pickleball Starter Path',title:'Certificate of Completion',body:'has completed all six levels of the Pickleball Starter Path: safety, grip, serve, two bounces, the kitchen and scoring.<br>Welcome to the court—enjoy every point!',coach:'Coach',date:'Date',ded:'Pickleball Special · For the Onesiphorus Children’s Home',hint:'Your name stays on this device only.'}};
-function today(){var d=new Date();return lang==='zh'?d.getFullYear()+' 年 '+(d.getMonth()+1)+' 月 '+d.getDate()+' 日':d.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})}
+  say:'🔊 Read to me',stop:'⏹ Stop',easy:'Starter challenge',hard:'Pro challenge',quizH:'Mini-quiz',quizS:'Get them all right to tick off the level!',quizOk:'All correct! You can tick it now ✓',no:'Try again!',
+  got:function(n){return 'I finished Level '+n+'!'},lock:'(pass the mini-quiz first)',
+  f1:'① Serve',f1s:'They wait for one bounce',f2:'② Return',f2s:'The serving team waits for one bounce too',f3:'③ After that',f3s:'Hit it out of the air (a volley) or after a bounce—your choice',
+  badgeGot:'Badge earned!',close:'Awesome!',allDone:'All six badges collected! Go make your certificate!',
+  left:function(n){return 'Collect all six badges to make your certificate! '+n+' to go.'},name:'Write your name',make:'Make my certificate',print:'Print certificate',printNo:'This view can’t print directly—use your browser’s print option.',
+  ck:'Pickleball Starter Path',title:'Certificate of Completion',body:'has completed all six levels of the Pickleball Starter Path: safety, grip, serve, two bounces, the kitchen and scoring.<br>Welcome to the court—enjoy every point!',coach:'Coach',date:'Date',colon:': ',ded:'Pickleball Special · For the Onesiphorus Children’s Home',hint:'Your name stays on this device only.',congrats:'',
+  cardT:'Pickleball Starter Path · Stamp Card',cardName:'Name',cardDate:'Date',stamp:'Stamp here',cardFoot:'When a challenge is done, the coach or teacher stamps or signs the circle. Scan the QR code for the online version.',noSpeech:'Read-aloud isn’t supported on this device.'}};
+
+function badgeSVG(i,on){
+ var c=on?'#A3311D':'#ECE6D8',r=on?'#7E2414':'#C9C1B0',t=on?'#F4F0E7':'#A9A294';
+ return '<svg class="bdg" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,2 61,14 77,10 80,26 95,33 88,48 95,63 80,70 77,86 61,82 50,94 39,82 23,86 20,70 5,63 12,48 5,33 20,26 23,10 39,14" fill="'+c+'" stroke="'+r+'" stroke-width="3"/><circle cx="50" cy="48" r="28" fill="none" stroke="'+t+'" stroke-width="2" stroke-dasharray="4 4"/><text x="50" y="62" text-anchor="middle" font-size="40" font-weight="900" fill="'+t+'" font-family="Playfair Display,serif" font-style="italic">'+i+'</text></svg>';
+}
+
+/* ---------- render ---------- */
+function levelHTML(L){
+ var u=U[lang],h='<section class="level" id="lv'+L.n+'"><div class="lhead"><span class="lnum">'+L.n+'</span><div><div class="kick">'+T2(L.kick)+'</div><h2>'+T2(L.title)+'</h2></div>';
+ h+='<button class="say" data-say="'+L.n+'" aria-pressed="'+(speaking===L.n)+'">'+(speaking===L.n?u.stop:u.say)+'</button></div>';
+ h+='<div class="big">'+esc(T2(L.big))+'</div>';
+ if(L.fig)h+='<figure class="fig">'+courtSVG(L.fig)+'<figcaption>'+esc(T2(L.figcap))+'</figcaption></figure>';
+ if(L.frames){h+='<div class="frames">'+[1,2,3].map(function(k){return '<div>'+frameSVG(k)+'<b>'+u['f'+k]+'</b><small>'+u['f'+k+'s']+'</small></div>'}).join('')+'</div>';}
+ (L.groups||[]).forEach(function(g,gi){
+  if(g.sub)h+='<div class="kick'+(gi?' sub':'')+'">'+esc(T2(g.sub))+'</div>';
+  var base=0;for(var k=0;k<gi;k++)base+=L.groups[k].steps.length;
+  h+='<div class="steps">'+g.steps.map(function(st,si){return '<div><i>'+'①②③④⑤⑥'.charAt(base+si)+'</i>'+esc(T2(st))+'</div>'}).join('')+'</div>';
+ });
+ if(L.note)h+='<p class="note">'+esc(T2(L.note))+'</p>';
+ if(L.sim)h+='<div class="sim" id="sim" aria-live="polite" style="margin-top:22px"></div>';
+ h+='<div class="chals"><div class="chal easy"><span class="ic">'+u.easy+'</span><div>'+esc(T2(L.easy))+'</div></div><div class="chal hard"><span class="ic">'+u.hard+'</span><div>'+esc(T2(L.hard))+'</div></div></div>';
+ if(L.vids)h+='<div class="row">'+L.vids.map(function(v){return '<a class="btn watch" href="'+v.u+'" target="_blank" rel="noopener">'+esc(v[lang])+'</a>'}).join('')+'</div>';
+ var q=quiz[L.n]||{};
+ h+='<div class="quiz" id="quiz'+L.n+'"><h3>'+u.quizH+'</h3><div class="note" style="margin:0 0 6px">'+u.quizS+'</div>'+L.quiz.map(function(Q,qi){
+  var sel=q[qi],right=sel===Q.a;
+  return '<div class="qq"><p>'+esc(T2(Q.q))+'</p><div class="qo">'+Q.o.map(function(o,oi){var cls=sel===oi?(oi===Q.a?'right':'wrong'):'';return '<button data-q="'+L.n+'.'+qi+'.'+oi+'" class="'+cls+'" aria-pressed="'+(sel===oi)+'">'+esc(T2(o))+'</button>'}).join('')+'</div><div class="qf '+(sel===undefined?'':right?'ok':'no')+'" aria-live="polite">'+(sel===undefined?'':right?esc(T2(Q.w)):u.no)+'</div></div>';
+ }).join('')+(passed(L.n)?'<div class="qf ok" style="font-weight:700">'+u.quizOk+'</div>':'')+'</div>';
+ var p=passed(L.n);
+ h+='<label class="got'+(p?'':' locked')+'"><input type="checkbox" data-done="'+L.n+'"'+(done[L.n]?' checked':'')+(p?'':' disabled')+'><span>'+u.got(L.n)+(p?'':' <small style="font-weight:400">'+u.lock+'</small>')+'</span></label>';
+ return h+'</section>';
+}
+function renderLevels(){
+ $('#levels').innerHTML=LV.map(levelHTML).join('');
+ renderSim();
+}
+function renderTop(){
+ var u=U[lang];
+ $('#map').innerHTML=LV.map(function(L){var on=!!done[L.n];return '<a href="#lv'+L.n+'" class="'+(on?'done':'')+'" aria-label="'+(lang==='zh'?'第 '+L.n+' 關 '+L.map.zh:'Level '+L.n+' '+L.map.en)+(on?(lang==='zh'?'，已完成':', done'):'')+'"><b>'+L.n+'</b><span>'+esc(T2(L.map))+'</span></a>'}).join('');
+ $('#shelf').innerHTML=LV.map(function(L){return '<div class="b" title="'+esc(T2(L.badge))+'">'+badgeSVG(L.n,!!done[L.n])+(done[L.n]?esc(T2(L.badge)):'')+'</div>'}).join('');
+ $('#prog').textContent=u.prog(count());
+ $$('[data-reset]').forEach(function(b){b.textContent=resetArm?u.reset2:u.reset});
+}
 function renderCert(){
- var u=T[lang],n=count(),el=$('#certArea');
+ var u=U[lang],n=count(),el=$('#certArea');
  if(n<TOTAL){el.innerHTML='<p class="note" style="font-size:19px">'+u.left(TOTAL-n)+'</p>';return}
  var h='<div class="row" style="margin-bottom:14px"><label><span class="mono" style="font-size:13px;display:block">'+u.name+'</span><input class="namein" id="nameIn" maxlength="20" value="'+esc(certName).replace(/"/g,'&quot;')+'"></label><button class="btn red" data-make>'+u.make+'</button></div><p class="disc">'+u.hint+'</p>';
  if(certName){
-  var nm=lang==='zh'?esc(certName):esc(certName);
-  h+='<div class="cert" id="cert"><div class="ck">'+u.ck+'</div><h3>'+u.title+'</h3>'+(lang==='zh'?'<p>恭喜</p>':'')+'<div class="nm">'+nm+'</div><p>'+u.body+'</p><div class="sig"><div>'+u.coach+(lang==='zh'?'：':': ')+'Coach Ninja</div><div>'+u.date+(lang==='zh'?'：':': ')+today()+'</div></div><div class="ded">'+u.ded+'</div></div><div class="row" style="justify-content:center"><button class="btn dark" data-print>'+u.print+'</button></div>';
+  h+='<div class="cert" id="cert"><div class="ck">'+u.ck+'</div><h3>'+u.title+'</h3>'+(u.congrats?'<p>'+u.congrats+'</p>':'')+'<div class="nm">'+esc(certName)+'</div><p>'+u.body+'</p><div class="bdgs">'+LV.map(function(L){return badgeSVG(L.n,true)}).join('')+'</div><div class="sig"><div>'+u.coach+u.colon+'Coach Ninja</div><div>'+u.date+u.colon+today()+'</div></div><div class="ded">'+u.ded+'</div></div><div class="row" style="justify-content:center"><button class="btn dark" data-print="cert">'+u.print+'</button></div>';
  }
  el.innerHTML=h;
 }
-function paint(){
- var u=T[lang];$$('[data-done]').forEach(function(c){c.checked=!!done[c.getAttribute('data-done')]});
- $$('#map a').forEach(function(a){var on=!!done[a.getAttribute('data-lv')];a.classList.toggle('done',on);a.setAttribute('aria-label',(lang==='zh'?'第 '+a.getAttribute('data-lv')+' 關':'Level '+a.getAttribute('data-lv'))+(on?(lang==='zh'?'，已完成':', done'):''))});
- $('#prog').textContent=u.prog(count());
- $$('[data-reset]').forEach(function(b){b.textContent=resetArm?u.reset2:u.reset});
- renderCert();
+function renderCard(){
+ var u=U[lang];
+ var h='<h3>'+u.cardT+'</h3><div class="who"><span>'+u.cardName+u.colon+'</span><span>'+u.cardDate+u.colon+'</span></div><div class="cgrid">';
+ h+=LV.map(function(L){return '<div class="cbox"><div class="n">'+L.n+'</div><b>'+esc(T2(L.map))+'</b><div class="t"><span>□ '+u.easy+'</span><span>□ '+u.hard+'</span></div><div class="stamp">'+u.stamp+'</div></div>'}).join('');
+ h+='</div><div class="foot"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAD4CAIAAABOs7xcAAAFY0lEQVR4Xu3dQYozRxpFUf+ml2Ds/S+vG+9BTeNxDB5EtqS654xFKjJ1CYpPgerX6/X6DX6633/6DcL/CJ0EoZMgdBKEToLQSRA6Cf863eVff/7xFQ/g3//5e1rnel9PX391Ws+339ctp+djRydB6CQInQShkyB0EoROgtBJOM7RT9a58i3rnHh9/ep0/Vtz7pOn72v1LT3Y0UkQOglCJ0HoJAidBKGTIHQS5jn60/PdW3PZdZ69vv5d1ufzrrn7rfdd7/fEjk6C0EkQOglCJ0HoJAidBKGTcG2O/u1uzX3fZV3/ep7+29nRSRA6CUInQegkCJ0EoZMgdBJ+7Bx9nSvfOo++vu/Jeg57Xf96/W9nRydB6CQInQShkyB0EoROgtBJuDZH/7S57K31rNdZz3nfmrt/mvW5Pc2OToLQSRA6CUInQegkCJ0EoZMwz9G/Ze57a55965z3t6/n5Ft6sKOTIHQShE6C0EkQOglCJ0HoJPx6vV6JG/1/uTUvX63nv9d1fjs7OglCJ0HoJAidBKGTIHQShE7C8Tz6Omf9tNev3nWuej3vvnrXfa09nNy6jh2dBKGTIHQShE6C0EkQOglCJ+Hx8+jrHPdd56pvrfPTrrO6tf6n5+LrfN2OToLQSRA6CUInQegkCJ0EoZPwNb+Pvs5319ffsn4PcLKeU1/nyk9b1/P052VHJ0HoJAidBKGTIHQShE6C0Ek4nkdf56Ant+aj61x5nWffWufJrfW/a53vcqtDOzoJQidB6CQInQShkyB0EoROwjxHX/3U+fE6z16fw8r3Bv84PQc7OglCJ0HoJAidBKGTIHQShE7C/Lsut+a161x5fd93Wde5PodPs97v6tbzsaOTIHQShE6C0EkQOglCJ0HoJHzc/xld3ZrjrufLT26t59Pcej7rc1vf13l00vzpQoLQSRA6CUInQegkCJ2E43n0W/PLp+fKt34/+9Z899ZzO1mvv1o/r1vnxVfrOu3oJAidBKGTIHQShE6C0EkQOgnHOfo6p1znu09f/+TpufvJ0/Pm9Xmuz2f19P2un6MdnQShkyB0EoROgtBJEDoJQidh/l2XdV6+WufBt9azvu/T1jnx6tZzO7k1R1+v43ddSPOnCwlCJ0HoJAidBKGTIHQSjnP0dY67zmXX+ejTPm2Ozj9udWVHJ0HoJAidBKGTIHQShE6C0EmYf9fl1lxztc6513W+63uDk3X96/cS3/L6k7UHOzoJQidB6CQInQShkyB0EoROwtvOoz/t1pz45Om5+y3rc3jaOv++xY5OgtBJEDoJQidB6CQInQShkzCfRz9513z0ZJ1zP+3Tns/Tn+N6nn59/bp+OzoJQidB6CQInQShkyB0EoROwnGOfmuu+bTTfPrWOex1/n1rfr8+/1v3e/L0fT29fjs6CUInQegkCJ0EoZMgdBKETsJxjn6yzpVvWefKt9Z/a358sl5/fQ635tPv+txvva8dnQShkyB0EoROgtBJEDoJQidhnqOv8+DVrbnpOm9erfPvk1v3e8vTz+1d92tHJ0HoJAidBKGTIHQShE6C0Em4Nkf/NOu8dp0fr+e8n17Pal3Pyfrcnr7O6b7s6CQInQShkyB0EoROgtBJEDoJP3aOvs5317n4yXqddZ799PWfdusc//r52tFJEDoJQidB6CQInQShkyB0Eq7N0dd58NPWefPJrfta17O+/mSdN99631vP7dbc3Y5OgtBJEDoJQidB6CQInQShkzDP0de57Lvcmr8+7da8+db8+2Rd59rJrev7XRfS/OlCgtBJEDoJQidB6CQInYRfr9crcaO02dFJEDoJQidB6CQInQShkyB0Ev4L5JkZzPWCUvoAAAAASUVORK5CYII=" alt="QR code: pb-technique.vercel.app/kids.html"><div>'+u.cardFoot+'<br>'+u.ded+'</div></div>';
+ $('#card').innerHTML=h;
 }
-function toast(t){var el=$('#toast');el.textContent=t;el.classList.add('on');setTimeout(function(){el.classList.remove('on')},1400)}
-function setLang(l,save2){lang=l;document.documentElement.classList.toggle('en',l==='en');document.documentElement.lang=l==='zh'?'zh-Hant':'en';$('#langBtn').textContent=l==='zh'?'EN':'中';if(save2){try{localStorage.setItem('pr-lang',l)}catch(e){}}renderSim();renderGloss($('#gl'),true);paint();}
+function today(){var d=new Date();return lang==='zh'?d.getFullYear()+' 年 '+(d.getMonth()+1)+' 月 '+d.getDate()+' 日':d.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})}
+function renderAll(){renderTop();renderLevels();renderGloss($('#gl'),true);renderCert();renderCard();}
+
+/* ---------- read aloud ---------- */
+var canSpeak=('speechSynthesis' in window)&&('SpeechSynthesisUtterance' in window);
+function stopSpeak(){try{window.speechSynthesis.cancel()}catch(e){}speaking=-1;$$('[data-say]').forEach(function(b){b.setAttribute('aria-pressed','false');b.textContent=U[lang].say})}
+function speak(n){
+ if(!canSpeak){toast(U[lang].noSpeech);return}
+ if(speaking===n){stopSpeak();return}
+ stopSpeak();
+ var sec=$('#lv'+n);
+ var parts=$$('h2, .big, .frames div, .steps div, .note, .chal',sec).map(function(e){return e.innerText.replace(/[①②③④⑤⑥]/g,'').trim()}).filter(Boolean);
+ var text=parts.join('。 ');
+ var ut=new SpeechSynthesisUtterance(text);ut.lang=lang==='zh'?'zh-TW':'en-US';ut.rate=lang==='zh'?0.9:0.95;
+ try{var vs=window.speechSynthesis.getVoices();var v=vs.filter(function(x){return lang==='zh'?/zh[-_]TW/i.test(x.lang):/^en/i.test(x.lang)})[0]||vs.filter(function(x){return lang==='zh'?/^zh/i.test(x.lang):false})[0];if(v)ut.voice=v}catch(e){}
+ ut.onend=ut.onerror=function(){if(speaking===n)stopSpeak()};
+ speaking=n;var b=$('[data-say="'+n+'"]');if(b){b.setAttribute('aria-pressed','true');b.textContent=U[lang].stop}
+ window.speechSynthesis.speak(ut);
+}
+
+/* ---------- badge popup ---------- */
+function celebrate(n){
+ var u=U[lang],L=LV[n],all=count()===TOTAL;
+ $('#popIn').innerHTML=badgeSVG(n,true)+'<div class="kick" style="margin:0">'+u.badgeGot+'</div><h3 id="popT">'+esc(T2(L.badge))+'</h3><p>'+(all?u.allDone:'')+'</p><button class="btn red" data-close>'+u.close+'</button>';
+ var pop=$('#pop');$$('.cf',pop).forEach(function(c){c.remove()});
+ if(!REDUCE){var cols=['#A3311D','#F2C94C','#2F6B3A','#161513','#E9907E'];for(var i=0;i<(all?60:28);i++){var c=document.createElement('i');c.className='cf';c.style.left=Math.random()*100+'%';c.style.background=cols[i%cols.length];c.style.animationDelay=(Math.random()*0.6)+'s';c.style.animationDuration=(1.6+Math.random()*1.2)+'s';pop.appendChild(c)}}
+ pop.classList.add('on');var cb=$('[data-close]',pop);if(cb)cb.focus();
+}
+function closePop(){$('#pop').classList.remove('on')}
+
+function toast(t){var el=$('#toast');el.textContent=t;el.classList.add('on');setTimeout(function(){el.classList.remove('on')},1600)}
+function setLang(l,s2){stopSpeak();lang=l;document.documentElement.classList.toggle('en',l==='en');document.documentElement.lang=l==='zh'?'zh-Hant':'en';$('#langBtn').textContent=l==='zh'?'EN':'中';if(s2){try{localStorage.setItem('pr-lang',l)}catch(e){}}renderAll();}
 function detect(){
  var q=(location.search.match(/[?&]lang=(en|zh)/)||[])[1];if(q)return q;
  try{var s=localStorage.getItem('pr-lang');if(s==='en'||s==='zh')return s}catch(e){}
@@ -368,21 +561,32 @@ function detect(){
  for(var i=0;i<ls.length;i++){if(/^zh/i.test(ls[i]))return 'zh'}
  return 'en';
 }
+
+/* ---------- events ---------- */
 document.addEventListener('change',function(e){
- var k=e.target.getAttribute&&e.target.getAttribute('data-done');
- if(k!==null&&k!==undefined&&e.target.hasAttribute('data-done')){done[k]=e.target.checked;save();paint();if(e.target.checked)toast(T[lang].toast);return}
+ if(e.target.hasAttribute&&e.target.hasAttribute('data-done')){var k=+e.target.getAttribute('data-done');if(!passed(k)){e.target.checked=false;return}
+  var was=!!done[k];done[k]=e.target.checked;save();renderTop();renderCert();if(e.target.checked&&!was)celebrate(k);return}
  if(e.target.id==='simT'){S.target=+e.target.value;simReset();renderSim()}
 });
 document.addEventListener('click',function(e){
  var sb=e.target.closest('[data-sim]');if(sb){var a=sb.getAttribute('data-sim');if(a==='r'){simReset();renderSim()}else simAct(a);return}
- if(e.target.closest('[data-make]')){var v=($('#nameIn').value||'').trim();certName=v;renderCert();if(v){var c=$('#cert');if(c)c.scrollIntoView({behavior:'smooth',block:'center'})}return}
- if(e.target.closest('[data-print]')){try{window.print()}catch(x){toast(T[lang].printNo)}return}
+ var qb=e.target.closest('[data-q]');if(qb){var p=qb.getAttribute('data-q').split('.').map(Number);quiz[p[0]]=quiz[p[0]]||{};quiz[p[0]][p[1]]=p[2];save();
+  var sec=$('#lv'+p[0]);var html=levelHTML(LV[p[0]]);var tmp=document.createElement('div');tmp.innerHTML=html;var nq=$('#quiz'+p[0],tmp),ng=$('.got',tmp);$('#quiz'+p[0]).replaceWith(nq);$('.got',sec).replaceWith(ng);
+  var fb=$('[data-q="'+p.join('.')+'"]');if(fb)fb.focus();return}
+ var sy=e.target.closest('[data-say]');if(sy){speak(+sy.getAttribute('data-say'));return}
+ if(e.target.closest('[data-close]')||e.target.id==='pop'){closePop();return}
+ if(e.target.closest('[data-make]')){certName=($('#nameIn').value||'').trim();renderCert();var c=$('#cert');if(c)c.scrollIntoView({behavior:REDUCE?'auto':'smooth',block:'center'});return}
+ var pr=e.target.closest('[data-print]');if(pr){var tg=$('#'+pr.getAttribute('data-print'));if(!tg)return;$('#printArea').innerHTML=tg.outerHTML.replace(/ id="(cert|card)"/,'');document.body.setAttribute('data-print','1');try{window.print()}catch(x){toast(U[lang].printNo)}setTimeout(function(){document.body.removeAttribute('data-print')},1000);return}
  if(e.target.closest('[data-reset]')){
-  if(!resetArm){resetArm=1;paint();setTimeout(function(){resetArm=0;paint()},4000);return}
-  resetArm=0;done={};certName='';save();simReset();renderSim();paint();toast(T[lang].resetDone);window.scrollTo(0,0);return}
+  if(!resetArm){resetArm=1;renderTop();setTimeout(function(){resetArm=0;renderTop()},4000);return}
+  resetArm=0;done={};quiz={};certName='';save();stopSpeak();simReset();renderAll();toast(U[lang].resetDone);window.scrollTo(0,0);return}
 });
-document.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.id==='nameIn'){var b=$('[data-make]');if(b)b.click()}});
+document.addEventListener('keydown',function(e){
+ if(e.key==='Escape')closePop();
+ if(e.key==='Enter'&&e.target.id==='nameIn'){var b=$('[data-make]');if(b)b.click()}
+});
 $('#langBtn').onclick=function(){setLang(lang==='zh'?'en':'zh',true)};
+if(canSpeak){try{window.speechSynthesis.getVoices();window.speechSynthesis.onvoiceschanged=function(){}}catch(e){}}
 setLang(detect(),false);
 })();
 </script>
