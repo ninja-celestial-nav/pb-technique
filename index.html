@@ -5,6 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>匹克球專刊 · 獻給阿尼色弗兒童之家</title>
 <meta name="description" content="匹克球專刊：規則與計分，以及張教練 YouTube 教學影片重點整理（握拍、發球、接發、截擊、丁克、強抽、扣殺、重推），附時間軸連結。為阿尼色弗兒童之家匹克球活動製作。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="匹克球專刊">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="匹克球專刊 · 獻給阿尼色弗兒童之家">
+<meta property="og:description" content="規則與計分、報分模擬器、張教練 11 支教學影片重點與名詞小辭典，每個技術都附影片時間軸。">
+<meta property="og:url" content="https://pb-technique.vercel.app/">
+<meta property="og:image" content="https://pb-technique.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="匹克球專刊 · 獻給阿尼色弗兒童之家">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="匹克球專刊 · 獻給阿尼色弗兒童之家">
+<meta name="twitter:description" content="規則與計分、報分模擬器、張教練 11 支教學影片重點與名詞小辭典，每個技術都附影片時間軸。">
+<meta name="twitter:image" content="https://pb-technique.vercel.app/og.png">
+<meta name="theme-color" content="#F4F0E7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23A3311D'/%3E%3Ccircle cx='22' cy='24' r='4' fill='%23F4F0E7'/%3E%3Ccircle cx='40' cy='22' r='4' fill='%23F4F0E7'/%3E%3Ccircle cx='32' cy='38' r='4' fill='%23F4F0E7'/%3E%3Ccircle cx='44' cy='40' r='4' fill='%23F4F0E7'/%3E%3Ccircle cx='20' cy='42' r='4' fill='%23F4F0E7'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,600;0,800;1,500;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -157,6 +173,15 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
 .win{background:var(--acc);color:#fff;padding:8px 12px;font-weight:700;margin-bottom:10px}
 .sim select{font:inherit;font-family:var(--mono);font-size:12px;border:1px solid var(--ink);background:none;padding:6px}
 @media (max-width:860px){.sim{grid-template-columns:1fr;padding:16px}}
+.gl{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);margin-bottom:10px}
+.gl div{padding:14px 18px 14px 0;border-bottom:1px solid var(--rule)}
+.gl div:not(:nth-child(3n+1)){padding-left:18px;border-left:1px solid var(--rule)}
+.gl dt{font-weight:700;font-size:17px}
+.gl dd{font-size:15px;color:var(--ink)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.covlines li:focus-visible{outline-offset:-3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media (max-width:860px){.gl{grid-template-columns:1fr}.gl div:not(:nth-child(3n+1)){padding-left:0;border-left:0}}
 /* footer nav */
 .foot{position:fixed;bottom:0;left:0;right:0;background:var(--paper);border-top:1px solid var(--ink);z-index:20}
 .foot-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;padding:10px 24px;gap:14px}
@@ -189,8 +214,8 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
   <div class="mast"><span data-l="zh">匹克球<i>專刊</i></span><span data-l="en">Pickleball <i>Special</i></span></div>
   <div class="issue"><span data-l="zh">獻給阿尼色弗兒童之家 · 2026 年 11 月</span><span data-l="en">For the Onesiphorus Children’s Home · Nov 2026</span></div>
   <div class="sp"></div>
-  <button class="tbtn" id="langBtn" aria-label="Switch language">EN</button>
-  <button class="tbtn" id="tocBtn"><span class="long"><span data-l="zh">目錄</span><span data-l="en">Contents</span></span><span class="short">≡</span></button>
+  <button class="tbtn" id="langBtn" aria-label="Switch language / 切換語言">EN</button>
+  <button class="tbtn" id="tocBtn" aria-label="目錄 / Contents" aria-haspopup="dialog" aria-controls="toc"><span class="long"><span data-l="zh">目錄</span><span data-l="en">Contents</span></span><span class="short">≡</span></button>
  </div>
  <div class="prog" id="prog"></div>
 </header>
@@ -211,7 +236,7 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
     <div class="kick"><span data-l="zh">本期獻給</span><span data-l="en">Dedicated to</span></div>
     <div style="font-size:26px;font-weight:900;line-height:1.35;margin:6px 0 10px"><span data-l="zh">阿尼色弗兒童之家的孩子們</span><span data-l="en">The children of the Onesiphorus Children’s Home</span></div>
     <p style="font-size:15px"><span data-l="zh">從認識球場、學會報分開始，一步一步把每一種擊球練起來。歡迎一起上場！</span><span data-l="en">Start with the court and the score call, then build every shot one step at a time. Come play!</span></p>
-    <p style="margin:4px 0 12px"><a class="btn red" href="kids.html"><span data-l="zh">小朋友、新手看這裡：五關新手路線 →</span><span data-l="en">Kids &amp; beginners: the five-level Starter Path →</span></a></p>
+    <p style="margin:4px 0 12px"><a class="btn red" href="kids.html"><span data-l="zh">小朋友、新手看這裡：六關新手路線 →</span><span data-l="en">Kids &amp; beginners: the six-level Starter Path →</span></a></p>
     <p class="disc"><span data-l="zh">本刊由 Coach Ninja 為阿尼色弗兒童之家的匹克球活動整理製作，並非阿尼色弗兒童之家的出版品。</span><span data-l="en">Compiled by Coach Ninja for a pickleball activity with the Onesiphorus Children’s Home; it is not a publication of the Home.</span></p>
    </div>
    <div class="credit"><span data-l="zh">影片來源：張教練 YouTube 頻道 <a href="https://www.youtube.com/@pickleballcoachchang" target="_blank" rel="noopener">@pickleballcoachchang</a>。本刊整理重點並附連結，影片著作權屬原頻道所有，歡迎到頻道訂閱支持。</span><span data-l="en">Source: Coach Chang’s YouTube channel <a href="https://www.youtube.com/@pickleballcoachchang" target="_blank" rel="noopener">@pickleballcoachchang</a>. We summarise and link; the videos belong to the channel—go subscribe.</span></div>
@@ -245,7 +270,7 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
  </div>
 
  <div class="kick" style="margin-top:30px"><span data-l="zh">互動練習 · 報分模擬器（雙打、傳統計分）</span><span data-l="en">Try it · Score-call trainer (doubles, side-out)</span></div>
- <div class="sim" id="sim"></div>
+ <div class="sim" id="sim" aria-live="polite"></div>
 
  <div class="feature">
   <div class="kick"><span data-l="zh">C · 2026 規則更新</span><span data-l="en">C · What changed in 2026</span></div>
@@ -253,6 +278,8 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
   <p><span data-l="zh">落球得分制是每一球都計分，不論誰發球。2025 年的版本在賽末點規定只有發球方能得分；2026 年規則 14.A.2 取消了這個「凍結」，接發方也能拿下致勝分。傳統 Side-out 計分仍是 USA Pickleball 的預設制度，落球得分屬於可選用的賽制。</span><span data-l="en">In rally scoring, every rally earns a point, whoever served. The 2025 version said only the serving side could win game point; 2026 Rule 14.A.2 removed that freeze, so the receiving side can win the final point too. Traditional side-out scoring remains USA Pickleball's default; rally scoring is an optional format.</span></p>
  </div>
 
+ <div class="kick" style="margin-top:34px"><span data-l="zh">D · 名詞小辭典</span><span data-l="en">D · Glossary</span></div>
+ <dl class="gl" id="gl"></dl>
  <p class="src"><span data-l="zh">依據：USA Pickleball 2026 官方規則，經 2026 規則變更文件（Rule 14.A.2）、USA Pickleball 發球說明及多家規則整理網站交叉查證（2026/11/17）。本頁為摘要，正式比賽以官方規則書與賽事規程為準。</span><span data-l="en">Based on the USA Pickleball 2026 rules, cross-checked against the 2026 Rulebook Change Document (Rule 14.A.2), USA Pickleball’s serving guide and several rules explainers (17 Nov 2026). This is a summary; the official rulebook and event regulations prevail.</span></p>
 </section>
 
@@ -332,8 +359,8 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
  <h2 class="h-big"><span data-l="zh">你的問題，<em>該看哪一段？</em></span><span data-l="en">Your problem, <em>your playlist</em></span></h2>
  <p class="deck"><span data-l="zh">選一個你最近最常遇到的狀況，我們幫你排好要看的影片片段。</span><span data-l="en">Pick the problem you hit most often and we'll queue the exact segments to watch.</span></p>
  <div class="mx">
-  <div class="opts" id="opts"></div>
-  <div class="rx" id="rx"></div>
+  <div class="opts" id="opts" role="radiogroup" aria-label="選擇你的問題 / Pick your problem"></div>
+  <div class="rx" id="rx" aria-live="polite"></div>
  </div>
  <div class="kick" style="margin-top:40px"><span data-l="zh">影片索引 · 本期引用的 11 支影片</span><span data-l="en">Video index · the 11 videos in this issue</span></div>
  <ul class="vidx" id="vidx"></ul>
@@ -352,19 +379,19 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
 
 <footer class="foot">
  <div class="foot-in">
-  <button class="tbtn" id="prev">←</button>
-  <span class="folio" id="folio">01 / 08</span>
+  <button class="tbtn" id="prev" aria-label="上一頁 / Previous page">←</button>
+  <span class="folio" id="folio" aria-live="polite">01 / 08</span>
   <span class="pname" id="pname"></span>
   <div class="sp"></div>
-  <button class="tbtn" id="next">→</button>
+  <button class="tbtn" id="next" aria-label="下一頁 / Next page">→</button>
  </div>
 </footer>
 
-<div class="toc" id="toc"><div class="toc-in">
- <div class="row" style="justify-content:space-between;margin-bottom:10px"><div class="kick" style="margin:0"><span data-l="zh">目錄</span><span data-l="en">Contents</span></div><button class="tbtn" id="tocClose">✕</button></div>
+<div class="toc" id="toc" role="dialog" aria-modal="true" aria-label="目錄 / Contents"><div class="toc-in">
+ <div class="row" style="justify-content:space-between;margin-bottom:10px"><div class="kick" style="margin:0"><span data-l="zh">目錄</span><span data-l="en">Contents</span></div><button class="tbtn" id="tocClose" aria-label="關閉目錄 / Close contents">✕</button></div>
  <ul class="covlines" id="toclist"></ul>
 </div></div>
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (function(){
@@ -475,6 +502,30 @@ function renderSim(){
   +'<div class="court">'+half('b',true)+'<div class="netl"><span>'+u.net+'</span></div>'+half('a',false)+'</div>';
  $('#sim').innerHTML=html;
 }
+var GLOSS=[
+ {k:1,zh:['廚房（非截擊區）','網子兩邊各 7 英尺（約 2.13 公尺）的區域，連線也算在內。腳在裡面時不能截擊。'],en:['Kitchen (non-volley zone)','The 7-ft (about 2.13 m) zone on each side of the net, lines included. No volleying with a foot in it.']},
+ {k:1,zh:['截擊（Volley）','球還沒落地，就在空中直接打回去。'],en:['Volley','Hitting the ball out of the air before it bounces.']},
+ {k:1,zh:['丁克球（Dink）','輕輕一推，讓球落進對方廚房的短球。'],en:['Dink','A soft shot that lands in the opponents’ kitchen.']},
+ {k:1,zh:['雙彈跳規則','發球和回球都要先落地彈一次，之後才可以截擊。'],en:['Two-bounce rule','The serve and the return must each bounce once before anyone volleys.']},
+ {k:1,zh:['底線','球場最後面的那條線，發球要站在它後面。'],en:['Baseline','The back line of the court; you serve from behind it.']},
+ {k:1,zh:['落地發球','讓球從手中或拍面自然落下，彈地後再發球；不能往下丟或往上拋。'],en:['Drop serve','Let the ball fall from your hand or paddle and serve after the bounce—no throwing down or tossing up.']},
+ {k:1,zh:['失誤','違反規則或沒把球打好，這一球就結束。'],en:['Fault','Breaking a rule or missing the shot; the rally ends.']},
+ {k:1,zh:['換發（Side out）','發球的隊伍失去發球權，換對方發球。'],en:['Side out','The serving team loses the serve and it passes to the opponents.']},
+ {k:1,zh:['1 號／2 號發球員','雙打每隊有兩位發球員輪流發；拿回發球權時，站在右區的是 1 號。'],en:['Server 1 / Server 2','In doubles both partners serve in turn; after a side out, the player in the right court is server 1.']},
+ {k:1,zh:['0-0-2','比賽開始時的報分：第一輪只有一位發球員。'],en:['0-0-2','The opening score call: the first serving turn has only one server.']},
+ {k:0,zh:['傳統計分（Side-out scoring）','只有發球方能得分，是 USA Pickleball 的預設計分方式。'],en:['Side-out scoring','Only the serving side can score; USA Pickleball’s default.']},
+ {k:0,zh:['落球得分（Rally scoring）','每一球都計分，不論誰發球；屬於可選用的賽制。'],en:['Rally scoring','A point on every rally, whoever served; an optional format.']},
+ {k:0,zh:['半截擊（Half volley）','球剛彈起、還在上升時就馬上打回去。'],en:['Half volley','Hitting the ball right after it bounces, on the rise.']},
+ {k:0,zh:['挑高球（Lob）','把球高高挑過對手頭頂，落到後場。'],en:['Lob','Lifting the ball over the opponents’ heads to land deep.']},
+ {k:0,zh:['突襲（Speed-up）','丁克對峙中突然加速，把球打向對手。'],en:['Speed-up','Suddenly accelerating the ball at the opponents during a dink rally.']},
+ {k:0,zh:['重推（Hard push）','對手回球偏高但在肩膀以下、無法扣殺時，用小臂瞬間加速推擊，攻擊對手腳邊。'],en:['Hard push','A quick forearm push on a high ball that’s still below the shoulder, aimed at the feet.']},
+ {k:0,zh:['繞柱（ATP）','球從網柱外側繞過去、不經過網子上方，打進對方場地；這是合法的擊球。'],en:['ATP (around the post)','A shot that goes around the net post instead of over the net and lands in the court—it’s legal.']}
+];
+function renderGloss(el,kidsOnly){
+ if(!el)return;
+ el.innerHTML=GLOSS.filter(function(g){return !kidsOnly||g.k}).map(function(g){var L=g[lang];return '<div><dt>'+esc(L[0])+'</dt><dd>'+esc(L[1])+'</dd></div>'}).join('');
+}
+
 function render(){
  var u=UI[lang];
  $$('[data-cards]').forEach(function(box){
@@ -484,12 +535,13 @@ function render(){
    return '<article class="card"><div class="num">'+String(i+1).padStart(2,'0')+'</div><h3>'+esc(L.n)+'</h3><div class="en-sub">'+c.sub+' · '+u.ep+' '+VID[c.v].ep+'</div><ul>'+L.b.map(function(b){return '<li>'+esc(b)+'</li>'}).join('')+'</ul><a class="watch" href="'+YT(VID[c.v].id,c.t)+'" target="_blank" rel="noopener">'+u.watch+' '+mmss(c.t)+'</a>'+extra+'</article>'}).join('');
  });
  $('#tiers').innerHTML=TIERS.map(function(t){var L=t[lang];return '<div class="tier"><b>'+L[0]+'</b><div class="en-sub mono" style="font-size:11px;color:var(--mute);text-transform:uppercase">'+L[1]+'</div><div class="bar"><span style="width:'+t.w+'%"></span></div><div style="font-size:15px">'+L[2]+'</div></div>'}).join('');
- var lines=u.pages.map(function(p,i){return i?'<li data-go="'+(i+1)+'"><i>'+ROMAN[i]+'</i><div><b>'+p+'</b><small>'+String(i+1).padStart(2,'0')+' / '+pad(N)+'</small></div></li>':''}).join('');
+ var lines=u.pages.map(function(p,i){return i?'<li data-go="'+(i+1)+'" tabindex="0" role="link"><i>'+ROMAN[i]+'</i><div><b>'+p+'</b><small>'+String(i+1).padStart(2,'0')+' / '+pad(N)+'</small></div></li>':''}).join('');
  $('#covlines').innerHTML=lines;
- $('#toclist').innerHTML='<li data-go="1"><i>·</i><div><b>'+u.pages[0]+'</b><small>01 / '+pad(N)+'</small></div></li>'+lines;
+ $('#toclist').innerHTML='<li data-go="1" tabindex="0" role="link"><i>·</i><div><b>'+u.pages[0]+'</b><small>01 / '+pad(N)+'</small></div></li>'+lines;
  $('#opts').innerHTML=MATCH.map(function(m,i){return '<label><input type="radio" name="m" value="'+i+'"'+(i===sel?' checked':'')+'><span>'+esc(m[lang])+'</span></label>'}).join('');
  renderRx();
  renderSim();
+ renderGloss($('#gl'),false);
  $('#vidx').innerHTML=Object.keys(VID).map(function(k){return VID[k]}).sort(function(a,b){return a.ep-b.ep}).map(function(v){
   var ts=[];Object.keys(CARDS).forEach(function(g){CARDS[g].forEach(function(c){if(VID[c.v]===v)ts.push(c.t);if(c.v2&&VID[c.v2]===v)ts.push(c.t2)})});
   if(v===VID.force)ts.push(59);if(v===VID.volley)ts.push(73);
@@ -536,10 +588,11 @@ document.addEventListener('change',function(e){if(e.target.name==='m'){sel=+e.ta
 $('#prev').onclick=function(){go(cur-1)};
 $('#next').onclick=function(){go(cur+1)};
 $('#langBtn').onclick=function(){setLang(lang==='zh'?'en':'zh',true)};
-$('#tocBtn').onclick=function(){$('#toc').classList.add('on')};
+$('#tocBtn').onclick=function(){$('#toc').classList.add('on');var f=$('#toclist li');if(f)f.focus()};
 $('#tocClose').onclick=function(){$('#toc').classList.remove('on')};
 $('#toc').onclick=function(e){if(e.target.id==='toc')$('#toc').classList.remove('on')};
 document.addEventListener('keydown',function(e){
+ if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('li[data-go]')){e.preventDefault();e.target.click();return}
  if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT')return;
  if(e.key==='ArrowRight')go(cur+1);else if(e.key==='ArrowLeft')go(cur-1);else if(e.key==='Escape')$('#toc').classList.remove('on');
 });
