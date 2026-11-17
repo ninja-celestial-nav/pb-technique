@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Paddle Review · 技術特輯：張教練精選影片全解析</title>
-<meta name="description" content="匹克球技術特輯：張教練 YouTube 教學影片重點整理，握拍、發球、接發、截擊、丁克、強抽、扣殺、重推，附時間軸直達連結。Coach Ninja / NinjaPB.">
+<title>匹克球專刊 · 獻給阿尼色弗兒童之家</title>
+<meta name="description" content="匹克球專刊：規則與計分，以及張教練 YouTube 教學影片重點整理（握拍、發球、接發、截擊、丁克、強抽、扣殺、重推），附時間軸連結。為阿尼色弗兒童之家匹克球活動製作。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,600;0,800;1,500;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -124,8 +124,10 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
 .cgrid>div:last-child{border-right:0}
 .price{display:flex;justify-content:space-between;border-bottom:1px dotted #555;padding:7px 0;font-family:var(--mono);font-size:14px}
 .price b{font-family:var(--disp);font-size:22px;color:#fff}
-.corner ul{list-style:none}
+.corner ul,.drills ul{list-style:none}
 .corner li{padding:6px 0;border-bottom:1px dotted #555;font-size:15px}
+.drills ul{border-top:1px solid var(--ink);display:grid;grid-template-columns:1fr 1fr}.drills li{padding:12px 16px 12px 0;border-bottom:1px solid var(--rule);font-size:16px}
+@media (max-width:860px){.drills ul{grid-template-columns:1fr}}
 .corner .btn{border-color:var(--paper);color:var(--paper)}
 .corner .btn.red{border-color:var(--acc)}
 .corner .disc{color:#A9A294}
@@ -184,12 +186,11 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
 <body>
 <header class="top">
  <div class="top-in">
-  <div class="mast">The Paddle <i>Review</i></div>
-  <div class="issue"><span data-l="zh">技術特輯 · 2026 年 11 月</span><span data-l="en">Technique Special · Nov 2026</span></div>
+  <div class="mast"><span data-l="zh">匹克球<i>專刊</i></span><span data-l="en">Pickleball <i>Special</i></span></div>
+  <div class="issue"><span data-l="zh">獻給阿尼色弗兒童之家 · 2026 年 11 月</span><span data-l="en">For the Onesiphorus Children’s Home · Nov 2026</span></div>
   <div class="sp"></div>
   <button class="tbtn" id="langBtn" aria-label="Switch language">EN</button>
   <button class="tbtn" id="tocBtn"><span class="long"><span data-l="zh">目錄</span><span data-l="en">Contents</span></span><span class="short">≡</span></button>
-  <a class="tbtn pill" href="https://ninjapb.vercel.app/" target="_blank" rel="noopener"><span class="long"><span data-l="zh">預約教練課</span><span data-l="en">Book a lesson</span></span><span class="short"><span data-l="zh">預約課程</span><span data-l="en">Book</span></span></a>
  </div>
  <div class="prog" id="prog"></div>
 </header>
@@ -207,17 +208,13 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
   </div>
   <aside>
    <div class="codecard">
-    <div class="kick"><span data-l="zh">Six Zero 官網專屬優惠</span><span data-l="en">Six Zero store offer</span></div>
-    <div><span data-l="zh">結帳時輸入優惠碼，享 9 折（10% OFF）</span><span data-l="en">Enter this code at checkout for 10% off</span></div>
-    <div class="code">NINJA</div>
-    <div class="row">
-     <button class="btn dark" data-copy="NINJA"><span data-l="zh">複製優惠碼</span><span data-l="en">Copy code</span></button>
-     <a class="btn" href="https://www.sixzeropickleball.com/NINJA" target="_blank" rel="noopener sponsored"><span data-l="zh">前往 Six Zero 官網</span><span data-l="en">Visit Six Zero</span></a>
-    </div>
-    <p class="disc"><span data-l="zh">推薦連結不會自動套用折扣，請記得在結帳頁貼上 NINJA。揭露：Coach Ninja 為 Six Zero 官方品牌推廣大使，透過本頁連結或優惠碼購買，他可能獲得推薦回饋。</span><span data-l="en">The link does not apply the discount automatically—paste NINJA at checkout. Disclosure: Coach Ninja is an official Six Zero brand ambassador and may earn a referral reward from purchases made through this page or code.</span></p>
+    <div class="kick"><span data-l="zh">本期獻給</span><span data-l="en">Dedicated to</span></div>
+    <div style="font-size:26px;font-weight:900;line-height:1.35;margin:6px 0 10px"><span data-l="zh">阿尼色弗兒童之家的孩子們</span><span data-l="en">The children of the Onesiphorus Children’s Home</span></div>
+    <p style="font-size:15px"><span data-l="zh">從認識球場、學會報分開始，一步一步把每一種擊球練起來。歡迎一起上場！</span><span data-l="en">Start with the court and the score call, then build every shot one step at a time. Come play!</span></p>
+    <p class="disc"><span data-l="zh">本刊由 Coach Ninja 為阿尼色弗兒童之家的匹克球活動整理製作，並非阿尼色弗兒童之家的出版品。</span><span data-l="en">Compiled by Coach Ninja for a pickleball activity with the Onesiphorus Children’s Home; it is not a publication of the Home.</span></p>
    </div>
-   <div class="credit"><span data-l="zh">影片來源：張教練 YouTube 頻道 <a href="https://www.youtube.com/@pickleballcoachchang" target="_blank" rel="noopener">@pickleballcoachchang</a>。本刊整理重點並附連結，影片著作權屬原頻道所有，歡迎到頻道訂閱支持。</span><span data-l="en">Source: Coach Chang's YouTube channel <a href="https://www.youtube.com/@pickleballcoachchang" target="_blank" rel="noopener">@pickleballcoachchang</a>. We summarise and link; the videos belong to the channel—go subscribe.</span></div>
-   <p class="src"><span data-l="zh">編輯：Coach Ninja · NinjaPB Performance Academy<br>使用方式：← → 鍵或下方按鈕翻頁</span><span data-l="en">Edited by Coach Ninja · NinjaPB Performance Academy<br>Use ← → keys or the buttons below to turn pages</span></p>
+   <div class="credit"><span data-l="zh">影片來源：張教練 YouTube 頻道 <a href="https://www.youtube.com/@pickleballcoachchang" target="_blank" rel="noopener">@pickleballcoachchang</a>。本刊整理重點並附連結，影片著作權屬原頻道所有，歡迎到頻道訂閱支持。</span><span data-l="en">Source: Coach Chang’s YouTube channel <a href="https://www.youtube.com/@pickleballcoachchang" target="_blank" rel="noopener">@pickleballcoachchang</a>. We summarise and link; the videos belong to the channel—go subscribe.</span></div>
+   <p class="src"><span data-l="zh">編輯：Coach Ninja<br>使用方式：← → 鍵或下方按鈕翻頁</span><span data-l="en">Edited by Coach Ninja<br>Use ← → keys or the buttons below to turn pages</span></p>
   </aside>
  </div>
 </section>
@@ -340,51 +337,14 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
  <div class="kick" style="margin-top:40px"><span data-l="zh">影片索引 · 本期引用的 11 支影片</span><span data-l="en">Video index · the 11 videos in this issue</span></div>
  <ul class="vidx" id="vidx"></ul>
  <p class="src"><span data-l="zh">影片標題、長度與上傳日期取自 YouTube（2026/11/17 查詢）。</span><span data-l="en">Titles, lengths and upload dates from YouTube (checked 17 Nov 2026). English titles are our translations.</span></p>
-</section>
 
-<!-- ===== 09 CORNER ===== -->
-<section class="slide" data-n="9">
- <div class="kick">VIII · Gear &amp; Coach's Corner</div>
- <h2 class="h-big"><span data-l="zh">本期<em>裝備</em>推薦</span><span data-l="en">This issue's <em>gear</em></span></h2>
- <div class="gear" id="gear"></div>
- <div class="corner">
-  <div class="kick">Coach's Corner</div>
-  <h2 class="h-big"><span data-l="zh">看完影片，<em>上場</em>練一次</span><span data-l="en">You've watched it. Now <em>play</em> it.</span></h2>
-  <p class="deck"><span data-l="zh">Coach Ninja · NinjaPB Performance Academy 創辦人 · RPO Level 1 國際匹克球教練 · Six Zero 官方品牌推廣大使。雙北小班制，慢動作影片分析＋動力鏈診斷。</span><span data-l="en">Coach Ninja · Founder, NinjaPB Performance Academy · RPO Level 1 certified coach · Official Six Zero brand ambassador. Small groups in Taipei &amp; New Taipei, with slow-motion video analysis and kinetic-chain diagnosis.</span></p>
-  <div class="cgrid">
-   <div>
-    <div class="kick"><span data-l="zh">小班課 · 60 分鐘 · 每人每堂</span><span data-l="en">Small group · 60 min · per person</span></div>
-    <div class="price"><span><span data-l="zh">2 人班</span><span data-l="en">2 players</span></span><b>NT$800</b></div>
-    <div class="price"><span><span data-l="zh">3 人班</span><span data-l="en">3 players</span></span><b>NT$600</b></div>
-    <div class="price"><span><span data-l="zh">4 人班</span><span data-l="en">4 players</span></span><b>NT$500</b></div>
-    <p class="disc"><span data-l="zh">4 人全班 NT$2,000，場地費另計。程度：新手入門 → DUPR 進階。時段：平日白天／晚上／週末。人數未滿也可私訊，協助揪團。</span><span data-l="en">Full group of 4: NT$2,000; court fees extra. Levels: beginner → DUPR advanced. Weekday day/evening or weekend. Short on players? DM and we'll help fill the group.</span></p>
-   </div>
-   <div>
-    <div class="kick"><span data-l="zh">本週練習菜單 · 本刊觀點</span><span data-l="en">This week's drills · Our view</span></div>
-    <ul>
+ <div class="kick" style="margin-top:40px"><span data-l="zh">本週練習菜單 · 本刊建議</span><span data-l="en">This week’s drills · Our suggestion</span></div>
+ <div class="drills"><ul>
      <li><span data-l="zh">放鬆握力斜線丁克 10 分鐘，弧頂不超過網帶太多</span><span data-l="en">10 min cross-court dinks with a relaxed grip—keep the arc just above the tape</span></li>
      <li><span data-l="zh">三種發球各 20 顆，記錄進區率</span><span data-l="en">20 of each serve; log how many land in</span></li>
      <li><span data-l="zh">搭檔餵腳邊球，半截擊回丁克 3 組</span><span data-l="en">Partner feeds at your feet; 3 sets of half-volley dinks</span></li>
      <li><span data-l="zh">丁克中聽口令突襲執拍手方向</span><span data-l="en">Dink rally; speed up to the paddle side on a call</span></li>
-    </ul>
-   </div>
-   <div>
-    <div class="kick"><span data-l="zh">學員福利</span><span data-l="en">Student perks</span></div>
-    <ul>
-     <li><span data-l="zh">課堂免費試打 Six Zero 旗艦拍</span><span data-l="en">Try Six Zero flagship paddles in class</span></li>
-     <li><span data-l="zh">球拍配重與鉛片客製建議</span><span data-l="en">Paddle weighting &amp; lead-tape advice</span></li>
-     <li><span data-l="zh">官網結帳輸入 NINJA 享 9 折</span><span data-l="en">10% off at the Six Zero store with NINJA</span></li>
-    </ul>
-    <div class="codeinline"><span class="c">NINJA</span><button class="btn" data-copy="NINJA"><span data-l="zh">複製</span><span data-l="en">Copy</span></button></div>
-   </div>
-  </div>
-  <div class="row" style="margin-top:22px">
-   <a class="btn red" href="https://ninjapb.vercel.app/" target="_blank" rel="noopener"><span data-l="zh">預約教練課</span><span data-l="en">Book a lesson</span></a>
-   <a class="btn" href="https://ig.me/m/ninjapbtw" target="_blank" rel="noopener"><span data-l="zh">IG 私訊 @ninjapbtw</span><span data-l="en">DM @ninjapbtw on IG</span></a>
-   <a class="btn" href="https://pickleball-ninja.vercel.app/" target="_blank" rel="noopener"><span data-l="zh">NinjaPB 線上戰術秘笈</span><span data-l="en">NinjaPB tactics handbook</span></a>
-  </div>
-  <p class="disc"><span data-l="zh">揭露：Coach Ninja 為 Six Zero 官方品牌推廣大使，本頁的 Six Zero 連結含推薦參數，透過連結或優惠碼購買，他可能獲得推薦回饋。技術內容整理自張教練公開影片，影片著作權屬原頻道所有。</span><span data-l="en">Disclosure: Coach Ninja is an official Six Zero brand ambassador. Six Zero links on this page carry a referral tag, and he may earn a reward from purchases made through them or the code. Technique content summarises Coach Chang's public videos, which belong to his channel.</span></p>
- </div>
+    </ul></div>
 </section>
 
 </main>
@@ -392,7 +352,7 @@ main{max-width:1180px;margin:0 auto;padding:0 24px 96px}
 <footer class="foot">
  <div class="foot-in">
   <button class="tbtn" id="prev">←</button>
-  <span class="folio" id="folio">01 / 09</span>
+  <span class="folio" id="folio">01 / 08</span>
   <span class="pname" id="pname"></span>
   <div class="sp"></div>
   <button class="tbtn" id="next">→</button>
@@ -473,20 +433,11 @@ var MATCH=[
  {zh:'扣殺沒威力',en:'My smash lacks power',rx:[['force',59],['smash',56]]}
 ];
 var RXNOTE={force:{zh:'握拍力道',en:'Grip pressure'},dink:{zh:'丁克',en:'Dinks'},grip:{zh:'握法',en:'Grips'},ret:{zh:'接發球',en:'Returns'},serve:{zh:'發球',en:'Serves'},volley:{zh:'截擊',en:'Volleys'},brk:{zh:'突破丁克',en:'Breaking the dink'},push:{zh:'重推',en:'Hard push'},drive:{zh:'強抽',en:'Drive'},drive2:{zh:'強抽原理',en:'Drive physics'},smash:{zh:'扣殺',en:'Smash'}};
-var GEAR=[
- {name:'Boulder Opal 14mm',url:'https://www.sixzeropickleball.com/products/boulder-opal?sca_ref=11914723.sbiWIzNDK28ii',
-  zh:{tag:'控制型力量拍',d:'官方定位是「可控的力量」：比 Black Opal 出球更可預測、持球時間更長、力量區間（power band）更大、容錯更高，搭配 SharkSkin 表面帶旋轉。',fit:'本刊建議：想要強抽、底線壓制，又重視穩定性的球友'},
-  en:{tag:'Controlled power',d:'Six Zero pitches it as controlled power: a more predictable pop than the Black Opal, longer dwell, a larger power band and more forgiveness, with a SharkSkin surface for spin.',fit:'Our pick for: drivers who want power with predictability'},
-  kv:[['Core','14mm · Hybrid'],['Weight','8.0–8.3 oz'],['Swing / Twist','115 / 6.4'],['Cert','UPA (Rough) · USAP (Smooth)']]},
- {name:'Coral Pro 16mm',url:'https://www.sixzeropickleball.com/products/coral-pro?sca_ref=11914723.sbiWIzNDK28ii',
-  zh:{tag:'全場型旋轉拍',d:'官方定位是全場型：強調旋轉與咬球感、柔和的力量，以及 reset、放小球時的厚實持球感。想加重旋轉又不失手感的球友可以先試。',fit:'本刊建議：重視網前手感，也想打上旋攻擊的球友'},
-  en:{tag:'All-court spin',d:'Six Zero positions it as all-court: heavy spin and ball bite with plush power, and a dwell feel that helps resets, drops and touch shots.',fit:'Our pick for: touch at the net plus topspin attack'},
-  kv:[['Core','16mm · Hybrid / Elongated / Widebody'],['Weight','8.0–8.3 oz'],['Swing / Twist','Hybrid 114 / 6.70'],['Cert','UPA · UPA + USAP versions']]}
-];
-var UI={zh:{pages:['封面','規則與計分','握拍','發球與接發','網前截擊','廚房區','強攻三招','你的處方','裝備與教練課'],watch:'看示範',watch2:'延伸：教學 30',copied:'已複製 NINJA',rxh:'建議觀看順序',buy:'前往選購',copy:'複製優惠碼',src:'數據來源：Six Zero 官網商品頁（2026/11/17 查詢）；描述為官方定位整理。',ep:'教學',min:'長度',pub:'上傳'},
- en:{pages:['Cover','Rules & scoring','Grip','Serve & return','Volleys','The kitchen','Power trio','Your prescription','Gear & lessons'],watch:'Watch',watch2:'Also: Lesson 30',copied:'Copied NINJA',rxh:'Watch in this order',buy:'Shop',copy:'Copy code',src:'Source: Six Zero product pages (checked 17 Nov 2026); descriptions summarise the brand’s own positioning.',ep:'Lesson',min:'Length',pub:'Uploaded'}};
+
+var UI={zh:{pages:['封面','規則與計分','握拍','發球與接發','網前截擊','廚房區','強攻三招','你的處方'],watch:'看示範',watch2:'延伸：教學 30',rxh:'建議觀看順序',ep:'教學',min:'長度',pub:'上傳'},
+ en:{pages:['Cover','Rules & scoring','Grip','Serve & return','Volleys','The kitchen','Power trio','Your prescription'],watch:'Watch',watch2:'Also: Lesson 30',rxh:'Watch in this order',ep:'Lesson',min:'Length',pub:'Uploaded'}};
 var ROMAN=['','I','II','III','IV','V','VI','VII','VIII'];
-var lang='zh',cur=1,N=9,sel=0;
+var lang='zh',cur=1,N=8,sel=0;
 function pad(n){return String(n).padStart(2,'0')}
 function $(s,r){return (r||document).querySelector(s)}
 function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
@@ -543,7 +494,6 @@ function render(){
   if(v===VID.force)ts.push(59);if(v===VID.volley)ts.push(73);
   ts=ts.filter(function(x,i,a){return a.indexOf(x)===i}).sort(function(a,b){return a-b});
   return '<li><span class="ep">'+v.ep+'</span><div><a class="ttl" href="'+YT(v.id)+'" target="_blank" rel="noopener">'+esc(v[lang])+'</a><div class="chips">'+ts.map(function(t){return '<a href="'+YT(v.id,t)+'" target="_blank" rel="noopener">▶ '+mmss(t)+'</a>'}).join('')+'</div></div><span class="meta r">'+mmss(v.len)+' · '+v.pub+'</span></li>'}).join('');
- $('#gear').innerHTML=GEAR.map(function(g){var L=g[lang];return '<div><div class="kick">'+esc(L.tag)+'</div><h3>Six Zero '+g.name+'</h3><p style="margin:8px 0">'+esc(L.d)+'</p><p style="font-weight:700">'+esc(L.fit)+'</p><dl class="kv">'+g.kv.map(function(x){return '<dt>'+x[0]+'</dt><dd>'+x[1]+'</dd>'}).join('')+'</dl><div class="codeinline"><span class="c">NINJA</span><button class="btn" data-copy="NINJA">'+u.copy+'</button><a class="btn dark" href="'+g.url+'" target="_blank" rel="noopener sponsored">'+u.buy+' →</a></div></div>'}).join('')+'<p class="src" style="grid-column:1/-1;padding:0 22px 10px">'+u.src+'</p>';
  $('#pname').textContent=u.pages[cur-1];
  $('#langBtn').textContent=lang==='zh'?'EN':'中';
  document.documentElement.lang=lang==='zh'?'zh-Hant':'en';
